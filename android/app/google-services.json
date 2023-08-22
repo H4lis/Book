@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "34126480760",
+    "project_id": "book-592f2",
+    "storage_bucket": "book-592f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34126480760:android:31edb3e46baeb87231748d",
+        "android_client_info": {
+          "package_name": "com.dytech.book"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "34126480760-e9mi1ujkqusu8qvmhvahfbqa3vkknt0m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUDuBm-QZsR3CYNQrry5la7RDCmMfqsUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "34126480760-e9mi1ujkqusu8qvmhvahfbqa3vkknt0m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
