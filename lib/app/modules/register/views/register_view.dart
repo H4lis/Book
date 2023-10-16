@@ -88,43 +88,74 @@ class RegisterView extends GetView<RegisterController> {
                   SizedBox(
                     height: 22,
                   ),
-                  TextField(
-                    controller: controller.passwordC,
-                    cursorColor: purple,
-                    decoration: InputDecoration(
-                        hintText: 'Password',
-                        contentPadding:
-                            EdgeInsets.symmetric(vertical: 14, horizontal: 14),
-                        hintStyle:
-                            light.copyWith(fontSize: 14), // Pesan petunjuk
-                        border: OutlineInputBorder(
-                            borderRadius:
-                                BorderRadius.circular(40)), // Garis pinggir
-                        focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(40),
-                            borderSide: BorderSide(color: purple))),
-                    style: regular.copyWith(fontSize: 14),
-                  ),
+                  Obx(() => TextField(
+                        obscureText: !controller.isPasswordVisible.value,
+                        controller: controller.passwordC,
+                        cursorColor: purple,
+                        decoration: InputDecoration(
+                          hintText: 'Password',
+                          contentPadding: EdgeInsets.symmetric(
+                              vertical: 14, horizontal: 14),
+                          hintStyle:
+                              light.copyWith(fontSize: 14), // Pesan petunjuk
+                          border: OutlineInputBorder(
+                              borderRadius:
+                                  BorderRadius.circular(40)), // Garis pinggir
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(40),
+                              borderSide: BorderSide(color: purple)),
+
+                          suffixIcon: IconButton(
+                            onPressed: () {
+                              controller
+                                  .togglePasswordVisibility(); // Memanggil fungsi untuk mengubah visibilitas kata sandi
+                            },
+                            icon: Icon(
+                              controller.isPasswordVisible.value
+                                  ? Icons.visibility
+                                  : Icons.visibility_off,
+                              color: Colors
+                                  .grey, // Ganti dengan warna yang Anda inginkan
+                            ),
+                          ),
+                        ),
+                        style: regular.copyWith(fontSize: 14),
+                      )),
                   SizedBox(
                     height: 22,
                   ),
-                  TextField(
-                    controller: controller.konfirmPasswordC,
-                    cursorColor: purple,
-                    decoration: InputDecoration(
-                        hintText: 'Konfirmasi Password',
-                        contentPadding:
-                            EdgeInsets.symmetric(vertical: 14, horizontal: 14),
-                        hintStyle:
-                            light.copyWith(fontSize: 14), // Pesan petunjuk
-                        border: OutlineInputBorder(
-                            borderRadius:
-                                BorderRadius.circular(40)), // Garis pinggir
-                        focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(40),
-                            borderSide: BorderSide(color: purple))),
-                    style: regular.copyWith(fontSize: 14),
-                  ),
+                  Obx(() => TextField(
+                        obscureText: !controller.isPasswordVisible.value,
+                        controller: controller.konfirmPasswordC,
+                        cursorColor: purple,
+                        decoration: InputDecoration(
+                          hintText: 'Konfirmasi Password',
+                          contentPadding: EdgeInsets.symmetric(
+                              vertical: 14, horizontal: 14),
+                          hintStyle:
+                              light.copyWith(fontSize: 14), // Pesan petunjuk
+                          border: OutlineInputBorder(
+                              borderRadius:
+                                  BorderRadius.circular(40)), // Garis pinggir
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(40),
+                              borderSide: BorderSide(color: purple)),
+                          suffixIcon: IconButton(
+                            onPressed: () {
+                              controller
+                                  .togglePasswordVisibility(); // Memanggil fungsi untuk mengubah visibilitas kata sandi
+                            },
+                            icon: Icon(
+                              controller.isPasswordVisible.value
+                                  ? Icons.visibility
+                                  : Icons.visibility_off,
+                              color: Colors
+                                  .grey, // Ganti dengan warna yang Anda inginkan
+                            ),
+                          ),
+                        ),
+                        style: regular.copyWith(fontSize: 14),
+                      )),
                 ],
               ),
             ),

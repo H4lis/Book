@@ -11,6 +11,8 @@ class LoginView extends GetView<LoginController> {
   const LoginView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final LoginController controller = Get.put(LoginController());
+
     return Scaffold(
         body: Stack(
       children: [
@@ -22,7 +24,7 @@ class LoginView extends GetView<LoginController> {
           padding: const EdgeInsets.symmetric(horizontal: 20),
           children: [
             const SizedBox(
-              height: 170,
+              height: 120,
             ),
             Center(
               child: Text(
@@ -66,23 +68,41 @@ class LoginView extends GetView<LoginController> {
                   const SizedBox(
                     height: 22,
                   ),
-                  TextField(
-                    controller: controller.passwordCc,
-                    cursorColor: purple,
-                    decoration: InputDecoration(
-                        hintText: 'Password',
-                        contentPadding: const EdgeInsets.symmetric(
-                            vertical: 14, horizontal: 14),
-                        hintStyle:
-                            light.copyWith(fontSize: 14), // Pesan petunjuk
-                        border: OutlineInputBorder(
-                            borderRadius:
-                                BorderRadius.circular(40)), // Garis pinggir
-                        focusedBorder: OutlineInputBorder(
+                  Obx(() => TextField(
+                        obscureText: !controller.isPasswordVisible.value,
+                        controller: controller.passwordCc,
+                        cursorColor: purple,
+                        decoration: InputDecoration(
+                          hintText: 'Password',
+                          contentPadding: const EdgeInsets.symmetric(
+                            vertical: 14,
+                            horizontal: 14,
+                          ),
+                          hintStyle:
+                              light.copyWith(fontSize: 14), // Pesan petunjuk
+                          border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(40),
-                            borderSide: const BorderSide(color: purple))),
-                    style: regular.copyWith(fontSize: 14),
-                  ),
+                          ), // Garis pinggir
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(40),
+                            borderSide: const BorderSide(color: purple),
+                          ),
+                          suffixIcon: IconButton(
+                            onPressed: () {
+                              controller
+                                  .togglePasswordVisibility(); // Memanggil fungsi untuk mengubah visibilitas kata sandi
+                            },
+                            icon: Icon(
+                              controller.isPasswordVisible.value
+                                  ? Icons.visibility
+                                  : Icons.visibility_off,
+                              color: Colors
+                                  .grey, // Ganti dengan warna yang Anda inginkan
+                            ),
+                          ),
+                        ),
+                        style: regular.copyWith(fontSize: 14),
+                      )),
                   const SizedBox(
                     height: 8,
                   ),

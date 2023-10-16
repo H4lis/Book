@@ -14,14 +14,18 @@ class RegisterController extends GetxController {
 
   final FirebaseAuth auth = FirebaseAuth.instance;
   final FirebaseFirestore fireStore = FirebaseFirestore.instance;
+  RxBool isPasswordVisible = false.obs; // Tambahkan ini
+
+  void togglePasswordVisibility() {
+    isPasswordVisible.value = !isPasswordVisible.value;
+  }
 
   void daftar() async {
-     isLoading.value = true;
+    isLoading.value = true;
     if (namaLengkapC.text.isNotEmpty &&
         emailC.text.isNotEmpty &&
         passwordC.text.isNotEmpty &&
         konfirmPasswordC.text.isNotEmpty) {
-     
       try {
         if (passwordC.text == konfirmPasswordC.text) {
           UserCredential userCredential =
@@ -42,8 +46,6 @@ class RegisterController extends GetxController {
             await userCredential.user!.sendEmailVerification();
             auth.signOut();
 
-            print(userCredential);
-
             Get.snackbar("Berhasil",
                 "Akun Anda Berhasil Dibuat, cek emailmu untuk melakukan verifikasi");
             Get.offAllNamed(Routes.LOGIN);
@@ -57,11 +59,9 @@ class RegisterController extends GetxController {
         if (e.code == 'weak-password') {
           Get.snackbar(
               "Terjadi Kesalahan", "Password yang digunakan terlalu singkat");
-          print('The password provided is too weak.');
         } else if (e.code == 'email-already-in-use') {
           Get.snackbar(
               "Terjadi Kesalahan", "Email anda sudah terdaftar silahkan login");
-          print('The account already exists for that email.');
         }
       } catch (e) {
         Get.snackbar("Terjadi Kesalahan", "Tidak Dapat Mendaftarkan akun");
@@ -69,6 +69,6 @@ class RegisterController extends GetxController {
     } else {
       Get.snackbar("Terjadi Kesalahan", "Nama, Email Harus diisi");
     }
-     isLoading.value = false;
+    isLoading.value = false;
   }
 }

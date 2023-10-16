@@ -8,26 +8,30 @@ class LoginController extends GetxController {
   TextEditingController emailCc = TextEditingController();
   TextEditingController passwordCc = TextEditingController();
 
+  RxBool isPasswordVisible = false.obs; // Tambahkan ini
+
+  void togglePasswordVisibility() {
+    isPasswordVisible.value = !isPasswordVisible.value;
+  }
+
   FirebaseAuth auth = FirebaseAuth.instance;
 
   Future<void> login() async {
-    print("Login");
     if (emailCc.text.isNotEmpty && passwordCc.text.isNotEmpty) {
       isLoading.value = true;
       try {
         UserCredential userCredential = await auth.signInWithEmailAndPassword(
             email: emailCc.text, password: passwordCc.text);
 
-        print(userCredential);
         if (userCredential.user != null) {
           isLoading.value = false;
           if (userCredential.user!.emailVerified == true) {
             Get.snackbar("Berhasil", "Anda Berhasil Login");
-            Get.offAllNamed(Routes.WRAPPER_SCREEN);
+            Get.offAllNamed(Routes.FAB_TABS);
           } else {
             Get.defaultDialog(
-                title: "Belum Verifikasi",
-                middleText: "Cek emailmu, dan lakukan verifikasi");
+                title: "Anda Belum Verifikasi",
+                middleText: "Cek email anda, dan lakukan verifikasi");
           }
         }
       } on FirebaseAuthException catch (e) {
@@ -35,12 +39,9 @@ class LoginController extends GetxController {
         if (e.code == 'user-not-found') {
           Get.snackbar("Terjadi Kesalahan",
               "Pengguna tidak ditemukan untuk email tersebut");
-          print('No user found for that email.');
         } else if (e.code == 'wrong-password') {
           Get.snackbar("Terjadi Kesalahan",
               "Pengguna tidak ditemukan untuk email tersebut");
-
-          print('Password Salah.');
         }
         isLoading.value = false;
       }

@@ -12,27 +12,57 @@ dependencies:
   firebase_auth: ^4.7.3
   cloud_firestore: ^4.8.5
   firebase_storage: 11.2.5
+  syncfusion_flutter_datagrid: ^22.2.9
+  flutter_launcher_icons: ^0.13.1
+  image_picker: 1.0.4
+
   flutter: 
     sdk: flutter
-  syncfusion_flutter_datagrid: ^22.2.9
+  audioplayers: ^1.1.0
+  video_player: ^2.7.2
+  flick_video_player: ^0.5.0
+  youtube_player_flutter: ^8.1.2
 
 dev_dependencies: 
   flutter_lints: 2.0.2
   flutter_test: 
     sdk: flutter
 
+flutter_launcher_icons: 
+  android: launcher_icon
+  image_path: assets/icons/logo.png
+  web: 
+    image_path: assets/icons/logo.png
+    background_color: '#hexcode'
+    theme_color: '#hexcode'
+    generate: true
+  windows: 
+    image_path: assets/icons/logo.png
+    generate: true
+    icon_size: 48
+  ios: true
+  min_sdk_android: 21
+
 flutter: 
-  uses-material-design: true
-  assets:
+  assets: 
     - assets/images/
     - assets/icons/
-
-  fonts:
+  fonts: 
     - family: Poppins
-      fonts:
+      fonts: 
         - asset: assets/fonts/Poppins-Regular.ttf
         - asset: assets/fonts/Poppins-Black.ttf
         - asset: assets/fonts/Poppins-Bold.ttf
         - asset: assets/fonts/Poppins-Medium.ttf
         - asset: assets/fonts/Poppins-Light.ttf
         - asset: assets/fonts/Poppins-SemiBold.ttf
+
+    - family: Amiri
+      fonts: 
+        - asset: assets/fonts/Amiri-Bold.ttf
+        - asset: assets/fonts/Amiri-BoldItalic.ttf
+        - asset: assets/fonts/Amiri-Italic.ttf
+        - asset: assets/fonts/Amiri-Regular.ttf
+
+  uses-material-design: true
+

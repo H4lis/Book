@@ -18,7 +18,7 @@ void main() async {
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return MaterialApp(
+            return const MaterialApp(
               home: Scaffold(
                 body: Center(
                   child: CircularProgressIndicator(),
@@ -26,12 +26,11 @@ void main() async {
               ),
             );
           }
-          print(snapshot.data);
           return GetMaterialApp(
             debugShowCheckedModeBanner: false,
             title: "Application",
             initialRoute:
-                snapshot.data != null ? Routes.WRAPPER_SCREEN : Routes.LOGIN,
+                snapshot.data != null ? Routes.FAB_TABS : Routes.LOGIN,
             getPages: AppPages.routes,
             theme: ThemeData(primaryColor: Colors.red),
           );
