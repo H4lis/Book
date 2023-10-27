@@ -8,17 +8,13 @@ import 'package:book/app/widgets/list_paragraf.dart';
 import 'package:book/app/widgets/list_paragraf_italic.dart';
 import 'package:book/app/widgets/paragraf_italic.dart';
 import 'package:book/app/widgets/paragraf_list_abjad.dart';
-import 'package:book/app/widgets/paragraf_list_costum.dart';
 import 'package:book/app/widgets/paragraf_widget.dart';
 import 'package:book/app/widgets/sampul_bab.dart';
 import 'package:book/app/widgets/sub_bab.dart';
 import 'package:book/app/widgets/tabel_penerapan_karakter.dart';
 import 'package:book/app/widgets/voice_play.dart';
-import 'package:flick_video_player/flick_video_player.dart';
 import 'package:flutter/material.dart';
-import 'package:video_player/video_player.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
-
 import '../data/bab_1_model/paragralistcostum2.dart';
 import '../data/bab_1_model/tabel_penilaian_sikap_d.dart';
 import '../data/bab_2_model/tadabbur_model.dart';
@@ -38,16 +34,12 @@ import '../widgets/list_paragraf_italic_stengah.dart';
 import '../widgets/pembatas.dart';
 import '../widgets/quran_widget.dart';
 import '../widgets/tadabbur.dart';
-import '../widgets/video_player_widget.dart';
 
 class Bab5 extends StatelessWidget {
-   Bab5({super.key});
-    YoutubePlayerController _controller = YoutubePlayerController(
-      initialVideoId: 'eAx5HXajUHA', 
-      flags: YoutubePlayerFlags(
-        autoPlay: false
-      )
-    );
+  Bab5({super.key});
+  YoutubePlayerController _controller = YoutubePlayerController(
+      initialVideoId: 'eAx5HXajUHA',
+      flags: YoutubePlayerFlags(autoPlay: false));
 
   @override
   Widget build(BuildContext context) {
@@ -57,8 +49,6 @@ class Bab5 extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         children: [
-        
-
           const SampulBab(
               title: "Bab 5",
               contentImage: "bab_5",
@@ -74,14 +64,16 @@ class Bab5 extends StatelessWidget {
           Image.asset(
             "assets/images/infografis5.jpg",
           ),
-          SizedBox(height: 10,),
-                SizedBox(height: 10,),
-                 YoutubePlayer(
+          SizedBox(
+            height: 10,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          YoutubePlayer(
             controller: _controller,
-            showVideoProgressIndicator: true,  
-            onReady: () {
-        
-            },
+            showVideoProgressIndicator: true,
+            onReady: () {},
           ),
           const DAyo(),
           ParagrafList(idlist: ayoTadarus5),
@@ -138,46 +130,53 @@ class Bab5 extends StatelessWidget {
           ),
           const ETadabb(),
           Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            decoration: const BoxDecoration(
-                color: bagroundGreen,
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(10),
-                    topRight: Radius.circular(10))),
-            padding: const EdgeInsets.all(10),
-            child: Text(
-              "Aktivitas 5.2", // Use the activityTitle parameter here
-              style: regular_paragraf.copyWith(
-                fontWeight: FontWeight.w600,
-              ),
+            padding: const EdgeInsets.symmetric(vertical: 8),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  decoration: const BoxDecoration(
+                      color: bagroundGreen,
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(10),
+                          topRight: Radius.circular(10))),
+                  padding: const EdgeInsets.all(10),
+                  child: Text(
+                    "Aktivitas 5.2", // Use the activityTitle parameter here
+                    style: regular_paragraf.copyWith(
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+                Container(
+                    width: double.infinity,
+                    decoration: const BoxDecoration(
+                        color: bagroundGreenLight,
+                        borderRadius: BorderRadius.only(
+                          bottomRight: Radius.circular(10),
+                          bottomLeft: Radius.circular(10),
+                          topRight: Radius.circular(10),
+                        )),
+                    padding: const EdgeInsets.all(10),
+                    child: RichText(
+                      text: TextSpan(
+                          style: regular_paragraf,
+                          children: <TextSpan>[
+                            TextSpan(
+                                text:
+                                    "Aktivitas Peserta Didik:\nAmati gambar atau ilustrasi berikut ini! Lalu berilah tanggapan kalian yang dikaitkan dengan materi ajar yang dipelajari, yakni: Meneladani Ulama Indonesia, yakni:"),
+                            TextSpan(
+                                text:
+                                    " Meneladani Ulama Indonesia, yakni: Hamzah al-Fansuri, Nuruddin bin Ali ar-Raniri, Syekh Abdurauf bin Ali al-Singkili, Syaikh Yusuf Abul Mahasin Tajul Khalwati al-Makasari, Abdus Samad bin Abdullah al-Jawi al-Palimbani, Abu Abdul Mu’thi Nawawi al-Tanari al-Bantani, dan Muhammad Sholeh bin Umar al-Samarani.",
+                                style: regular_paragraf.copyWith(
+                                    fontStyle: FontStyle.italic))
+                          ]),
+                      textAlign: TextAlign.justify,
+                    )),
+              ],
             ),
           ),
-          Container(
-            width: double.infinity,
-            decoration: const BoxDecoration(
-                color: bagroundGreenLight,
-                borderRadius: BorderRadius.only(
-                  bottomRight: Radius.circular(10),
-                  bottomLeft: Radius.circular(10),
-                  topRight: Radius.circular(10),
-                )),
-            padding: const EdgeInsets.all(10),
-            child: RichText(text: TextSpan(
-              style: regular_paragraf,
-              children: <TextSpan> [TextSpan(text: "Aktivitas Peserta Didik:\nAmati gambar atau ilustrasi berikut ini! Lalu berilah tanggapan kalian yang dikaitkan dengan materi ajar yang dipelajari, yakni: Meneladani Ulama Indonesia, yakni:"),
-              TextSpan(text: " Meneladani Ulama Indonesia, yakni: Hamzah al-Fansuri, Nuruddin bin Ali ar-Raniri, Syekh Abdurauf bin Ali al-Singkili, Syaikh Yusuf Abul Mahasin Tajul Khalwati al-Makasari, Abdus Samad bin Abdullah al-Jawi al-Palimbani, Abu Abdul Mu’thi Nawawi al-Tanari al-Bantani, dan Muhammad Sholeh bin Umar al-Samarani.",style: regular_paragraf.copyWith(fontStyle: FontStyle.italic))
-              ]),textAlign: TextAlign.justify,)
-            
-    
-          ),
-        ],
-      ),
-    )
-     ,         Tadabbur(idlist: tadabbur5),
+          Tadabbur(idlist: tadabbur5),
           const FKisah(),
           const AktivitasWidget(
               activityTitle: "Aktivitas 5.3",
@@ -246,49 +245,55 @@ class Bab5 extends StatelessWidget {
             ),
           ),
           const GWawasan(),
-              Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            decoration: const BoxDecoration(
-                color: bagroundGreen,
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(10),
-                    topRight: Radius.circular(10))),
-            padding: const EdgeInsets.all(10),
-            child: Text(
-              "Aktivitas 5.4", // Use the activityTitle parameter here
-              style: regular_paragraf.copyWith(
-                fontWeight: FontWeight.w600,
-              ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 8),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  decoration: const BoxDecoration(
+                      color: bagroundGreen,
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(10),
+                          topRight: Radius.circular(10))),
+                  padding: const EdgeInsets.all(10),
+                  child: Text(
+                    "Aktivitas 5.4", // Use the activityTitle parameter here
+                    style: regular_paragraf.copyWith(
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+                Container(
+                    width: double.infinity,
+                    decoration: const BoxDecoration(
+                        color: bagroundGreenLight,
+                        borderRadius: BorderRadius.only(
+                          bottomRight: Radius.circular(10),
+                          bottomLeft: Radius.circular(10),
+                          topRight: Radius.circular(10),
+                        )),
+                    padding: const EdgeInsets.all(10),
+                    child: RichText(
+                      text: TextSpan(
+                          style: regular_paragraf,
+                          children: <TextSpan>[
+                            TextSpan(
+                                text:
+                                    "Aktivitas Peserta Didik:\nBentuk kelas kalian menjadi 7 kelompok. Lalu, setiap kelompok mendapatkan 1 tokoh ulama sesuai materi ajar yang akan dipelajari Meneladani Ulama Indonesia, yakni: "),
+                            TextSpan(
+                                text:
+                                    "Hamzah al-Fansuri, Nuruddin bin Ali ar-Raniri, Syekh Abdurauf bin Ali al-Singkili, Syaikh Yusuf Abul Mahasin Tajul Khalwati al-Makasari, Abdus Samad bin Abdullah al-Jawi al-Palimbani, Abu Abdul Mu’thi Nawawi al-Tanari al-Bantani, dan Muhammad Sholeh bin Umar al-Samarani. ",
+                                style: regular_paragraf.copyWith(
+                                    fontStyle: FontStyle.italic)),
+                            TextSpan(text: "Hasilnya dipresentasikan!")
+                          ]),
+                      textAlign: TextAlign.justify,
+                    )),
+              ],
             ),
           ),
-          Container(
-            width: double.infinity,
-            decoration: const BoxDecoration(
-                color: bagroundGreenLight,
-                borderRadius: BorderRadius.only(
-                  bottomRight: Radius.circular(10),
-                  bottomLeft: Radius.circular(10),
-                  topRight: Radius.circular(10),
-                )),
-            padding: const EdgeInsets.all(10),
-            child: RichText(text: TextSpan(
-              style: regular_paragraf,
-              children: <TextSpan> [TextSpan(text: "Aktivitas Peserta Didik:\nBentuk kelas kalian menjadi 7 kelompok. Lalu, setiap kelompok mendapatkan 1 tokoh ulama sesuai materi ajar yang akan dipelajari Meneladani Ulama Indonesia, yakni: "),
-              TextSpan(text: "Hamzah al-Fansuri, Nuruddin bin Ali ar-Raniri, Syekh Abdurauf bin Ali al-Singkili, Syaikh Yusuf Abul Mahasin Tajul Khalwati al-Makasari, Abdus Samad bin Abdullah al-Jawi al-Palimbani, Abu Abdul Mu’thi Nawawi al-Tanari al-Bantani, dan Muhammad Sholeh bin Umar al-Samarani. ",style: regular_paragraf.copyWith(fontStyle: FontStyle.italic))
-   ,          TextSpan(text: "Hasilnya dipresentasikan!")
-             
-              ]),textAlign: TextAlign.justify,)
-            
-    
-          ),
-        ],
-      ),
-    ),
-       
+
           const Heading2(title: "1. Indonesia"),
           ParagrafWidget(
               content:
@@ -326,18 +331,23 @@ class Bab5 extends StatelessWidget {
           ParagrafWidget(
               content:
                   "Indonesia merdeka tidak lepas dari peran para Ulama Indonesia. Banyak sekali nama-nama yang dapat kita sodorkan dan menjadi pengingat tentang jejak mereka dalam memerdekakan Indonesia, yang sudah kita kenal, antara lain: Pangeran Diponegoro, Cut Nyak Dien, Pangeran Antasari, dan lain sebagainya."),
-        
-        RichText(text: TextSpan(
-          style: regular_paragraf,
-          children: <TextSpan>[
 
-TextSpan(text: "   Namun kali ini, yang akan disajikan adalah para Ulama Indonesia yang tidak hanya memberi sumbangsih besar untuk Indonesia, tetapi mewarnai wajah dunia sampai saat ini. Mereka itu, antara lain: "),
-TextSpan(text: "Abu Abdul Mu’thi Nawawi al-Tanari al-Bantani, Syaikh Yusuf Abul Mahasin Tajul Khalwati al-Makasari, Abdus Samad bin Abdullah al-Jawi al-Palimbani, Nuruddin bin Ali ar-Raniri, Syekh Abdurauf bin Ali al-Singkili, Muhammad Sholeh bin Umar al-Samarani, Hamzah al-Fansuri. ",style: regular_paragraf.copyWith(fontStyle: FontStyle.italic)),
-TextSpan(text: "Mari kita urai jejak dan langkahnya satu per satu.")
-        ]),textAlign: TextAlign.justify,),
-          ParagrafWidget(
-              content:
-                  ""),
+          RichText(
+            text: TextSpan(style: regular_paragraf, children: <TextSpan>[
+              TextSpan(
+                  text:
+                      "   Namun kali ini, yang akan disajikan adalah para Ulama Indonesia yang tidak hanya memberi sumbangsih besar untuk Indonesia, tetapi mewarnai wajah dunia sampai saat ini. Mereka itu, antara lain: "),
+              TextSpan(
+                  text:
+                      "Abu Abdul Mu’thi Nawawi al-Tanari al-Bantani, Syaikh Yusuf Abul Mahasin Tajul Khalwati al-Makasari, Abdus Samad bin Abdullah al-Jawi al-Palimbani, Nuruddin bin Ali ar-Raniri, Syekh Abdurauf bin Ali al-Singkili, Muhammad Sholeh bin Umar al-Samarani, Hamzah al-Fansuri. ",
+                  style:
+                      regular_paragraf.copyWith(fontStyle: FontStyle.italic)),
+              TextSpan(
+                  text: "Mari kita urai jejak dan langkahnya satu per satu.")
+            ]),
+            textAlign: TextAlign.justify,
+          ),
+          ParagrafWidget(content: ""),
           const Heading2Orange(
               title: "a. Abu Abdul Mu’thi Nawawi al-Tanari al-Bantani"),
           Heading3(title: "1. Riwayat Hidupnya"),
@@ -495,8 +505,8 @@ TextSpan(text: "Mari kita urai jejak dan langkahnya satu per satu.")
               content:
                   "   Selain beberapa risalah tersebut, sedikitnya ada 20 judul buku yang ditulis Syekh Yusuf. Hampir semuanya berbahasa Arab. Di antaranya sebagai berikut:"),
           ParagrafListItalic(idlist: judulBuku),
- 
-      Row(
+
+          Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
@@ -508,19 +518,21 @@ TextSpan(text: "Mari kita urai jejak dan langkahnya satu per satu.")
                 ),
               ),
               Expanded(
-                child: 
-                RichText(text: TextSpan(
-                  style: regular_paragraf,
-                  children: <TextSpan>[
-                    TextSpan(text: "Safīnat an-Najah, ",style: regular_paragraf.copyWith(fontStyle: FontStyle.italic)),
-                  TextSpan(text: "menjadi karyanya yang paling populer, yang hingga kini masih banyak diajarkan di berbagai pesantren. Di Museum Pusat Jakarta, juga didapati sekitar 10 manuskrip Syekh Yusuf yang belum diterjemahkan."),
-                ]))
-         
-              )
+                  child: RichText(
+                      text: TextSpan(
+                          style: regular_paragraf,
+                          children: <TextSpan>[
+                    TextSpan(
+                        text: "Safīnat an-Najah, ",
+                        style: regular_paragraf.copyWith(
+                            fontStyle: FontStyle.italic)),
+                    TextSpan(
+                        text:
+                            "menjadi karyanya yang paling populer, yang hingga kini masih banyak diajarkan di berbagai pesantren. Di Museum Pusat Jakarta, juga didapati sekitar 10 manuskrip Syekh Yusuf yang belum diterjemahkan."),
+                  ])))
             ],
           ),
-     
-    
+
           const Heading2Orange(
             title:
                 "c. Jejak dan Langkah Abdus Samad bin Abdullah al-Jawi al-Palimbani",
@@ -581,11 +593,20 @@ TextSpan(text: "Mari kita urai jejak dan langkahnya satu per satu.")
                   "Syekh Abdus Samad termasuk pengarang yang produktif. Karyanya yang terkenal dan sampai saat ini masih dipergunakan adalah Hidayatus Salikin dan Siyarus Salikin. Kedua kitab tersebut, merupakan penjelasan dari 2 kitab karya Hujjatul Islam Imam al-Ghazali, yakni Bidāyat al-Hidāyah dan Lubāb Ihyā` ‘Ulūm al-Dīn."),
 
           ParagrafListItalic(idlist: kitab),
-          ParagrafListCostum2(no: "8", content: "Ar-Risālatu fī Kaifiyatir Rītib Lailatil Jum’ah"),
-          ParagrafListCostum2(no: "9", content: "Mulhiqun fī Bayāni Fawaidin Nafi’ah fī Jihādi fī Sabīlillah"),
-          ParagrafListCostum2(no: "10", content: "Zātul Muttaqin fī Tauhidi Rabbil ‘Alamīn"),
+          ParagrafListCostum2(
+              no: "8",
+              content: "Ar-Risālatu fī Kaifiyatir Rītib Lailatil Jum’ah"),
+          ParagrafListCostum2(
+              no: "9",
+              content:
+                  "Mulhiqun fī Bayāni Fawaidin Nafi’ah fī Jihādi fī Sabīlillah"),
+          ParagrafListCostum2(
+              no: "10", content: "Zātul Muttaqin fī Tauhidi Rabbil ‘Alamīn"),
           ParagrafListCostum2(no: "11", content: "\'Ilmut Tasawuf"),
-          ParagrafListCostum2(no: "12", content: "Mulkhishut Tuhbatil Mafdhah minar Rahmatil Mahdah ‘Alaihis Shalātu was Salām"),
+          ParagrafListCostum2(
+              no: "12",
+              content:
+                  "Mulkhishut Tuhbatil Mafdhah minar Rahmatil Mahdah ‘Alaihis Shalātu was Salām"),
           ParagrafListCostum2(no: "13", content: "Kitab Mi’raj "),
           ParagrafListCostum2(no: "14", content: "Anisul Muttaqin"),
           ParagrafListCostum2(no: "15", content: "Puisi Kemenangan Kedah"),
@@ -699,8 +720,7 @@ TextSpan(text: "Mari kita urai jejak dan langkahnya satu per satu.")
           ParagrafWidget(
               content:
                   "Menurut Azyumardi Azra (Akademisi UIN Jakarta) menyatakan bahwa banyak karya-karya Syekh Abdurrauf Singkil yang sempat dipublikasikan melalui murid-muridnya. Di antaranya adalah:"),
-         
-         
+
           ParagrafList(idlist: karya),
           ParagrafWidget(
               content:
@@ -765,8 +785,7 @@ TextSpan(text: "Mari kita urai jejak dan langkahnya satu per satu.")
           ParagrafWidget(
               content:
                   "   Syekh Kyai Sholeh Darat termasuk ulama yang produktif, banyak karya lahir darinya. Di antara kitab atau karya tulis beliau adalah:"),
-          
-          
+
           ParagrafListItalicStengah(idlist: karyaSholehDaratt),
           const Heading2Orange(title: "g. Jejak dan Langkah Hamzah al-Fansuri"),
           Heading3(title: "1. Riwayat Hidupnya"),
@@ -959,4 +978,3 @@ TextSpan(text: "Mari kita urai jejak dan langkahnya satu per satu.")
     );
   }
 }
-

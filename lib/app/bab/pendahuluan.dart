@@ -1,4 +1,4 @@
-import 'package:book/app/widgets/pembatas.dart';
+
 import 'package:flutter/material.dart';
 
 import '../modules/SideMenu/views/side_menu_view.dart';
@@ -36,8 +36,7 @@ class Pendahuluann extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             child: Column(
               children: [
-                KataPengantar(),
-               
+                KataPengantar(),               
                 KataSambutan(),
                 Prakata(),
                 PetunjukPenggunaanBuku(),

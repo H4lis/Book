@@ -5,7 +5,6 @@ import 'package:book/app/widgets/border_black.dart';
 import 'package:book/app/widgets/heading_3.dart';
 import 'package:book/app/widgets/paragraf_italic.dart';
 import 'package:book/app/widgets/per_list_paragraf.dart';
-import 'package:book/app/widgets/sub_bab.dart';
 import 'package:book/app/widgets/tabel_penerapan_karakter.dart';
 import 'package:book/app/widgets/voice_play_orange.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -82,7 +81,7 @@ class Bab_1 extends StatelessWidget {
             // Lanjutkan dengan penggunaan nilai 'user'
             YoutubePlayerController _controller = YoutubePlayerController(
       initialVideoId: 'OarXrVcaIko', 
-      flags: YoutubePlayerFlags(
+      flags: const YoutubePlayerFlags(
         autoPlay: false
       )
     );
@@ -308,8 +307,8 @@ class Bab_1 extends StatelessWidget {
                       ],
                     ),
                     Image.asset("assets/images/infografis.jpg"),
-                        SizedBox(height: 10,),
-                SizedBox(height: 10,),
+                        const SizedBox(height: 10,),
+                const SizedBox(height: 10,),
                  YoutubePlayer(
             controller: _controller,
             showVideoProgressIndicator: true,  
@@ -320,7 +319,7 @@ class Bab_1 extends StatelessWidget {
                     const SizedBox(
                       height: 18,
                     ),
-                    Heading1(numbering: "D", title: "Tadabbur"),
+                    const Heading1(numbering: "D", title: "Tadabbur"),
                     const SizedBox(
                       height: 8,
                     ),
@@ -360,9 +359,9 @@ class Bab_1 extends StatelessWidget {
                     const SizedBox(
                       height: 18,
                     ),
-                    Heading1(numbering: "E", title: "Kisah Inspiratif"),
+                    const Heading1(numbering: "E", title: "Kisah Inspiratif"),
 
-                    AktivitasWidget(
+                    const AktivitasWidget(
                         activityTitle: "Aktivitas 1.3",
                         contentText:
                             "Pahami dan renungkan artikel berikut ini, sebagai bagian dari pemahaman dari materi ajar yang akan dipelajari!"),
@@ -394,7 +393,7 @@ class Bab_1 extends StatelessWidget {
                           const QuranWidget(
                               arab:
                                   "عَنْ أَبِيِ هُرَيْرَةَقَلَ:قَالَ رَسُوْلُ اللّٰهِ صَلَّ اللهُ عَلَيْهِ وَسَلَّمَ:كَفَ بِالْمَرْءِكَذِبًاأَنْ يُحَدِّثَ بِكُلِّ مَا سَمِعَ     (رواه مسلم)"),
-                          Terjemahan(
+                          const Terjemahan(
                               content:
                                   "Diriwayatkan dari Abu Hurairah ia berkata Rasulullah Saw. Bersabda: “Cukuplah seseorang disebut pendusta orang yang mengatakan (membicarakan) semua yang ia dengar”",
                               riwayat: "(HR. Muslim)."),
@@ -586,7 +585,7 @@ class Bab_1 extends StatelessWidget {
                       child: RichText(
                         text: TextSpan(
                           style: regular_paragraf,
-                          children: <TextSpan>[
+                          children: const <TextSpan>[
                             TextSpan(
                               text:
                                   "   Anehnya, mereka tidak merasa salah, seperti kandungan Q.S. al-Kahfi/18: 103-104 ",
@@ -604,14 +603,14 @@ class Bab_1 extends StatelessWidget {
                     ParagrafWidget(
                         content:
                             "   Kita juga diingatkan oleh Q.S. Fāthir/35: 8 bahwa setan mudah memengaruhi orang-orang yang tidak berilmu, sehingga ia menganggap perbuatannya--sekalipun salah--menjadi benar, “Maka apakah orang yang ditipu itu menganggap baik pekerjaannya yang buruk, sehingga ia meyakini bahwa pekerjaannya itu baik?”."),
-                    SizedBox(
+                    const SizedBox(
                       height: 4,
                     ),
 
                     RichText(
                       text: TextSpan(
                         style: regular_paragraf,
-                        children: <TextSpan>[
+                        children: const <TextSpan>[
                           TextSpan(
                               text:
                                   "   Sebuah doa yang selalu kita panjatkan, "),
@@ -802,7 +801,7 @@ class Bab_1 extends StatelessWidget {
                       height: 280, // Atur// Atur tinggi sesuai kebutuhan
                       child: PilihanGandaSoal(daftarSoal: pilihanGanda),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Text(

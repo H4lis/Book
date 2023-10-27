@@ -40,7 +40,7 @@ class Bab2 extends StatelessWidget {
   Widget build(BuildContext context) {
     YoutubePlayerController _controller = YoutubePlayerController(
       initialVideoId: 'xbiScpFK3gs', 
-      flags: YoutubePlayerFlags(
+      flags: const YoutubePlayerFlags(
         autoPlay: false
       )
     );
@@ -56,17 +56,17 @@ class Bab2 extends StatelessWidget {
               contentImage: "bab_2",
               description:
                   "Bukti Beriman: Memenuhi Janji, Mensyukuri Nikmat, Memelihara Lisan, Menutupi Aib Orang Lain"),
-         ATujuan(),
+         const ATujuan(),
           ParagrafWidget(content: "Peserta didik dapat: "),
           ParagrafList(idlist: tujuanPembelajaran),
-         BKata(),
+         const BKata(),
           BagroundOrangeKataKunci(idlist: kataKunciBab2),
-       CInfo(),
+       const CInfo(),
           Image.asset(
             "assets/images/infografis2.png",
           ),
-              SizedBox(height: 10,),
-                SizedBox(height: 10,),
+              const SizedBox(height: 10,),
+                const SizedBox(height: 10,),
                  YoutubePlayer(
             controller: _controller,
             showVideoProgressIndicator: true,  
@@ -74,7 +74,7 @@ class Bab2 extends StatelessWidget {
         
             },
           ),
-    DAyo(),
+    const DAyo(),
           ParagrafList(idlist: ayoTadarus),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 8),
@@ -112,16 +112,16 @@ class Bab2 extends StatelessWidget {
                         style: regular_paragraf,
                         textAlign: TextAlign.justify,
                       ),
-                      QuranWidget(
+                      const QuranWidget(
                           arab:
                               "يٰٓاَيُّهَا الَّذِيْنَ اٰمَنُوْٓا اَوْفُوْا بِالْعُقُوْدِۗ اُحِلَّتْ لَكُمْ بَهِيْمَةُ الْاَنْعَامِ اِلَّا مَا يُتْلٰى عَلَيْكُمْ غَيْرَ مُحِلِّى الصَّيْدِ وَاَنْتُمْ حُرُمٌۗ اِنَّ اللّٰهَ يَحْكُمُ مَا يُرِيْدُ   (الماَئدة/٥:ا)"),
-                      VoicePlayOrange(
+                      const VoicePlayOrange(
                           audioUrl:
                               "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F02%20al-Maidah%2001.mp3?alt=media&token=911a3f1e-f751-420d-8bdb-88b50692e917"),
-                      QuranWidget(
+                      const QuranWidget(
                           arab:
                               "يٰٓاَيُّهَا الَّذِيْنَ اٰمَنُوا اجْتَنِبُوْا كَثِيْرًا مِّنَ الظَّنِّۖ اِنَّ بَعْضَ الظَّنِّ اِثْمٌ وَّلَا تَجَسَّسُوْا وَلَا يَغْتَبْ بَّعْضُكُمْ بَعْضًاۗ اَيُحِبُّ اَحَدُكُمْ اَنْ يَّأْكُلَ لَحْمَ اَخِيْهِ مَيْتًا فَكَرِهْتُمُوْهُۗ وَاتَّقُوا اللّٰهَ ۗاِنَّ اللّٰهَ تَوَّابٌ رَّحِيْمٌ    (الحجرٰت/٩٤: ١٢)"),
-                      VoicePlayOrange(
+                      const VoicePlayOrange(
                           audioUrl:
                               "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F02%20al-Hujur%C4%81t%2012.mp3?alt=media&token=a7de73fa-36cb-4436-91f2-80ba1b7bd071")
                     ],
@@ -130,13 +130,13 @@ class Bab2 extends StatelessWidget {
               ],
             ),
           ),
-     ETadabb(),
+     const ETadabb(),
           const AktivitasWidget(
               activityTitle: "Aktivitas 2.2",
               contentText:
                   "Amati gambar atau ilustrasi berikut ini! Lalu berilah tanggapan kalian yang dikaitkan dengan materi ajar yang dipelajari, yakni: Memenuhi Janji, Mensyukuri Nikmat, Memelihara Lisan, dan Menutupi Aib Orang Lain."),
           Tadabbur(idlist: tadabburdua),
-        FKisah(),
+        const FKisah(),
           const AktivitasWidget(
               activityTitle: "Aktivitas 2.3",
               contentText:
@@ -145,7 +145,7 @@ class Bab2 extends StatelessWidget {
             height: 10,
           ),
           Container(
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
               color: bagroundDarkOrange,
               borderRadius: BorderRadius.circular(10),
@@ -181,7 +181,7 @@ class Bab2 extends StatelessWidget {
       ),
       TextSpan(text: "\"Kalian tak akan masuk surga, sampai kalian beriman dan saling mencintai. Maukah kalian aku tunjukkan satu amalan, jika dilakukan membuat kalian saling mencintai? Itu adalah sebarkan salam\"", style: regular_paragraf.copyWith(fontStyle: FontStyle.italic)),
       
-      TextSpan(
+      const TextSpan(
         text: ' (HR. Muslim).',
  
       ),
@@ -218,7 +218,7 @@ ParagrafWidget(content: "   Berlandaskan Hadis tersebut, selain iman, syarat mas
         RichText(text:TextSpan(
           style: regular_paragraf,
           children: <TextSpan>[
-            TextSpan(
+            const TextSpan(
               text: "   M. Quraish Shihab dalam karyanya ”Mutiara Hati” memaparkan bahwa ",
 
             ),
@@ -231,7 +231,7 @@ ParagrafWidget(content: "   Berlandaskan Hadis tersebut, selain iman, syarat mas
               content:
                   "   Al-Qur’án menggariskan, misalnya yang tersurat dalam Q.S. al-A’rāf/7: 96, Q.S. Ibrahīm/14: 23, dan Q.S. Yūnus/10: 9, bahwa orang beriman yang dibarengi dengan amal shaleh (sebagai realisasi Syariah dan Akhlak), dijanjikan kehidupan dunianya penuh dengan kebahagiaan, keberkahan, kemuliaan, dan di akhirat nanti dimasukkan ke dalam surga. Di samping itu, Rasulullah Saw. juga bersabda:"),
           // const VoicePlay(),
-          QuranWidget(
+          const QuranWidget(
               arab:
                   "اَلْاءِيْمَانُ بِضْعٌ وَسِتُّوْنَ شُعْبَةً وَالْحَيَاءُ شُعْبَةً مِنَ الْاءِيْمَانِ   (رواه البخاري)"),
           const Terjemahan(
@@ -250,10 +250,10 @@ ParagrafWidget(content: "   Berlandaskan Hadis tersebut, selain iman, syarat mas
           ParagrafWidget(
               content:
                   "   Menurut bahasa, akad berarti perjanjian atau ikatan yang kuat. Jadi memenuhi janji merupakan kewajiban dan menjadi tanda orang itu beriman atau tidak. Itu sebabnya, jika dikaitkan dengan makna bahasa, maka janji itu harus ditepati dan dipenuhi, dan kita diingatkan bahwa setiap janji akan diminta pertanggung jawaban, sebagaimana Firman Allah Swt.:"),
-          QuranWidget(
+          const QuranWidget(
               arab:
                   " وَاَوْفُوْا بِالْعَهْدِۖ اِنَّ الْعَهْدَ كَانَ مَسْـُٔوْلًا (الاسراَء/١٧: ٣٤) ..."),
-          VoicePlay(
+          const VoicePlay(
               audioUrl:
                   "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F02%20al-Isra%2034.mp3?alt=media&token=bfdff096-c7de-4d5b-bee9-1baa5c299bf7"),
           const Terjemahan(
@@ -283,10 +283,10 @@ ParagrafWidget(content: "   Berlandaskan Hadis tersebut, selain iman, syarat mas
           ParagrafWidget(
               content:
                   "Mungkin terasa ganjil dan ada yang bertanya, kapan saya berjanji kepada Allah Swt. Jawabannya, ternyata sudah dijelaskan di dalam Al-Qur’an, bahwa semua manusia tak terkecuali pernah melakukan penjanjian kepada Allah Swt. (di alam ruh/rahim) dan bentuk janjinya adalah nanti jika sudah di dunia akan mengimani Allah sebagai Rabb-Nya dan berjanji menjadi hamba-Nya yang taat. Sebagaimana firmannya:"),
-          QuranWidget(
+          const QuranWidget(
               arab:
                   "وَاِذْ اَخَذَ رَبُّكَ مِنْۢ بَنِيْٓ اٰدَمَ مِنْ ظُهُوْرِهِمْ ذُرِّيَّتَهُمْ وَاَشْهَدَهُمْ عَلٰٓى اَنْفُسِهِمْۚ اَلَسْتُ بِرَبِّكُمْۗ قَالُوْا بَلٰىۛ شَهِدْنَا ۛاَنْ تَقُوْلُوْا يَوْمَ الْقِيٰمَةِ اِنَّا كُنَّا عَنْ هٰذَا غٰفِلِيْنَۙ    (الاعراف/٧: ١٧٢)"),
-          VoicePlay(
+          const VoicePlay(
               audioUrl:
                   "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F02%20al-A%E2%80%99raf7%20172.mp3?alt=media&token=8a15a2a3-abe9-4ab5-acc4-19bfb8c81bb1"),
           const Terjemahan(
@@ -330,10 +330,10 @@ ParagrafWidget(content: "   Berlandaskan Hadis tersebut, selain iman, syarat mas
           ParagrafWidget(
               content:
                   "Ada 2 kata dasar yang digunakan, yakni: Syukur dan Nikmat. Syukur, menurut bahasa berarti membuka atau menampakkan. Lawan dari syukur adalah kufur yang berarti menutup dan menyembunyikan. Perhatikan Q.S. Ibrahīm/14: 7, yaitu: "),
-          QuranWidget(
+          const QuranWidget(
               arab:
                   "وَاِذْ تَاَذَّنَ رَبُّكُمْ لَىِٕنْ شَكَرْتُمْ لَاَزِيْدَنَّكُمْ وَلَىِٕنْ كَفَرْتُمْ اِنَّ عَذَابِيْ لَشَدِيْدٌ    (ابرٰهيم /١٤: ٧)"),
-          VoicePlay(
+          const VoicePlay(
               audioUrl:
                   "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F02%20Ibrah%C4%ABm%207.mp3?alt=media&token=07ae6498-a93a-4b7b-b49f-ca71b9be5238"),
           const Terjemahan(
@@ -391,10 +391,10 @@ ParagrafWidget(content: "   Berlandaskan Hadis tersebut, selain iman, syarat mas
               content:
                   "   Jadi, kembali kepada kalian semua. Jika kalian menjadi hamba yang bersyukur, maka manfaat dan maslahatnya, kembali ke Anda sendiri. Sebaliknya, jika kalian kufur, maka tunggulah kegagalan dan kesengsaraan dunia, apalagi pedihnya neraka, akan kalian rasakan sendiri (Q.S. Ibrahīm/14: 7)."),
           ParagrafWidget(content: "Allah Swt. juga berfirman:"),
-          QuranWidget(
+          const QuranWidget(
               arab:
                   "وَلَقَدْ اٰتَيْنَا لُقْمٰنَ الْحِكْمَةَ اَنِ اشْكُرْ لِلّٰهِ ۗوَمَنْ يَّشْكُرْ فَاِنَّمَا يَشْكُرُ لِنَفْسِهٖۚ وَمَنْ كَفَرَ فَاِنَّ اللّٰهَ غَنِيٌّ حَمِيْدٌ    (لقمٰن/ا٣: ١٢)"),
-          VoicePlay(
+          const VoicePlay(
               audioUrl:
                   "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F02%20Luqman%2012.mp3?alt=media&token=727e1a8c-0094-4f1a-92b4-43564d53e2d5"),
           const Terjemahan(
@@ -415,10 +415,10 @@ ParagrafWidget(content: "   Berlandaskan Hadis tersebut, selain iman, syarat mas
           ParagrafWidget(
               content:
                   "   Berlandaskan paparan tersebut, lidah dan lisan kita harus tetap dijaga dengan baik (Q.S. al-Ahzāb/33: 70-71). Tipis sekali perbedaan antara bahagia dan celaka serta senang susah, hanya dari penggunaan lidah. Apalagi jika dikaitkan dengan ajaran Islam yang sudah memberi rambu-rambu dalam penggunan lidah. Kita diingatkan oleh Allah Swt. dengan fiman-Nya, yakni:"),
-          QuranWidget(
+          const QuranWidget(
               arab:
                   "يَّوْمَ تَشْهَدُ عَلَيْهِمْ اَلْسِنَتُهُمْ وَاَيْدِيْهِمْ وَاَرْجُلُهُمْ بِمَا كَانُوْا يَعْمَلُوْنَ    (النّور/٢٤: ٢٤)"),
-          VoicePlay(
+          const VoicePlay(
               audioUrl:
                   "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F02%20an-Nur%2024.mp3?alt=media&token=9a2b2d0f-9130-41a9-805a-5fd388149e87"),
 
@@ -434,10 +434,10 @@ ParagrafWidget(content: "   Berlandaskan Hadis tersebut, selain iman, syarat mas
               content:
                   "   Bahkan di ayat lain (khususnya di Q.S. Yāsīn), lisan dan mulut akan dikunci, termasuk diingatkan juga, bahwa lisan itu adalah anugerah Allah, kita semua dapat berbicara juga atas karunianya, lalu kenapa disalahgunakan? (perhatikan isi kandungan Q.S. Fushshilat/41: 21). "),
           ParagrafWidget(content: "Allah Swt. berfirman di Q.S. Yāsīn/36: 65"),
-          QuranWidget(
+          const QuranWidget(
               arab:
                   "اَلْيَوْمَ نَخْتِمُ عَلٰٓى اَفْوَاهِهِمْ وَتُكَلِّمُنَآ اَيْدِيْهِمْ وَتَشْهَدُ اَرْجُلُهُمْ بِمَا كَانُوْا يَكْسِبُوْنَ    (يٰسَ/٣٦: ٦٥)"),
-          VoicePlay(
+          const VoicePlay(
               audioUrl:
                   "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F02%20Yasin%2065.mp3?alt=media&token=802cff87-0dad-436e-bff8-f12cb517c199"),
           const Terjemahan(
@@ -448,7 +448,7 @@ ParagrafWidget(content: "   Berlandaskan Hadis tersebut, selain iman, syarat mas
           ParagrafWidget(
               content:
                   "   Rasulullah Saw. juga mengingatkan kita, bahwa keselamatan manusia tergantung pada kemampuannya dalam menjaga lisannya. Seperti makna dasar Islam sendiri yang berarti selamat dan aman. Semua itu, mengajarkan kepada kita bahwa lidah dan lisan ini, harus digunakan dengan benar, sehingga diri sendiri terselamatkan, apalagi pihak lain. Rasulullah Saw. bersabda: "),
-          QuranWidget(
+          const QuranWidget(
               arab:
                   "عَنْ أَبِي هُرَيْرَةَرَضِيَ اللّٰهُ عَنْهُ،قَالَ:قَالَ رَسُوْلُ اللّٰهِ صَلَّ اللّٰهُ عَلَيْهِ وَسَلَّمَ:مَنْ كَا نَ يُؤْمِنُ بِاللّٰهِ وَاليَوْمِ الآخِرِ فَلْيَقُلْ خَيْرًا أَوْلِيَصْمُتْ   (رواه البخاري)"),
 
@@ -465,11 +465,11 @@ ParagrafWidget(content: "   Berlandaskan Hadis tersebut, selain iman, syarat mas
               content:
                   "   Fitnah adalah bahasa Arab yang terdapat dalam al-Qur’an dan dipakai oleh orang Indonesia, tetapi makna fitnah yang dipahami oleh orang Indonesia berbeda dengan makna fitnah yang terdapat dalam Al-Qur’an. Dalam Al-Qur’an kata fitnah memiliki beberapa arti, antara lain cobaan, ujian, musibah dan ada juga yang berarti siksa di akhirat, seperti terdapat dalam Surah al-Baqarah ayat 217: "),
 
-          QuranWidget(arab: "(وَالْفِتْنَةُ اَكْبَرُ مِنَ الْقَتْلِ )"),
-          VoicePlay(
+          const QuranWidget(arab: "(وَالْفِتْنَةُ اَكْبَرُ مِنَ الْقَتْلِ )"),
+          const VoicePlay(
               audioUrl:
                   "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F02%20al-Baqarah%20217.mp3?alt=media&token=d71fb75b-739f-4aa8-86e6-0335d14f7208"),
-          Terjemahan(
+          const Terjemahan(
               content:
                   "siksa bagi orang kafir kelak di akhirat lebih besar dari pada pembunuhan. Demikian penjelasan M. Quraish Shihab.",
               riwayat: ""),
@@ -515,7 +515,7 @@ ParagrafWidget(content: "   Berlandaskan Hadis tersebut, selain iman, syarat mas
           ParagrafWidget(
               content:
                   "   Hadis berikut ini, menambah pemahaman kita tentang ketiga istilah tersebut, yaitu: "),
-          QuranWidget(
+          const QuranWidget(
               arab:
                   "عَنْ أَبِي هُرَيْرَةَ أَنَّ رَسُوْلَ اللّٰهِ صلَّ اللّٰهُ عَلَيْهِ وَسَلَّمَ قَالَ:أَتَدْرُوْنَ مَا الْغِيْبَةُ قَالُوْا: اللّٰهُ وَرَسُوْلُهُ أَعْلَمُ قَالَ: ذِكْرُكَ أَخَاكَ بِمَا يَكْرَهُ قِيْلَ أَفَرَأَيْتَ إِنْ كَانَ فِيْ أَخِيْ مَا أَقُولُ قَالَ: إِنْ كَانَ فِيْهِ مَا تَقُوْلُ فَقَدِ اغْتَبْتَهُ وَإِنْ لَمْ يَكُنْ فِيهِ فَقَدْ بَهَتَّهُ   (رواه مسلم)"), // const VoicePlay(),
           const Terjemahan(
@@ -584,10 +584,10 @@ ParagrafWidget(content: "   Berlandaskan Hadis tersebut, selain iman, syarat mas
               content:
                   "   Tersimpul, bahwa aib itu harus ditutupi. Jangan mudah menggerakkan jari yang dikaitkan dengan medsos. Teliti dan selektiflah dalam menerima informasi. Jika itu benar, share! Sebaliknya, jika tidak, ya jangan dishare. Begitu juga, tercela sekali, jika ada orang yang mencari-cari kesalahan atau aib seseorang. Kita diingatkan oleh Allah Swt. melalui firmannya, yaitu:"),
    
-          QuranWidget(
+          const QuranWidget(
               arab:
                   "يٰٓاَيُّهَا الَّذِيْنَ اٰمَنُوا اجْتَنِبُوْا كَثِيْرًا مِّنَ الظَّنِّۖ اِنَّ بَعْضَ الظَّنِّ اِثْمٌ وَّلَا تَجَسَّسُوْا وَلَا يَغْتَبْ بَّعْضُكُمْ بَعْضًاۗ اَيُحِبُّ اَحَدُكُمْ اَنْ يَّأْكُلَ لَحْمَ اَخِيْهِ مَيْتًا فَكَرِهْتُمُوْهُۗ وَاتَّقُوا اللّٰهَ ۗاِنَّ اللّٰهَ تَوَّابٌ رَّحِيْمٌ    (الحجرٰت/٤٩: ١٢)"),
-          VoicePlay(
+          const VoicePlay(
               audioUrl:
                   "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F02%20al-Hujur%C4%81t%2012.mp3?alt=media&token=a7de73fa-36cb-4436-91f2-80ba1b7bd071"),
           const Terjemahan(
@@ -599,7 +599,7 @@ ParagrafWidget(content: "   Berlandaskan Hadis tersebut, selain iman, syarat mas
               content:
                   "   Melalui ayat ini, Allah Swt. melarang orang beriman melakukan prasangka buruk, mencari-cari kesalahan pihak lain, dan melarang bergunjing. Bahkan, bagi yang gemar bergunjing diumpamakan seperti orang yang memakan daging saudaranya yang sudah meninggal. Sungguh perilaku yang bukan saja menimbulkan dosa, tetapi juga amat menjijikkan. Rasulullah Saw Bersabda:"),
 
-          QuranWidget(
+          const QuranWidget(
               arab:
                   "عَنْ أَبِي هُرَيْرَةَ قَالَ: قَالَ رَسُوْلُ اللّٰهِ صَلَّ اللّٰهُ عَلَيْهِ وَسَلَّمَ: مَنْ ستَرَ عَلَ مُسْلِمٍ، سَتَرَهُ اللّٰهُ فِي الدُّنْيَا وَالآخِرَةِ   (رواه مسله)"),
           const Terjemahan(
@@ -656,7 +656,7 @@ ParagrafWidget(content: "   Berlandaskan Hadis tersebut, selain iman, syarat mas
           Refleksi(
               content:
                   "Sejak manusia berada di bumi, Allah Swt. terus menerus menurunkan rahmat dan nikmatnya, sehingga bumi tetap dapat memberikan segala kebutuhan manusia. \n\nNamun, kenapa di dunia ini, masih ada kelaparan dan kemiskinan. Coba lakukan telaah, kenapa bisa terjadi seperti itu! Jawabannya cukup 1 lembar saja yang diperkaya dengan data, gambar, atau ilustrasi!"),
-       JRangkum(),
+       const JRangkum(),
           Container(
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
@@ -665,7 +665,7 @@ ParagrafWidget(content: "   Berlandaskan Hadis tersebut, selain iman, syarat mas
               ),
               child: ParagrafList(idlist: rangkuman2)),
 
-         KPenilai(),
+         const KPenilai(),
   
           TabelPanilaianSikap(idlist: tabelPenSikap2),
 
@@ -678,7 +678,7 @@ ParagrafWidget(content: "   Berlandaskan Hadis tersebut, selain iman, syarat mas
             child: PilihanGandaSoal(daftarSoal: pilihanGanda2),
           ),
 
-          Jawablah(),
+          const Jawablah(),
           ParagrafList(idlist: soalUraian),
           const Heading2(title: "3. Penilaian Keterampilan"),
           Heading3(title: "a. Penilaian Proyek"),
@@ -700,7 +700,7 @@ ParagrafWidget(content: "   Berlandaskan Hadis tersebut, selain iman, syarat mas
               content:
                   "Syukur menjadi kunci utama dari kebahagiaan. Kenapa manusia modern saat ini, yang jika dikaji dari kemudahan hidup dan berlimpahnya barangbarang sandang, pangan, dan papan, namun hidupnya menjadi terasing, semakin lupa bahkan ingkar kepada Allah Swt. Lakukan analisis yang mendalam tentang problematika tersebut. Perkaya analisa kalian dengan kisah-kisah nyata.\n\nBoleh ditulis tangan, atau cara yang lain. Cukup 1-2 lembar saja. Jangan lupa, sertakan sumber rujukannya ya!"),
 
-          Pembatas(),
+          const Pembatas(),
         ],
       ),
     );

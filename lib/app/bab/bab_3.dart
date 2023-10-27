@@ -45,7 +45,7 @@ class Bab3 extends StatelessWidget {
 
     YoutubePlayerController _controller = YoutubePlayerController(
       initialVideoId: 'PJcxtl5c2cw', 
-      flags: YoutubePlayerFlags(
+      flags: const YoutubePlayerFlags(
         autoPlay: false
       )
     );
@@ -71,8 +71,8 @@ class Bab3 extends StatelessWidget {
           Image.asset(
             "assets/images/infografis3.jpg",
           ),
-              SizedBox(height: 10,),
-                SizedBox(height: 10,),
+              const SizedBox(height: 10,),
+                const SizedBox(height: 10,),
                  YoutubePlayer(
             controller: _controller,
             showVideoProgressIndicator: true,  
@@ -786,13 +786,13 @@ class Bab3 extends StatelessWidget {
           child: RichText(text: TextSpan(
             style: regular_paragraf,
             children: <TextSpan>[
-              TextSpan(text: "Narkoba adalah singkatan dari "),
+              const TextSpan(text: "Narkoba adalah singkatan dari "),
               TextSpan(text: "nar ", style: regular_paragraf.copyWith(fontWeight: FontWeight.w600,fontStyle:FontStyle.italic), ),
-              TextSpan(text: "= Narkoba; "),
+              const TextSpan(text: "= Narkoba; "),
               TextSpan(text: "ko ",style: regular_paragraf.copyWith(fontWeight: FontWeight.w600,fontStyle:FontStyle.italic)),
-              TextSpan(text: "= Psikotropika; dan "),
+              const TextSpan(text: "= Psikotropika; dan "),
               TextSpan(text: "ba ",style: regular_paragraf.copyWith(fontWeight: FontWeight.w600,fontStyle:FontStyle.italic)),
-              TextSpan(text: "= Bahan-bahan adiktif (alkohol, rokok, kopi, dan lain sebagainya). "),
+              const TextSpan(text: "= Bahan-bahan adiktif (alkohol, rokok, kopi, dan lain sebagainya). "),
             ]
           ), textAlign: TextAlign.justify,)
         )

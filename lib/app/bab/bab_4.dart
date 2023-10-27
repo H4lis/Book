@@ -45,7 +45,7 @@ class Bab4 extends StatelessWidget {
   Widget build(BuildContext context) {
      YoutubePlayerController _controller = YoutubePlayerController(
       initialVideoId: 'd1JHqQLm36o', 
-      flags: YoutubePlayerFlags(
+      flags: const YoutubePlayerFlags(
         autoPlay: false
       )
     );
@@ -72,7 +72,7 @@ class Bab4 extends StatelessWidget {
           Image.asset(
             "assets/images/infografis4.jpg",
           ),
-          SizedBox(height: 10,),
+          const SizedBox(height: 10,),
                  YoutubePlayer(
             controller: _controller,
             showVideoProgressIndicator: true,  
@@ -118,16 +118,16 @@ class Bab4 extends StatelessWidget {
                         style: regular_paragraf,
                         textAlign: TextAlign.justify,
                       ),
-                      QuranWidget(
+                      const QuranWidget(
                           arab:
                               "وَلْتَكُنْ مِّنْكُمْ اُمَّةٌ يَّدْعُوْنَ اِلَى الْخَيْرِ وَيَأْمُرُوْنَ بِالْمَعْرُوْفِ وَيَنْهَوْنَ عَنِ الْمُنْكَرِ ۗ وَاُولٰۤىِٕكَ هُمُ الْمُفْلِحُوْنَ   (اٰل عمران/٣ :١٠٤)"),
-                      VoicePlayOrange(
+                      const VoicePlayOrange(
                           audioUrl:
                               "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F04%20Ali-Imr%C4%81n%20104.mp3?alt=media&token=18b4826f-604a-4084-b119-57c943d1f6ea"),
-                      QuranWidget(
+                      const QuranWidget(
                           arab:
                               "اُدْعُ اِلٰى سَبِيْلِ رَبِّكَ بِالْحِكْمَةِ وَالْمَوْعِظَةِ الْحَسَنَةِ وَجَادِلْهُمْ بِالَّتِيْ هِيَ اَحْسَنُۗ اِنَّ رَبَّكَ هُوَ اَعْلَمُ بِمَنْ ضَلَّ عَنْ سَبِيْلِهٖ وَهُوَ اَعْلَمُ بِالْمُهْتَدِيْنَ   (النحل/١٦ :١٢٥) "),
-                      VoicePlayOrange(
+                      const VoicePlayOrange(
                           audioUrl:
                               "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F04%20%20al-Nahl%20125.mp3?alt=media&token=fccdd810-8048-4574-859f-8eec60fb163c&_gl=1*15ovhrq*_ga*ODY4Mjc1MjUwLjE2OTE2NDUxNjU.*_ga_CW55HF8NVT*MTY5NTg2MDg5MS41My4xLjE2OTU4NjA5MjcuMjQuMC4w")
                     ],
@@ -200,7 +200,7 @@ class Bab4 extends StatelessWidget {
               ],
             ),
           ),
-          GWawasan(),
+          const GWawasan(),
           const AktivitasWidget(
               activityTitle: "Aktivitas 4.4",
               contentText:
@@ -224,7 +224,7 @@ class Bab4 extends StatelessWidget {
           ParagrafWidget(
               content:
                   "   Belajar dari Sirah Rasulullah Saw., kita mendapatkan banyak hikmah tentang bagaimana Islam itu harus dibawa dan diperjuangkan. Islam diajarkan oleh beliau dengan kelemahlembutan, santun, damai dan akhlak yang baik. Bahkan tidak pernah menggunakan cara-cara tetor dan menakutkan. Melalui cara seperti itu, akhirnya banyak pihak atau kelompok yang awalnya antipati kepada Islam, berubah menjadi pemeluk dan pembela Islam yang sejati. Sabda Rasulullah Saw.:"),
-          QuranWidget(
+          const QuranWidget(
               arab:
                   "إِنَّ اللَّهَ رَفِيْقٌ يُحِبُّ الرِّفْقَ فِيْ الأَ مْرِكُلِّهِ   (رواه البخاري)"),
           const Terjemahan(
@@ -282,10 +282,10 @@ class Bab4 extends StatelessWidget {
               content:
                   "   Faktor tersebut yang kini banyak menjangkiti para dai, sehingga hasil dakwah tidak banyak memberi pengaruh positif dalam perbaikan kualitas keberagamaan masyarakat, apalagi jika dikaitkan dengan gejala munculnya para dai yang dibesarkan oleh media, misalnya para dai yang biasa dipanggil dengan sebutan ustad seleb (Perhatikan kandungan isi Q.S. ash-Shaf/61: 2-3)."),
           Heading3(title: "b. Dalil Perlunya Dakwah"),
-          QuranWidget(
+          const QuranWidget(
               arab:
                   "وَلْتَكُنْ مِّنْكُمْ اُمَّةٌ يَّدْعُوْنَ اِلَى الْخَيْرِ وَيَأْمُرُوْنَ بِالْمَعْرُوْفِ وَيَنْهَوْنَ عَنِ الْمُنْكَرِ ۗ وَاُولٰۤىِٕكَ هُمُ الْمُفْلِحُوْنَ   (اٰل عمران/٣ :١٠٤) "),
-          VoicePlayOrange(
+          const VoicePlayOrange(
               audioUrl:
                   "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F04%20Ali-Imr%C4%81n%20104.mp3?alt=media&token=18b4826f-604a-4084-b119-57c943d1f6ea"),
           const Terjemahan(
@@ -321,10 +321,10 @@ class Bab4 extends StatelessWidget {
               content:
                   "Adab atau etika dakwah yang harus diperhatikan, antara lain:"),
           ParagrafList(idlist: adabBerd),
-          QuranWidget(
+          const QuranWidget(
               arab:
                   "اُدْعُ اِلٰى سَبِيْلِ رَبِّكَ بِالْحِكْمَةِ وَالْمَوْعِظَةِ الْحَسَنَةِ وَجَادِلْهُمْ بِالَّتِيْ هِيَ اَحْسَنُۗ اِنَّ رَبَّكَ هُوَ اَعْلَمُ بِمَنْ ضَلَّ عَنْ سَبِيْلِهٖ وَهُوَ اَعْلَمُ بِالْمُهْتَدِيْنَ   (النحل/١٦ :١٢٥) "),
-          VoicePlayOrange(
+          const VoicePlayOrange(
               audioUrl:
                   "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F04%20%20al-Nahl%20125.mp3?alt=media&token=fccdd810-8048-4574-859f-8eec60fb163c&_gl=1*15ovhrq*_ga*ODY4Mjc1MjUwLjE2OTE2NDUxNjU.*_ga_CW55HF8NVT*MTY5NTg2MDg5MS41My4xLjE2OTU4NjA5MjcuMjQuMC4w"),
           const Terjemahan(
@@ -356,7 +356,7 @@ class Bab4 extends StatelessWidget {
           
           style: regular_paragraf,
           children: <TextSpan>[
-          TextSpan(text: "   Keberhasilan tersebut dinilai secara tepat oleh Sir George Bernard Shaw dalam karyanya "),
+          const TextSpan(text: "   Keberhasilan tersebut dinilai secara tepat oleh Sir George Bernard Shaw dalam karyanya "),
         TextSpan(text: "\“The Genuine Islam”: (Muhammad Saw.) sukses mengubah Jazirah Arab dari paganisme dan pemuja makhluk menjadi para pemuja Tuhan, dari peperangan dan perpecahan antar suku menjadi umatyang bersatu, dari kaum pemabuk dan pengacau menjadi kaum pemikir dan penyabar, dari kaum yang tidak berhukum dan anarkis menjadi kaum yang teratur … . Sejarah manusia yang tidak pernah terjadi atau sedahsyat ini, dan bayangkan ini terjadi hanya dalam waktu 23 tahun.\”",style: regular_paragraf.copyWith(fontStyle: FontStyle.italic)),
         ]
           
@@ -490,14 +490,14 @@ class Bab4 extends StatelessWidget {
           ParagrafList(idlist: syaratKhutbah),
           Heading3(title: "c. Syarat-syarat dua khutbah"),
           ParagrafList(idlist: syarat2khutbah),
-          QuranWidget(
+          const QuranWidget(
               arab:
                   " عَنْ جَابِرِ بْنِ سَمُرَةَ أَنَّ النَّبِيَّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ كَانَ يَخْطُبُ قَائِمًا ، وَيَجْلِسُ بَيْنَ الْخُطْبَتَيْنِ   (رواه احمد)"),
           const Terjemahan(
               content:
                   "Dari Jabir bin Samurah sesungguhnya Nabi Saw. berkhutbah dengan berdiri dan beliau duduk di antara dua khutbah”",
               riwayat: " (H.R. Ahmad)."),
-          QuranWidget(
+          const QuranWidget(
               arab:
                   "عَنْ جَابِرِ بْنِ عَبْدِ اللهِ ، قَالَ: كَانَ رَسُوْلُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ إِذَا خَطَبَ احْمَرَّتْ عَيْنَاهُ ، وَعَلَا صَوْتُهُ، وَاشْتَدَّ غَضَبُهُ ، حَتَّى كَأَنَّهُ مُنْذِرُ جَيْشِ يَقُولُ : صَبَّحَكُمْ وَمَسَاكُمْ   (رواه مسلم)"),
           const Terjemahan(
@@ -517,10 +517,10 @@ class Bab4 extends StatelessWidget {
             padding: const EdgeInsets.only(left: 21),
             child: Column(
               children: [
-                QuranWidget(
+                const QuranWidget(
                     arab:
                         "يٰٓاَيُّهَا الَّذِيْنَ اٰمَنُوْٓا اِذَا نُوْدِيَ لِلصَّلٰوةِ مِنْ يَّوْمِ الْجُمُعَةِ فَاسْعَوْا اِلٰى ذِكْرِ اللّٰهِ وَذَرُوا الْبَيْعَۗ ذٰلِكُمْ خَيْرٌ لَّكُمْ اِنْ كُنْتُمْ تَعْلَمُوْنَ   (الجمعة/٢٦ :٩)   "),
-                VoicePlay(
+                const VoicePlay(
                     audioUrl:
                         "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F04%20al-Jumu%E2%80%99ah%209.mp3?alt=media&token=2cbfe340-b598-4621-b17b-015972ea64c9&_gl=1*odbfss*_ga*ODY4Mjc1MjUwLjE2OTE2NDUxNjU.*_ga_CW55HF8NVT*MTY5NTg2MDg5MS41My4xLjE2OTU4NjI0NzEuNTMuMC4w"),
                 const Terjemahan(
@@ -545,7 +545,7 @@ class Bab4 extends StatelessWidget {
               no: "4",
               content:
                   "Mendengarkan khutbah dengan seksama. Jangan berbicara, termasuk menegur jamaah lain, apalagi mengantuk atau tidur, akibatnya jum’atnya menjadi sia-sia, termasuk tidak memahami isi khutbah. Sabda Rasulullah Saw.:s"),
-          QuranWidget(
+          const QuranWidget(
               arab:
                   "أَنَّ أَبَاهُرَيْرَةَ ، أَخْبَرَهُ: أَنَّ رَسُوْلَ اللّٰهِ صَلَّ اللّٰهُ عَلَيْهِ وَسَلَّمَ قَالَ: إِذَا قُلْتَ لِصَاحِبِكَ يَوْمَ الجُمُعَةِ: أَنْصِتْ، وَالاءِمَامُ يَخْطُبُ، فَقَدْ لَغَوْتَ   (رواه البخاري)"),
           const Padding(
@@ -565,19 +565,19 @@ class Bab4 extends StatelessWidget {
                   "Materi khutbah, hendaklah disesuaikan dengan situasi dan kondisi yang sedang aktual atau terkini, yang diperkuat dengan rujukan atau dalil yang kuat, khususnya yang bersumber dari Al-Qur’an dan Hadis."),
           const ParagrafListCostum(
               no: "5", content: "Penutup khutbah I (Pertama), contohnya:"),
-          QuranWidget(
+          const QuranWidget(
               arab:
                   "َبارَكَ اللهُ لِيْ وَلَكُمْ فِي الْقُرْاٰنِ الْعَظِيْمِ وَنَفَعَنِى وَإِيَّاكُمْ بِمَا فِيْهِ مِنَ الْاٰيَاتِ وَالذِّكْرِالْحَكِيْمِ وَتَقَبَّلَ مِنِّيْ وَمِنْكُمْ تِلَاوَتَهُ إِنَّهُ هُوَ السَّمِيْعُ الْعَلِيْمُ اَقُوْلُ قَوْلِي هَذاَ وَاسْتَغْفِرُ وَلَكُمْ وَلِسَائِرِ الْمُسْلِمِيْنَ وَالْمُسْلِمَاتِ وَالْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ فَاسْتَغْفِرُوْهُ إِنَّهُ هُوَ الْغَفُوْرُ الرَّحِيْمُ"),
           Heading3(title: "h. Praktik Khutbah II (Kedua)"),
           ParagrafList(idlist: khutbah2),
-          QuranWidget(
+          const QuranWidget(
               arab:
                   "اَلْحَمْدُ لِلّٰهِ حَمْدًا كَثِيْرًا كَمَا آمَرَ، وَاَشْهَدُ اَنْ لَّا اِلٰهَ اِلَّا اللهُ وَحْدَهُ لاَ شَرِيْكَ لَهُ اِرْغَامًا لِمَنْ جَحَدَ بِهِ وَكَفَرَ. وَأَشْهَدُ اَنَّ سَيِّدَنَا مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ سَيِّدُ الْإِنْسِ وَالْبَشَرِ. اَللَّهُمَّ صَلِّ وَسَلِّمْ عَلٰى سَيّدِنَا مُحَمَّدٍ وَعَلٰى اٰلِهِ وَصَحْبِهِ مَا اتَّصَلَتْ عَيْنٌ بِنَظَرٍ وَأُذُنٌ بِخَبَر. أمَّا بَعْدُ: فَيَا أَيُّهَا النَّاسُ إِتَّقُوْا اللهَ وَذَرُوْا الْفَوَاحِشَ مَاظَهَرَ وَمَا بَطَنَ. وَاعْلَمُوْا اَنَّ اللهَ اَمَرَكُمْ بِأَمْرِ بَدَأَ بِنَفْسِهِ . وَشَنّٰي بِمَلاَئِكَةِ الْمُسَبِّحَةِ بِقُدْسِهِ. فَقَالَ تَعَالٰي: إِنَّ اللَّهَ وَمَلاَئِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ يَا أَيُّهَا الَّذِيْنَ أَمَنُوْا صَلُّوْاعَلَيْهِ وَسَلِّمُوا تَسْلِيمًا"),
           const ParagrafListCostum(
               no: "3", content: "Setelah itu diakhiri dengan membaca doa"),
           const ParagrafListCostum(
               no: "4", content: "Kalimat penutup khutbah kedua, contohnya:"),
-          QuranWidget(
+          const QuranWidget(
               arab:
                   "عِبَادَ اللهِ إِنَّ اللهَ يَأْمُرُ بِالْعَدْلِ وَالْاِحْسَانِ وَإِيتَاءِ ذِي الْقُرْبٰي وَيَنْهٰى عَنِ الْفَحْشَاءِ وَالْمُنْكَرِ وَالْبَغْيِ يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ. فَاذْكُرُوا اللهَ الْعَظِيمَ يَذْكُرْكُمْ وَاشْكُرُوهُ عَلٰى نِعَمِهِ يَزِدُكُمْ وَاسْئَلُوْهُ مِنْ فَضْلِهِ يُعْطِكُمْ وَلَذِكْرُ اللهِ أَكْبَرُ"),
           const ParagrafListCostum(
@@ -614,10 +614,10 @@ class Bab4 extends StatelessWidget {
               content:
                   "   Khusus di Indonesia, konsep tablig tidak hanya berisi ceramah lisan, tetapi juga berisi kegiatan keagamaan lainnya. Misalnya kita kenal istilah tablig akbar yang biasanya dilaksanakan di tempat yang luas dan dihadiri lebih banyak peserta, serta biasanya diisi dengan dzikir bersama, sehingga terjadi perbedaan konsep atau persinggungan makna dan istilah yang dipakai yang tertanam pada benak masyarakat umum."),
           Heading3(title: "b. Dalil Adanya Tablig"),
-          QuranWidget(
+          const QuranWidget(
               arab:
                   "الَّذِيْنَ يُبَلِّغُوْنَ رِسٰلٰتِ اللّٰهِ وَيَخْشَوْنَهٗ وَلَا يَخْشَوْنَ اَحَدًا اِلَّا اللّٰهَ ۗوَكَفٰى بِاللّٰهِ حَسِيْبًا (الاحزاب/٣٣ :٣٩) "),
-          VoicePlay(
+          const VoicePlay(
               audioUrl:
                   "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F04%20al-Ahz%C4%81b%2039.mp3?alt=media&token=5d301cf5-c91c-4fe5-b91c-a1647ad5c9d3&_gl=1*zizy7x*_ga*ODY4Mjc1MjUwLjE2OTE2NDUxNjU.*_ga_CW55HF8NVT*MTY5NTg2MDg5MS41My4xLjE2OTU4NjMyOTIuNDAuMC4w"),
           const Terjemahan(
