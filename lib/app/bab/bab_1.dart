@@ -1,4 +1,5 @@
 import 'package:audioplayers/audioplayers.dart';
+import 'package:book/app/assingnment/p_sikap_1.dart';
 import 'package:book/app/data/bab_2_model/tadabbur_model.dart';
 import 'package:book/app/widgets/app_bar_widget.dart';
 import 'package:book/app/widgets/border_black.dart';
@@ -11,6 +12,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import '../assingnment/p_pengetahuan_1.dart';
 import '../controller.dart';
 import '../data/bab_1_model/isi_kandungan_ayat.dart';
 import '../data/bab_1_model/isi_kandungan_hadis.dart';
@@ -56,7 +58,7 @@ class Bab_1 extends StatelessWidget {
   final ProfileController controller = Get.put(ProfileController());
   final controllerwrap = Get.put(WrapperScreenController());
   final player = AudioPlayer();
-  
+
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -80,12 +82,8 @@ class Bab_1 extends StatelessWidget {
             Map<String, dynamic> user = snap.data!.data()!;
             // Lanjutkan dengan penggunaan nilai 'user'
             YoutubePlayerController _controller = YoutubePlayerController(
-      initialVideoId: 'OarXrVcaIko', 
-      flags: const YoutubePlayerFlags(
-        autoPlay: false
-      )
-    );
-
+                initialVideoId: 'OarXrVcaIko',
+                flags: const YoutubePlayerFlags(autoPlay: false));
 
             return ListView(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
@@ -291,7 +289,6 @@ class Bab_1 extends StatelessWidget {
                             ),
                           ],
                         ),
-                        
                         Container(
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
@@ -307,15 +304,17 @@ class Bab_1 extends StatelessWidget {
                       ],
                     ),
                     Image.asset("assets/images/infografis.jpg"),
-                        const SizedBox(height: 10,),
-                const SizedBox(height: 10,),
-                 YoutubePlayer(
-            controller: _controller,
-            showVideoProgressIndicator: true,  
-            onReady: () {
-        
-            },
-          ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    YoutubePlayer(
+                      controller: _controller,
+                      showVideoProgressIndicator: true,
+                      onReady: () {},
+                    ),
                     const SizedBox(
                       height: 18,
                     ),
@@ -788,6 +787,46 @@ class Bab_1 extends StatelessWidget {
                     const Heading1(numbering: "J", title: "Penilaian"),
 
                     TabelPanilaianSikap(idlist: tabelPenSikap1),
+                    Container(
+                      margin: EdgeInsets.only(top: 8, bottom: 12),
+                      width: MediaQuery.of(context).size.width,
+                      height: 122,
+                      decoration: BoxDecoration(
+                        border: Border.all(width: 1, color: grey),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: InkWell(
+                        onTap: () {
+                          Get.to(PSikap1());
+                        },
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              "assets/icons/assignment.png",
+                              width: 30,
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Text(
+                              "Penilaian Sikap",
+                              style: medium.copyWith(fontSize: 12, color: grey),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Heading2(title: "2. Penilainan Pengetahuan"),
+                    SizedBox(
+                      height: 4,
+                    ),
+                    Text(
+                      "Berilah tanda silang (X) pada huruf A, B, C, D atau E pada pernyataan di bawah ini sebagai jawaban yang paling tepat!",
+                      // "Ketuk tombol di bawah ini untuk melakukan penilaian pengetahuan",
+                      style: h2.copyWith(fontWeight: FontWeight.w600),
+                    ),
                     const SizedBox(
                       height: 8,
                     ),
@@ -812,6 +851,37 @@ class Bab_1 extends StatelessWidget {
                       height: 2,
                     ),
                     ParagrafList(idlist: soalUraianBab1),
+                    Container(
+                      margin: EdgeInsets.only(top: 8, bottom: 12),
+                      width: MediaQuery.of(context).size.width,
+                      height: 122,
+                      decoration: BoxDecoration(
+                        border: Border.all(width: 1, color: grey),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: InkWell(
+                        onTap: () {
+                          Get.to(PPengetahuan1());
+                        },
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              "assets/icons/assignment.png",
+                              width: 30,
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Text(
+                              "Penilaian Pengetahuan",
+                              style: medium.copyWith(fontSize: 12, color: grey),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
                     const Heading2(title: "3. Penilaian Keterampilan"),
                     Heading3(title: "a. Penilaian Proyek"),
                     const AktivitasWidget(

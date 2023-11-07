@@ -1,3 +1,5 @@
+import 'package:book/app/assingnment/p_pengetahuan_4.dart';
+import 'package:book/app/assingnment/p_sikap_4.dart';
 import 'package:book/app/data/bab_2_model/tadabbur_model.dart';
 import 'package:book/app/data/tabel_penerapan_karakter.dart';
 import 'package:book/app/widgets/aktivitas_widget.dart';
@@ -19,6 +21,7 @@ import 'package:book/app/widgets/tadabbur.dart';
 import 'package:book/app/widgets/terjemahan_widget.dart';
 import 'package:book/app/widgets/voice_play.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../data/bab_1_model/tabel_penilaian_sikap_d.dart';
@@ -717,6 +720,46 @@ class Bab4 extends StatelessWidget {
               child: ParagrafList(idlist: rangkuman4)),
           const KPenilai(),
           TabelPanilaianSikap(idlist: tabelPenSikap4),
+           Container(
+           margin: EdgeInsets.only(top: 8, bottom: 12),
+                  width: MediaQuery.of(context).size.width,
+                  height: 122,
+                  decoration: BoxDecoration(
+                    border: Border.all(width: 1, color: grey),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: InkWell(
+                    onTap: () {
+                   Get.to(PSikap4());
+                    },
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          "assets/icons/assignment.png",
+                          width: 30,
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          "Penilaian Sikap",
+                          style: medium.copyWith(fontSize: 12, color: grey),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+        Heading2(title: "2. Penilainan Pengetahuan"),
+        SizedBox(
+          height: 4,
+        ),
+        Text(
+          "Berilah tanda silang (X) pada huruf A, B, C, D atau E pada pernyataan di bawah ini sebagai jawaban yang paling tepat!",
+         
+          style: h2.copyWith(fontWeight: FontWeight.w600),
+        ),
           Container(
             margin: const EdgeInsets.only(top: 4),
             padding: const EdgeInsets.all(10),
@@ -729,6 +772,37 @@ class Bab4 extends StatelessWidget {
           ),
           const Jawablah(),
           ParagrafList(idlist: uraian4),
+             Container(
+                      margin: EdgeInsets.only(top: 8, bottom: 12),
+                      width: MediaQuery.of(context).size.width,
+                      height: 122,
+                      decoration: BoxDecoration(
+                        border: Border.all(width: 1, color: grey),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: InkWell(
+                        onTap: () {
+                          Get.to(PPengetahuan4());
+                        },
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              "assets/icons/assignment.png",
+                              width: 30,
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Text(
+                              "Penilaian Pengetahuan",
+                              style: medium.copyWith(fontSize: 12, color: grey),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
           const Heading2(title: "3. Penilaian Keterampilan"),
           Heading3(title: "a. Penilaian Proyek"),
           Padding(

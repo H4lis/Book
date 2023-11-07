@@ -1,8 +1,8 @@
 import 'package:book/app/shared/constant.dart';
 import 'package:flutter/material.dart';
 
-class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
-  const AppBarWidget({
+class AppBarAssignment extends StatelessWidget implements PreferredSizeWidget {
+  const AppBarAssignment({
     Key? key,
   });
 
@@ -11,15 +11,15 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       elevation: 1,
       backgroundColor: Colors.white,
-      title: const Text(
-        "Book App",
+      title: Text(
+        "Assignment",
         style: TextStyle(
           color: purple,
           fontSize: 20,
           fontWeight: FontWeight.bold,
         ),
       ),
-      iconTheme: const IconThemeData(color: Colors.grey),
+      iconTheme: IconThemeData(color: Colors.grey),
     );
   }
 
