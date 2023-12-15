@@ -93,6 +93,39 @@ List<TabelPenerapanKarakter> tabelPenKarakter5 = [
       TabelPenerapanKarakter(butirSikap: "Tidak melupakan untuk memiliki kompetensi berbahasa asing, termasuk Bahasa Arab, karena mayoritas buku dan karya yang disusun oleh para ulama Nusantara Indonesia berbahasa Arab, minimal bisa memahami dan menterjemahkan.", nilaiKarakter: "Tanggung jawab, peduli lingkungan"),
 ];
 
+List<TabelPenerapanKarakter> tabelPenKarakter6 = [
+  TabelPenerapanKarakter(
+      butirSikap: "Contoh perilaku", nilaiKarakter: "Nilai Karakter"),
+      TabelPenerapanKarakter(butirSikap: "Membaca Q.S. Yūnus/10:40-41 dan Q.S. al-Māidah/5:32", nilaiKarakter: "Karakter religius/beriman dan bertaqwa kepada Allah Swt."),
+
+      TabelPenerapanKarakter(butirSikap: " Menghafalkan Q.S. Yūnus/10: 40-41 dan Q.S. al-Māidah/5: 32", nilaiKarakter: "Karakter religius/beriman dan bertaqwa kepada Allah Swt."),
+      TabelPenerapanKarakter(butirSikap: "Menghormati orang lain yang berbeda pendapat", nilaiKarakter: "Karakter toleransi"),
+      TabelPenerapanKarakter(butirSikap: "Memberikan kesempatan kepada teman untuk melaksanakan ajaran agama sesuai dengan yang diyakini", nilaiKarakter: "Karakter toleransi/berkebinekaan global"),
+      TabelPenerapanKarakter(butirSikap: "Mendengarkan orang lain saat berbicara di depan umum", nilaiKarakter: "Karakter toleransi/berkebinekaan global"),
+      TabelPenerapanKarakter(butirSikap: "Hidup berdampingan dengan semua orang tanpa memandang suku, agama, ras, dan Negara", nilaiKarakter: "Karakter toleransi/berkebinekaan global"),
+      TabelPenerapanKarakter(butirSikap: "Membuang sampah ke tempat sampah", nilaiKarakter: "Mandiri/memelihara kehidupan manusia"),
+      TabelPenerapanKarakter(butirSikap: "Apabila menemukan duri atau paku di jalan, diambil dan dibuang di tempat sampah", nilaiKarakter: "Peduli lingkungan/memelihara kehidupan manusia"),
+      TabelPenerapanKarakter(butirSikap: "Menggunakan masker dan jaga jarak saat ada wabah", nilaiKarakter: "Peduli lingkungan/memelihara kehidupan manusia"),
+      TabelPenerapanKarakter(butirSikap: " Memberikan bantuan kepada korban bencana", nilaiKarakter: "Peduli sosial/memelihara kehidupan manusia"),
+ 
+];
+
+List<TabelPenerapanKarakter> tabelPenKarakter7 = [
+  TabelPenerapanKarakter(
+      butirSikap: "Butir Sikap", nilaiKarakter: "Nilai Karakter"),
+
+      TabelPenerapanKarakter(butirSikap: "Berdoa sebelum mengikuti pelajaran", nilaiKarakter: "Bertaqwa kepada Allah Swt."),
+      TabelPenerapanKarakter(butirSikap: "Mendirikan shalat lima waktu dengan berjamaah", nilaiKarakter: "Bertaqwa kepada Allah Swt."),
+      TabelPenerapanKarakter(butirSikap: "Menjaga kehormatan dengan menutup aurat sesuai perintah Allah", nilaiKarakter: "Tanggung jawab"),
+      TabelPenerapanKarakter(butirSikap: "Selalu menepati janji", nilaiKarakter: "Komitmen"),
+      TabelPenerapanKarakter(butirSikap: "Menyisihkan uang saku untuk berinfaq", nilaiKarakter: "peduli"),
+      TabelPenerapanKarakter(butirSikap: "Mengajukan pertanyaan terhadap persoalan yang memerlukan jawaban", nilaiKarakter: "Berpikir kritis"),
+      TabelPenerapanKarakter(butirSikap: "Menjaga kerukunan dalam kehidupan bermasyarakat", nilaiKarakter: "Kebinekaan"),
+      TabelPenerapanKarakter(butirSikap: "Mempelajari materi cabang iman tanpa harus disuruh terlebih dahulu", nilaiKarakter: "Mandiri"),
+      TabelPenerapanKarakter(butirSikap: "Aktif memberikan ide/pemikiran dalam memecahkan persoalan yang muncul ketika diskusi dan presentasi", nilaiKarakter: "Kreatif"),
+      TabelPenerapanKarakter(butirSikap: "Menjalin hubungan baik dengan orang lain", nilaiKarakter: "Komunikatif"),
+];
+
 List<TabelPenerapanKarakter> a = [
   TabelPenerapanKarakter(
       butirSikap: "Butir Sikap", nilaiKarakter: "Nilai Karakter"),

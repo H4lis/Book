@@ -77,19 +77,7 @@ List<ListParagrafModel> kitab = [
   ListParagrafModel(
       textContent:
           "Nashīhatul Muslimīna wa Tazkiratul Mu’minīna fi Fadhāilil Jihādi wa Karāmatil Mujtahidīna fī Sabīlillah."),
-  // ListParagrafModel(
-  //     textContent: ""),
-  // ListParagrafModel(
-  //     textContent:
-  //         ""),
-  // ListParagrafModel(textContent: ""),
-  // ListParagrafModel(textContent: "‘"),
-  // ListParagrafModel(
-  //     textContent:
-  //         ""),
-  // ListParagrafModel(textContent: ""),
-  // ListParagrafModel(textContent: ""),
-  // ListParagrafModel(textContent: ""),
+
 ];
 
 

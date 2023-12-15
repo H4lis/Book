@@ -128,6 +128,42 @@ List<TabelPenilaianSikapD> tabelPenSikap5 = [
 
       
 ];
+List<TabelPenilaianSikapD> tabelPenSikap6 = [
+  TabelPenilaianSikapD(
+      pernyataan: "Pernyataan", jawaban: "Jawaban", alasan: "Alasan"),
+  TabelPenilaianSikapD(
+      pernyataan:
+          "Menghormati teman yang berbeda organisasi masyarat",
+      jawaban: "",
+      alasan: ""),
+      TabelPenilaianSikapD(pernyataan: "Menghormati teman yang berbeda agama", jawaban: "", alasan: ""),
+      TabelPenilaianSikapD(pernyataan: "Menghargai pendapat teman, meskipun berbeda dengan pendapat saya", jawaban: "", alasan: ""),
+      TabelPenilaianSikapD(pernyataan: "Menerima hasil kesepakatan dalam musyawarah", jawaban: "", alasan: ""),
+      TabelPenilaianSikapD(pernyataan: "Tidak berbicara saat guru menjelaskan materi pelajaran ", jawaban: "", alasan: ""),
+      TabelPenilaianSikapD(pernyataan: "Bertutur kata dengan baik dan tidak menyinggung perasaan orang lain", jawaban: "", alasan: ""),
+      TabelPenilaianSikapD(pernyataan: "Membuang sampah pada tempat sampah", jawaban: "", alasan: ""),
+      TabelPenilaianSikapD(pernyataan: "Membuang duri atau benda tajam di jalan ke tempat sampah", jawaban: "", alasan: ""),
+      TabelPenilaianSikapD(pernyataan: "Membiasakan senyum, salam, salim dan sapa dengan orang lain", jawaban: "", alasan: ""),
+      TabelPenilaianSikapD(pernyataan: "Menyelesaikan masalah dengan musyawarah", jawaban: "", alasan: ""),
+      
+];
+List<TabelPenilaianSikapD> tabelPenSikap7 = [
+  TabelPenilaianSikapD(
+      pernyataan: "Pernyataan", jawaban: "Jawaban", alasan: "Alasan"),
+
+      TabelPenilaianSikapD(pernyataan: "Saya berdoa terlebih dahulu sebelum mengikuti pelajaran", jawaban: "", alasan: ""),
+      TabelPenilaianSikapD(pernyataan: "Saya menutup aurat dimanapun berada", jawaban: "", alasan: ""),
+      TabelPenilaianSikapD(pernyataan: "Saya mengumpulkan tugas tepat waktu", jawaban: "", alasan: ""),
+      TabelPenilaianSikapD(pernyataan: "Saya aktif berkontribusi saat diskusi kelompok", jawaban: "", alasan: ""),
+      TabelPenilaianSikapD(pernyataan: "Saya menepati janji untuk serius dalam mengikuti pelajaran", jawaban: "", alasan: ""),
+      TabelPenilaianSikapD(pernyataan: "Saya mengajukan pertanyaan ketika mengalami kebingungan atau mengalami gagal paham terhadap materi pelajaran yang disampaikan guru atau teman ", jawaban: "", alasan: ""),
+      TabelPenilaianSikapD(pernyataan: "Saya malu kalau berbuat maksiat", jawaban: "", alasan: ""),
+      TabelPenilaianSikapD(pernyataan: "Saya mempelajari materi pelajaran sebelum disuruh orangtua/guru", jawaban: "", alasan: ""),
+      TabelPenilaianSikapD(pernyataan: "Saya aktif memberikan ide/pemikiran /gagasan ketika diskusi", jawaban: "", alasan: ""),
+      TabelPenilaianSikapD(pernyataan: "Saya menjalin hubungan baik dengan orang lain, baik orangtua, guru, teman, dan masyarakat", jawaban: "", alasan: ""),
+
+      
+];
 List<TabelPenilaianSikapD> q = [
   TabelPenilaianSikapD(
       pernyataan: "Pernyataan", jawaban: "Jawaban", alasan: "Alasan"),

@@ -28,7 +28,7 @@ import '../data/bab_1_model/tabel_penilaian_sikap_d.dart';
 
 import 'package:book/app/widgets/tabel_penerapan_karakter.dart';
 
-import '../data/bab_4..model/list_paragraf_4.dart';
+import '../data/bab_4_model/list_paragraf_4.dart';
 import '../data/kata_kunci.dart';
 import '../data/pilihan_ganda.dart';
 import '../modules/SideMenu/views/side_menu_view.dart';

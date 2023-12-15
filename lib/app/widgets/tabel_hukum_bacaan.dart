@@ -1,26 +1,27 @@
 import 'package:flutter/material.dart';
 
-import '../../data/bab_4_model/tabel_persamaan_d.dart';
-import '../../shared/constant.dart';
+import '../shared/constant.dart';
 
-class TabelPersamaan extends StatelessWidget {
-  const TabelPersamaan({
-    super.key,
-  });
+class TabelHukumBacaanWidget extends StatelessWidget {
+  final List<dynamic> idlist;
+  const TabelHukumBacaanWidget({required this.idlist, Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 10),
+      margin: const EdgeInsets.only(top: 10),
       color: purpleBagroundDark,
       child: Table(
         border: TableBorder.all(color: purple),
         defaultVerticalAlignment: TableCellVerticalAlignment.middle,
         columnWidths: {
-          0: FractionColumnWidth(1 / 8),
+          0: const FractionColumnWidth(1 / 8),
+          2: const FractionColumnWidth(1 / 2.8),
+          4: const FractionColumnWidth(1 / 3),
         },
         children: List.generate(
-          tabelPersamaanD.length,
+          idlist.length,
           (index) => TableRow(
             decoration: BoxDecoration(
               color: index == 0
@@ -33,9 +34,13 @@ class TabelPersamaan extends StatelessWidget {
               TableCell(
                 verticalAlignment: TableCellVerticalAlignment.top,
                 child: Container(
-                  padding: EdgeInsets.all(8),
+                  padding: const EdgeInsets.all(8),
                   child: Text(
-                    index == 0 ? "No" : "${index}",
+                    index == 0
+                        ? "No"
+                        : index == 1
+                            ? ""
+                            : "${index - 1}",
                     style: index == 0
                         ? h2.copyWith(
                             color: black,
@@ -46,11 +51,25 @@ class TabelPersamaan extends StatelessWidget {
                 ),
               ),
               TableCell(
-                verticalAlignment: TableCellVerticalAlignment.middle,
+                verticalAlignment: TableCellVerticalAlignment.top,
                 child: Container(
-                  padding: EdgeInsets.all(8),
+                  padding: const EdgeInsets.all(8),
                   child: Text(
-                    "${tabelPersamaanD[index].persamaan}",
+                    "${idlist[index].lafadz}",
+                    style: index == 0
+                        ? h2
+                        : regulerQuran.copyWith(fontSize: 16, height: 3),
+                    textAlign:
+                        index == 0 ? TextAlign.center : TextAlign.justify,
+                  ),
+                ),
+              ),
+              TableCell(
+                verticalAlignment: TableCellVerticalAlignment.top,
+                child: Container(
+                  padding: const EdgeInsets.all(8),
+                  child: Text(
+                    "${idlist[index].hukumBacaan}",
                     style: index == 0 ? h2 : regular_paragraf,
                     textAlign: index == 0 ? TextAlign.center : TextAlign.start,
                   ),
@@ -59,9 +78,9 @@ class TabelPersamaan extends StatelessWidget {
               TableCell(
                 verticalAlignment: TableCellVerticalAlignment.top,
                 child: Container(
-                  padding: EdgeInsets.all(8),
+                  padding: const EdgeInsets.all(8),
                   child: Text(
-                    "${tabelPersamaanD[index].perbedaan}",
+                    "${idlist[index].alasan}",
                     style: index == 0 ? h2 : regular_paragraf,
                     textAlign: index == 0 ? TextAlign.center : TextAlign.start,
                   ),

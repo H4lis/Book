@@ -192,6 +192,136 @@ class SideMenuView extends GetView<SideMenuController> {
             trailing: const Icon(Icons.navigate_next),
           ),
           const Divider(height: 1),
+          ListTile(
+            onTap: () => {
+              Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => FabTabs(selectedIndex: 7)))
+            },
+            horizontalTitleGap: 0,
+            title: Row(
+              children: [
+                Text(
+                  'Bab 6 :  ',
+                  style: h1.copyWith(color: black),
+                ),
+                Expanded(
+                    child: Text(
+                  "Menguatkan Kerukunan melalui Toleransi dan Memelihara Kehidupan Manusia",
+                  style: regular.copyWith(fontSize: 10),
+                  maxLines: 2, // Batasi teks hingga dua baris
+                  overflow: TextOverflow.ellipsis,
+                ))
+              ],
+            ),
+            trailing: const Icon(Icons.navigate_next),
+          ),
+          const Divider(height: 1),
+          ListTile(
+            onTap: () => {
+              Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => FabTabs(selectedIndex: 8)))
+            },
+            horizontalTitleGap: 0,
+            title: Row(
+              children: [
+                Text(
+                  'Bab 7 :  ',
+                  style: h1.copyWith(color: black),
+                ),
+                Expanded(
+                    child: Text(
+                  "Menguatkan Iman dengan Menjaga Kehormatan, Ikhlas, Malu, dan Zuhud",
+                  style: regular.copyWith(fontSize: 10),
+                  maxLines: 2, // Batasi teks hingga dua baris
+                  overflow: TextOverflow.ellipsis,
+                ))
+              ],
+            ),
+            trailing: const Icon(Icons.navigate_next),
+          ),
+          const Divider(height: 1),
+          ListTile(
+            onTap: () => {
+              Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => FabTabs(selectedIndex: 9)))
+            },
+            horizontalTitleGap: 0,
+            title: Row(
+              children: [
+                Text(
+                  'Bab 8 :  ',
+                  style: h1.copyWith(color: black),
+                ),
+                Expanded(
+                    child: Text(
+                  "Adab Menggunakan Media Sosial",
+                  style: regular.copyWith(fontSize: 10),
+                  maxLines: 2, // Batasi teks hingga dua baris
+                  overflow: TextOverflow.ellipsis,
+                ))
+              ],
+            ),
+            trailing: const Icon(Icons.navigate_next),
+          ),
+          const Divider(height: 1),
+          ListTile(
+            onTap: () => {
+              Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => FabTabs(selectedIndex: 10)))
+            },
+            horizontalTitleGap: 0,
+            title: Row(
+              children: [
+                Text(
+                  'Bab 9 :  ',
+                  style: h1.copyWith(color: black),
+                ),
+                Expanded(
+                    child: Text(
+                  "Ketentuan Pernikahan dalam Islam",
+                  style: regular.copyWith(fontSize: 10),
+                  maxLines: 2, // Batasi teks hingga dua baris
+                  overflow: TextOverflow.ellipsis,
+                ))
+              ],
+            ),
+            trailing: const Icon(Icons.navigate_next),
+          ),
+          const Divider(height: 1),
+          ListTile(
+            onTap: () => {
+              Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => FabTabs(selectedIndex: 11)))
+            },
+            horizontalTitleGap: 0,
+            title: Row(
+              children: [
+                Text(
+                  'Bab 10 :  ',
+                  style: h1.copyWith(color: black),
+                ),
+                Expanded(
+                    child: Text(
+                  "Peradaban Islam pada Masa Modern",
+                  style: regular.copyWith(fontSize: 10),
+                  maxLines: 2, // Batasi teks hingga dua baris
+                  overflow: TextOverflow.ellipsis,
+                ))
+              ],
+            ),
+            trailing: const Icon(Icons.navigate_next),
+          ),
+          const Divider(height: 1),
         ],
       ),
     );

@@ -4,7 +4,7 @@ import '../shared/constant.dart';
 
 class Terjemahan extends StatelessWidget {
   final String content;
-  final String riwayat; 
+  final String riwayat;
   const Terjemahan({
     required this.content,
     required this.riwayat,

@@ -358,7 +358,7 @@ class Bab_1 extends StatelessWidget {
                     const SizedBox(
                       height: 18,
                     ),
-                    const Heading1(numbering: "E", title: "Kisah Inspiratif"),
+                    
 
                     const AktivitasWidget(
                         activityTitle: "Aktivitas 1.3",

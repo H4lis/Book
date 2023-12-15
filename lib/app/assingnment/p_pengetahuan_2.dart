@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
 import '../widgets/app_bar_assignment.dart';
-import '../widgets/app_bar_widget.dart';
 
 class PPengetahuan2 extends StatefulWidget {
   PPengetahuan2({Key? key}) : super(key: key);

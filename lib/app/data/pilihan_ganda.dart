@@ -684,3 +684,301 @@ List<SoalPilihanGanda> pilihanGanda5 = [
     jawabanBenar: "",
   ),
 ];
+
+List<SoalPilihanGanda> pilihanGanda6 = [
+  SoalPilihanGanda(
+    pertanyaan:
+        "Perhatikan Q.S. Yūnus/10: 40, di bawah ini! \n              ..... وَمِنْهُمْ مَّنْ يُؤْمِنُ بِهِ وَمِنْهُمْ مّنْ لَّا يُؤْمِنُ بِهِ ۗ  وَرَبُّكَ  \n Sambungan ayat di atas yang tepat adalah ….",
+    pilihanJawaban: [
+      "A.  مِمَّآ اَعْمَلُ ",
+      "B.  أَنْتُمْ بَرِيٓ‍ُٔوْنَ",
+      "C.  اَعۡلَمُ بِالۡمُفۡسِدِيْنَ",
+      "D.  مِّمَّا تَعۡمَلُوْنَ",
+      "E.  وَأَنَا۠ بَرِيْٓءٌ"
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan:
+        "Dalam Q.S. Yūnus/10: 41 ada kalimat  ...فَقُلْ لِّيْ عَمَلِيْ  Terjemahan yang tepat untuk kalimat di atas adalah ….",
+    pilihanJawaban: [
+      "A. maka dengarkanlah, “Bagiku pekerjaanku…",
+      "B. maka dengarkanlah, Bagimu pekerjaanku…",
+      "C. maka katakanlah, “Bagimu pekerjaanku…",
+      "D. maka katakanlah, “Bagiku pekerjaanmu…",
+      "E. maka katakanlah, “Bagiku pekerjaanku…"
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan:
+        "Diantara isi Q.S. Yūnus/10: 40-41 adalah agar umat Islam mempunyai sikap …. ",
+    pilihanJawaban: [
+      "A. wira’i",
+      "B. zuhud",
+      "C. qana’ah",
+      "D. samhah",
+      "E. syaja’ah"
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan:
+        "Perhatikan ayat di bawah ini!\n وَاِنْ كَذَّبُوْكَ فَقُلْ لِّيْ عَمَلِيْ وَلَكُمۡ عَمَلُكُمۡۖ اَنْتُمْ بَرِيٓ‍ُٔوْنَ مِمَّآ اَعۡمَلُ وَاَنَا۠ بَرِيْٓءٌ مِّمَّا تَعۡمَلُوْنَ   \nDari ayat yang digaris bawahi di atas bacaan tajwid yang benar dan urut adalah….",
+    pilihanJawaban: [
+      "A. idzhar syafawi, ikhfa’, ghunnah dan mad wajib munfasil",
+      "B. ikhfa’ syafawi, ikhfa’, ghunnah, dan mad jaiz munfasil ",
+      "C. ikhfa, ikhfa’ syafawi, mad jaiz munfasil, dan ghunnah",
+      "D. mad wajib muttasil, ghunnah, ikhfa, ikhfa’ syafawi",
+      "E. ikhfa’, idzhar syafawi, ghunnah, dan mad jaiz munfasil"
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan:
+        "Dalam Hadis Nabi Muhammad Saw., dari Abu Hurairah r.a., bahwa al-Thufail bin ‘Amr menemui Nabi Muhammad Saw. dan menceritakan bahwa Daus (salah satu kabilah Yaman) telah durhaka dan menolak ajaran dakwahnya, dan meminta agar Nabi mendoakan mereka binasa. Terhadap hal tersebut, respon Nabi Muhammad Saw. Sesuai dengan hadis tersebut adalah ….",
+    pilihanJawaban: [
+      "A. Nabi berdoa, “Ya Allah berilah azab kepada kabilah Daus dan datangkanlah (mereka) bersama orang yang binasa.” ",
+      "B. Nabi berdoa, “Ya Allah berilah azab kepada kabilah Daus dan datangkanlah (mereka) bersama orang yang kufur.”",
+      "C. Nabi berdoa, “Ya Allah berilah petunjuk kepada kabilah Daus dan datangkanlah (mereka) bersama orang muslim (masuk Islam).”",
+      "D. Nabi berdoa, “Ya Allah berilah petunjuk kepada kabilah Daus dan datangkanlah (mereka) bersama orang yang ahl al-ilmi.”",
+      "E. Nabi berdoa, “Ya Allah berilah petunjuk kepada kabilah Daus dan datangkanlah (mereka) bersama pemimpin yang adil.”"
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan:
+        "Perhatikan ayat di bawah ini! \n   مَنْ أَحْيَاهَا فَكَأَنَّمَا أَحْيَا النَّاسَ جَمِيعًا  \nTerjemahan yang tepat dari ayat di atas adalah ….",
+    pilihanJawaban: [
+      "A. Barangsiapa memelihara kehidupan seorang manusia, maka seakan-akan dia telah memelihara kehidupan semua manusia",
+      "B. Barangsiapa memelihara kehidupan seorang manusia, maka seakan-akan dia telah memelihara kehidupan banyak manusia",
+      "C. Barangsiapa memelihara kehidupan yang ada di bumi, maka seakan-akan dia telah memelihara kehidupan semua makhluk",
+      "D. Barangsiapa memelihara kehidupan seluruh makhluk, maka seakan-akan dia telah memelihara kehidupan di alam semesta",
+      "E. Barangsiapa memelihara kehidupan banyak manusia, maka seakan-akan dia telah memelihara kehidupan seluruh manusia"
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan:
+        "Perhatikan Q.S. Al-Maidah/ 5: 32 di bawah ini!  مِنۡ اَجۡلِ ذٰلِكَ  كَتَبۡنَا عَلىٰ بَنِيْٓ إِسۡرَٰٓءِيْلَ اَنَّهٗ مَنْ قَتَلَ نَفۡسًاۢ بِغَيۡرِ نَفۡسٍ اَوۡ فَسَادٍ فِى الۡاَرۡضِ فَكَاَنَّمَا قَتَلَ النَّاسَ جَمِيْعًاۗ   Dari ayat di atas yang digarisbawahi mempunyai bacaan tajwid secara urut adalah ….",
+    pilihanJawaban: [
+      "A. idzhar khalqi, qalqalah sughra, ikhfa’, ghunnah, dan mad thabi’i ",
+      "B. idzhar khalqi, qalqalah kubra, ikhfa’, ghunnah, dan mad thabi’i",
+      "C. idzhar khalqi, qalqalah sughra, ikhfa’ syafawi, ghunnah, dan mad thabi’i",
+      "D. idzhar khalqi, qalqalah sughra, ikhfa’, iqlab, dan mad thabi’i",
+      "E. idzhar khalqi, qalqalah sughra, ikhfa’, ghunnah, dan mad ’arid"
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan:
+        "Pernyataan di bawah ini yang merupakan penerapan dari Q.S. Al-Maidah/ 5: 32 adalah ….",
+    pilihanJawaban: [
+      "A. melaksanakan shalat lima waktu di awal waktu",
+      "B. melaksanakan shalat tahajud pada sepertiga malam",
+      "C. memberikan santunan kepada anak yatim piatu",
+      "D. berpuasa sunah setiap hari senin dan kamis",
+      "E. membaca al-Quran setiap hari di rumah dan masjid"
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan:
+        "Diriwatkan dari ‘Abdullah bin ‘Amr, dari Nabi Muhammad Saw., beliau bersabda: ”Barangsiapa yang membunuh mu’ahid (nonmuslim yang mendapatkan janji jaminan keamanan dari orang muslim) tidak akan dapat mencium harumnya surga, padahal harumnya dapat dicium dari perjalanan ….",
+    pilihanJawaban: [
+      "A. sepuluh tahun",
+      "B. dua puluh tahun",
+      "C. tiga puluh tahun",
+      "D. empat puluh tahun",
+      "E. lima puluh tahun"
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan:
+        "Dalam hadis riwayat Muslim, bahwa Nabi Muhammad Saw. menyebutkan bahwa orang yang datang pada hari kiamat membawa shalat, puasa dan zakat. Tetapi di samping itu juga pernah mencaci si ini, menuduh si ini, makan harta si ini, menumpahkan darah si ini, dan memukul si ini. Dalam hadis tersebut disebut dengan orang yang ….",
+    pilihanJawaban: [
+      "A. al-mukhlis",
+      "B. al-muflis",
+      "C. al-muhsin",
+      "D. al-dzalim",
+      "E. al-‘ashi"
+    ],
+    jawabanBenar: "",
+  ),
+];
+List<SoalPilihanGanda> pilihanGanda7 = [
+  SoalPilihanGanda(
+    pertanyaan:
+        "Dalam Hadis Nabi Muhammad Saw. yang diriwayatkan Al-Bukhāri, bahwa maksudnya kekayaan itu adalah ….",
+    pilihanJawaban: [
+      "A. kekayaan harta",
+      "B. kekayaan hati",
+      "C. kekayaan pikiran",
+      "D. kekayaan materi",
+      "E. kekayaan intelektual"
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan:
+        "Perhatikan Q.S. Al-Ahzab/33: 35 di bawah ini!  \nاِنَّ الْمُسْلِمِيْنَ وَالْمُسْلِمٰتِ وَالْمُؤْمِنِيْنَ وَالْمُؤْمِنٰتِ وَالْقٰنِتِيْنَ وَالْقٰنِتٰتِ وَالصّٰدِقِيْنَ وَالصّٰدِقٰتِ وَالصّٰبِرِيْنَ وَالصّٰبِرٰتِ وَالْخٰشِعِيْنَ وَالْخٰشِعٰتِ وَالْمُتَصَدِّقِيْنَ وَالْمُتَصَدِّقٰتِ وَالصَّاۤىِٕمِيْنَ وَالصّٰۤىِٕمٰتِ وَالْحٰفِظِيْنَ فُرُوْجَهُمْ وَالْحٰفِظٰتِ وَالذّٰكِرِيْنَ اللّٰهَ كَثِيْرًا وَّالذّٰكِرٰتِ اَعَدَّ اللّٰهُ لَهُمْ مَّغْفِرَةً وَّاَجْرًا عَظِيْمًا  (الاحزاب/ ٣٣: ٣٥)    \nDari ayat di atas, merupakan dalil naqli tentang salah satu cabang iman yaitu ….",
+    pilihanJawaban: [
+      "A. menjaga kehormatan",
+      "B. ikhlas",
+      "C. malu",
+      "D. zuhud",
+      "E. taqarrub"
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan:
+        "Di bawah ini yang merupakan pemahaman yang benar tentang sifat zuhud adalah . . . .",
+    pilihanJawaban: [
+      "A. tidak boleh memiliki harta karena akan melalaikan kepada Allah",
+      "B. mencari harta dengan optimal untuk keluarga mumpung masih hidup",
+      "C. mengesampingkan kewajiban kerja dengan selalu beribadah",
+      "D. mencari nafkah sepanjang waktu dalam hidup karena waktu adalah uang",
+      "E. menjadikan harta dunia untuk mengantarkan kebahagiaan di akhirat"
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan:
+        "Meninggalkan kenikmatan duniawi untuk mendapatkan kenikmatan akhirat merupakan salah satu ciri orang yang memiliki sifat zuhud. Namun tidak hanya itu, orang yang memiliki sifat zuhud memiliki ciri lain yaitu . . . .",
+    pilihanJawaban: [
+      "A. senang mencela dan susah untuk memuji orang lain",
+      "B. membenci orang yang memberikan celaan kepadanya",
+      "C. marah-marah ketika mendapat pujian orang lain",
+      "D. sangat senang akan pujian yang datang dari orang lain",
+      "E. bersikap sederhana baik saat dipuji maupun saat dicela"
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan: "Di bawah ini merupakan tingkatan ikhlas dengan urut adalah ….",
+    pilihanJawaban: [
+      "A. awam, khas, dan khawasul khas",
+      "B. awam, khawasul khawas, dan khawas",
+      "C. awam, khawas, dan khawasul khawas",
+      "D. awam, khas, dan khawasul khawas",
+      "E. awam, khawas, dan khawasul khas"
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan: "Di bawah ini yang termasuk ciri-ciri orang ikhlas adalah ….",
+    pilihanJawaban: [
+      "A. malas beribadah jika sendirian dan rajin dihadapan banyak orang",
+      "B. senantiasa beramal dan bersungguh-sungguh dalam beramal",
+      "C. bergairah beribadah ketika dipuji dan tidak bersemangat jika dicela",
+      "D. melakukan segala sesuatu yang dilarang oleh Allah Swt.",
+      "E. membedakan antara amal yang rewardnya besar dan kecil"
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan: "Di bawah ini merupakan manfaat ikhlas adalah ….",
+    pilihanJawaban: [
+      "A. menambah kekayaan di dunia",
+      "B. terhindar dari tipu daya setan",
+      "C. menjadi orang yang terkenal ",
+      "D. mendapatkan pujian dari teman",
+      "E. dicari banyak orang untuk dibantu"
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan:
+        "Dalam Hadis Nabi Muhammad Saw. yang diriwayatkan Al-Tirmidzī bahwa yang termasuk malu kepada Allah dengan sebenarnya adalah ….",
+    pilihanJawaban: [
+      "A. menjaga seluruh jiwanya dengan mengikutsertakan program asuransi",
+      "B. menjaga harta benda yang dimilikinya dengan menabung di Bank Syari’ah",
+      "C. menjaga seluruh anggota badan dari perbuatan yang dilarang oleh agama Islam",
+      "D. menjaga seluruh keluarga dengan memasang CCTV di dalam dan di luar rumah",
+      "E. menjaga lingkungan sekitar dengan melakukan jaga malam secara bergantian "
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan:
+        "Perhatikan pernyataan di bawah ini! \n1) menghindari dari perbuatan maksiat\n2) menghantarkan hambanya melakukan kebaikan \n3) mengurangi rezeki \n4) lebih dekat dengan Allah Swt.\n5) tidak mendapatkan pekerjaan \nDari pernyataan di atas, yang termasuk manfaat sikap malu sebagai /ncabang Iman adalah ….",
+    pilihanJawaban: [
+      "A. 1), 2), dan 3)",
+      "B. 1), 3), dan 4)",
+      "C. 2), 3), dan 4)",
+      "D. 2), 4), dan 1)",
+      "E. 3), 5), dan 1)"
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan:
+        "Malu merupakan tanda baik atau tidaknya iman seseorang. Malu berbeda dengan tidak percaya diri. Oleh karenanya, malu ini harus ditempatkan pada posisi yang tepat. Salah satu penerapan sifat malu yang tepat di bawah ini adalah….",
+    pilihanJawaban: [
+      "A. malu tidak mengerjakan tugas",
+      "B. malu menghadiri pengajian umum ",
+      "C. malu diejek teman apabila berjilbab",
+      "D. malu salat berjama’ah di masjid",
+      "E. malu tidak mempunyai HP terbaru"
+    ],
+    jawabanBenar: "",
+  ),
+];
+List<SoalPilihanGanda> pilihanGanda8 = [
+  SoalPilihanGanda(
+    pertanyaan: "",
+    pilihanJawaban: ["", "", "", "", ""],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan: "",
+    pilihanJawaban: ["", "", "", "", ""],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan: "",
+    pilihanJawaban: ["", "", "", "", ""],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan: "",
+    pilihanJawaban: ["", "", "", "", ""],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan: "",
+    pilihanJawaban: ["", "", "", "", ""],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan: "",
+    pilihanJawaban: ["", "", "", "", ""],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan: "",
+    pilihanJawaban: ["", "", "", "", ""],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan: "",
+    pilihanJawaban: ["", "", "", "", ""],
+    jawabanBenar: "",
+  ),
+];
+List<SoalPilihanGanda> pilihanGanda9 = [
+  SoalPilihanGanda(
+    pertanyaan: "",
+    pilihanJawaban: ["", "", "", "", ""],
+    jawabanBenar: "",
+  ),
+];
+List<SoalPilihanGanda> pilihanGanda10 = [
+  SoalPilihanGanda(
+    pertanyaan: "",
+    pilihanJawaban: ["", "", "", "", ""],
+    jawabanBenar: "",
+  ),
+];

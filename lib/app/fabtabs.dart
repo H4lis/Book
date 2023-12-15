@@ -7,6 +7,11 @@ import 'package:book/app/bab/pendahuluan.dart';
 import 'package:flutter/material.dart';
 
 import 'bab/bab_1.dart';
+import 'bab/bab_10.dart';
+import 'bab/bab_6.dart';
+import 'bab/bab_7.dart';
+import 'bab/bab_8.dart';
+import 'bab/bab_9.dart';
 import 'modules/profile/views/profile_view.dart';
 
 class FabTabs extends StatefulWidget {
@@ -53,10 +58,20 @@ class _FabTabsState extends State<FabTabs> {
                     : currentIndex == 4
                         ? const Bab3()
                         : currentIndex == 5
-                            ? Bab4()
+                            ? const Bab4()
                             : currentIndex == 6
-                                ?  Bab5()
-                                : DaftarIsi();
+                                ? Bab5()
+                                : currentIndex == 7
+                                    ? const Bab6()
+                                    : currentIndex == 8
+                                        ? const Bab7()
+                                        : currentIndex == 9
+                                            ? const Bab8()
+                                            : currentIndex == 10
+                                                ? const Bab9()
+                                                : currentIndex == 11
+                                                    ? const Bab10()
+                                                    : const DaftarIsi();
     return SafeArea(
       child: Scaffold(
         body: PageStorage(
