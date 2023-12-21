@@ -154,6 +154,8 @@ List<ListParagrafModel> fakPerkelahian = [
  
   ];
 
+
+
 List<ListParagrafModel> rangkuman = [
   ListParagrafModel(
       textContent:

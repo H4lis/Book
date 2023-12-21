@@ -108,10 +108,10 @@ List<KataKunciModel> kataKunciBab9 = [
   KataKunciModel(textContent: "Shalihah"),
 ];
 List<KataKunciModel> kataKunciBab10 = [
-  KataKunciModel(textContent: "Masa Klasik"),
+  KataKunciModel(textContent: "Ilmu Pengetahuan"),
   KataKunciModel(textContent: "Masa Pertengahan"),
   KataKunciModel(textContent: "Masa Modern"),
-  KataKunciModel(textContent: "Ilmu Pengetahuan"),
+  KataKunciModel(textContent: "Masa Klasik"),
   KataKunciModel(textContent: "Ijtihad"),
   KataKunciModel(textContent: "Kitab"),
   KataKunciModel(textContent: "Nasionalisme"),

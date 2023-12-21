@@ -928,57 +928,297 @@ List<SoalPilihanGanda> pilihanGanda7 = [
 ];
 List<SoalPilihanGanda> pilihanGanda8 = [
   SoalPilihanGanda(
-    pertanyaan: "",
-    pilihanJawaban: ["", "", "", "", ""],
+    pertanyaan:
+        "Adab dari segi bahasa menunjuk kepada sesuatu yang sudah lama dikakukan dan sudah membudaya dalm kehidupan. Dari sini dapat diketahui bahwa makna dari adab adalah kecuali….",
+    pilihanJawaban: [
+      "A. adat istiadat",
+      "B. kebiasaan",
+      "C. etika",
+      "D. norma",
+      "E. kehendak"
+    ],
     jawabanBenar: "",
   ),
   SoalPilihanGanda(
-    pertanyaan: "",
-    pilihanJawaban: ["", "", "", "", ""],
+    pertanyaan:
+        "Perhatikan Q.S. Al-Hujurāt/49: 6 dibawah ini!\n يٰٓاَيُّهَا الَّذِيْنَ اٰمَنُوْٓا اِنْ جَاۤءَكُمْ فَاسِقٌۢ بِنَبَاٍ فَتَبَيَّنُوْٓا اَنْ تُصِيْبُوْا قَوْمًاۢ بِجَهَالَةٍ فَتُصْبِحُوْا عَلٰى مَا فَعَلْتُمْ نٰدِمِيْنَ  (الحجرٰت/ ٤٩: ٦)  \nDari ayat di atas dapat diketahui bahwa apabila seorang yang fasik datang kepadamu membawa suatu berita, maka kalian hendaknya …. ",
+    pilihanJawaban: [
+      "A. mengamati kebenaran beritanya",
+      "B. mengembalikan kembali ke orang tersebut",
+      "C. menyerahkan orang lain untuk menerimanya",
+      "D. meneliti kebenaran beritanya",
+      "E. meneruskan berita tersebut kepada orang lain"
+    ],
     jawabanBenar: "",
   ),
   SoalPilihanGanda(
-    pertanyaan: "",
-    pilihanJawaban: ["", "", "", "", ""],
+    pertanyaan:
+        "Perhatikan hadis Nabi Muhammad Saw. di bawah ini!\n عَنْ أَبِي الْخَيْرِ أَنَّهُ سَمِعَ عَبْدَ اللّٰهِ بْنَ عَمْرِو بْنِ الْعَاصِ يَقُولُ إِنَّ رَجُلًا سَأَلَ رَسُوْلَ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ أَيُّ الْمُسْلِمِينَ خَيْرٌ قَالَ مَنْ سَلِمَ الْمُسْلِمُوْنَ مِنْ لِسَانِهِ وَيَدِهِ (رواه مسلم) \nDari hadis di atas dapat diketahui bahwa maksud muslim yang paling baik adalah …. ",
+    pilihanJawaban: [
+      "A. seorang muslim yang keluarganya merasa aman dari gangguan lisan dan tangannya",
+      "B. seorang muslim yang orang lain merasa aman dari gangguan lisan dan tangannya",
+      "C. seorang muslim yang kelompoknya merasa aman dari gangguan lisan dan tangannya ",
+      "D. seorang muslim yang temannya merasa aman dari gangguan lisan dan tangannya",
+      "E. seorang muslim yang adiknya merasa aman dari gangguan lisan dan tangannya"
+    ],
     jawabanBenar: "",
   ),
   SoalPilihanGanda(
-    pertanyaan: "",
-    pilihanJawaban: ["", "", "", "", ""],
+    pertanyaan:
+        "Al-Qur’an memberikan panduan dalam menggunakan media sosial. Diantaranya adalah dalam Q.S. Al-Haj/22: 30. Dalam ayat tersebut, hendaknya kalian mematuhi adab menggunakan media sosial, yaitu ….",
+    pilihanJawaban: [
+      "Al-Qur’an memberikan panduan dalam menggunakan media sosial. Diantaranya adalah dalam Q.S. Al-Haj/22: 30. Dalam ayat tersebut, hendaknya kalian mematuhi adab menggunakan media sosial, yaitu ….",
+      "B. menyampaikan informasi tanpa rekayasa atau manipulasi",
+      "C. bersikap bijak dalam menerima informasi atau berkomentar",
+      "D. berniat yang baik dalam menggunakan media sosial",
+      "E. dapat mengambil hikmah dalam menggunakan media sosial"
+    ],
     jawabanBenar: "",
   ),
   SoalPilihanGanda(
-    pertanyaan: "",
-    pilihanJawaban: ["", "", "", "", ""],
+    pertanyaan:
+        "Dalam mengupdate status atau mengunggah tulisan di media sosial, umat Islam harus mengikuti perintah dalam Al-Qur’an. Diantaranya dalam Q.S. Al-Hujurāt/49: 12. Di bawah ini adalah isi perintahnya, yaitu….",
+    pilihanJawaban: [
+      "A. menghindari husnudzan, tajassus, dan ghibah",
+      "B. melaksanakan husnudzan, tajassus, dan ghibah",
+      "C. menghindari su’udzan, tajassus, dan melaksanakan ghibah",
+      "D. menghindari su’udzan, dan melaksanakan tajassus, dan ghibah",
+      "E. menghindari su’udzan, tajassus, dan ghibah"
+    ],
     jawabanBenar: "",
   ),
   SoalPilihanGanda(
-    pertanyaan: "",
-    pilihanJawaban: ["", "", "", "", ""],
+    pertanyaan:
+        "Perhatikan pernyataan di bawah ini!\n1) mengajak kepara orang lain untuk berbuat kebaikan \n2) memilih teman bermain dari daerahnya sendiri\n3) menyampaikan argumentasi dengan cara yang baik\n4) berniat yang baik dalam menggunakan media sosial\n5) memproduksi konten yang bersifat hate speech\nDari pernyataan tersebut, yang termasuk adab menggunakan media sosial adalah ….",
+    pilihanJawaban: [
+      "A. 1), 2), dan 3)",
+      "B. 1), 2), dan 4)",
+      "C. 2), 3), dan 5)",
+      "D. 3), 4), dan 5)",
+      "E. 3), 4), dan 1)"
+    ],
     jawabanBenar: "",
   ),
   SoalPilihanGanda(
-    pertanyaan: "",
-    pilihanJawaban: ["", "", "", "", ""],
+    pertanyaan:
+        "Dalam Hadis Nabi Muhammad Saw. yang diriwayatkan oleh Tirmidzī disebutkan bahwa maksud sebagian dari kebaikan Islam seseorang adalah ….",
+    pilihanJawaban: [
+      "A. meninggalkan daerahnya untuk mencari rezeki",
+      "B. meninggalkan teman yang berbuat kemaksiatan",
+      "C. meninggalkan kemaksiatan menuju ketakwaan",
+      "D. meninggalkan sesuatu yang tidak bermanfaat baginya",
+      "E. meninggalkan kampungnya untuk menuntut ilmu"
+    ],
     jawabanBenar: "",
   ),
   SoalPilihanGanda(
-    pertanyaan: "",
-    pilihanJawaban: ["", "", "", "", ""],
+    pertanyaan:
+        "Dalam Hadis Nabi Muhammad Saw. yang diriwayatkan Muslim bahwa barangsiapa yang menunjukkan kepada kebaikan, maka ….",
+    pilihanJawaban: [
+      "A. orang tersebut akan mendapatkan pahala yang lebih besar orang yang menjalankan kebaikan tersebut",
+      "B. orang tersebut akan mendapatkan pahala yang sama seperti orang yang menjalankan kebaikan tersebut",
+      "C. orang tersebut akan mendapatkan pahala kurang lebih sama dari orang yang menjalankan kebaikan tersebut",
+      "D. orang tersebut akan mendapatkan pahala dua kali lipat dari orang yang menjalankan kebaikan tersebut",
+      "E. orang tersebut akan mendapatkan pahala tiga kali lipat dari orang yang menjalankan kebaikan tersebut"
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan:
+        "Saat ini banyak para ustadz dan artis menggunakan media sosial untuk mengupload kegiatan kajian keislaman. Hal ini menunjukkan bahwa media sosial dapat bermanfaat sebagai ….",
+    pilihanJawaban: [
+      "A. media pertunjukkan ibadah",
+      "B. sarana dalam berdakwah",
+      "C. media menunjukkan status",
+      "D. perantara datangnya rizki",
+      "E. menaikkan popularitas"
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan:
+        "Di bawah ini adalah bentuk penerapan adab dalam menggunakan media sosial yang benar, yaitu ….",
+    pilihanJawaban: [
+      "A. saling menghormati dan menghargai antaranggota dalam satu grup",
+      "B. mengirimkan berita di media sosial yang mengandung unsur tajassus",
+      "C. menanggapi komentar teman satu daerah saja di media sosial",
+      "D. mengajak teman untuk menyebarkan informasi yang belum tahu sumbernya",
+      "E. menghindari informasi yang mengajak untuk berbuat baik kepada sesama"
+    ],
     jawabanBenar: "",
   ),
 ];
 List<SoalPilihanGanda> pilihanGanda9 = [
   SoalPilihanGanda(
-    pertanyaan: "",
-    pilihanJawaban: ["", "", "", "", ""],
+    pertanyaan:
+        "Perhatikan hadis di bawah ini! \nيَا مَعْشَرَ الشَّبَابِ مَنِ اسْتَطَاعَ مِنْكُمُ الْبَاءَةَ فَلْيَتَزَوَّجْ فَإِنَّهُ أَغَضُ لِلْبَصَرِ وَأَحْصَنُ لِلْفَرْجِ وَمَنْ لَمْ يَسْتَطِعْ فَعَلَيْهِ بِالصَّوْمِ فَإِنَّهُ لَهُ وِجَاءٌ  (رواه البخاری) \nHadis di atas menjadi dasar penetapan hukum menikah bagi seorang laki-laki. Sesuai hadis tersebut, menikah hukumnya wajib bagi orang yang....  ",
+    pilihanJawaban: [
+      "A. sudah memiliki pekerjaan tetap dan memiliki rumah sendiri serta memiliki tabungan",
+      "B. tidak ada alasan untuk menolak ataupun menerima dilakukannya sebuah pernikahan",
+      "C. sudah mampu menikah secara lahir batin serta tidak sanggup menghindar dari zina",
+      "D. sudah mampu menikah secara lahir batin dan mampu menghindar dari zina",
+      "E. sudah memiliki syarat-syarat sesuai dengan peraturan di lingkungan masyarakat"
+    ],
     jawabanBenar: "",
   ),
+  SoalPilihanGanda(
+    pertanyaan:
+        "Seorang pria dan wanitia pergi melaksanakan umrah ke tanah suci. Disela-sela ibadah umrah, sebelum melakukan tahalul, dia melangsungkan pernikahan yang disaksikan oleh dua orang saksi. Dari peristiwa tersebut, hukum pernikahannya adalah ….",
+    pilihanJawaban: [
+      "A. sunah",
+      "B. haram",
+      "C. wajib",
+      "D. mubah ",
+      "E. makruh"
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan:
+        "Perhatikan pernyataan di bawah ini!\n1) harta\n2) status\n3) jabatan\n4) agama \n5) kecantikan/ketampanan\n6) keturunan\nDari pernyataan di atas yang termasuk pertimbangan dalam menikah sebagaimana yang dituntunkan oleh Nabi Muhammad Saw. adalah ….",
+    pilihanJawaban: [
+      "A. 1), 2), 3), dan 6)",
+      "B. 1), 2), 4), dan 6)",
+      "C. 1), 2), 5), dan 6)",
+      "D. 4), 5), 6), dan 1)",
+      "E. 4), 5), 6), dan 2)"
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan:
+        "Rukun nikah adalah suatu perkara yang harus dipenuhi dalam pelaksanaan nikah, jika tidak maka nikahnya tidak sah. Rukun nikah itu adalah sebagai berikut, kecuali …. ",
+    pilihanJawaban: [
+      "A. calon suami ",
+      "B. calon istri",
+      "C. ijab kabul",
+      "D. dua orang saksi",
+      "E. bapak calon istri"
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan: "Kewajiban material suami kepada istrinya adalah …. ",
+    pilihanJawaban: [
+      "A. memberi perlindungan keselamatan kepada istrinya",
+      "B. memberi kesehatan badan dan rohani istri",
+      "C. memberi nafkah istri sesuai kemampuannya ",
+      "D. memperhatikan keadaan istrinya dan melindungi istri",
+      "E. meningkatkan mutu keislaman istrinya"
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan: "Di bawah ini yang bukan merupakan tujuan nikah adalah …..",
+    pilihanJawaban: [
+      "A. supaya hidup manusia tenteram dan bahagia",
+      "B. melaksanakan perintah Allah Swt.",
+      "C. membina rumah tangga dengan kasih sayang ",
+      "D. mengikuti sunah Rasulullah Saw. ",
+      "E. terpenuhinya kebutuhan biologis semata"
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan:
+        "Perhatikan daftar di bawah ini!\n1) Calon suami;\n2) Calon Istri;\n3) Mahar;\n4) Wali;\n5) 2 orang saksi;\n6) Walimah\n7) Ijab qabul\nDari daftar di atas, yang termasuk rukun menikah ditunjukkan pada nomor ….",
+    pilihanJawaban: [
+      "A. 1), 2), 3), 4), 5)",
+      "A. 1), 2), 3), 4), 5)",
+      "C. 1), 2), 3), 6), 7)",
+      "D. 1), 2), 4), 5), 6)",
+      "E. 1, 2), 4), 5), 7) "
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan:
+        "Batas usia minimal menurut UU No. 16 Tahun 2019 baik laki-laki maupun perempuan adalah … ",
+    pilihanJawaban: [
+      "A. 17 tahun",
+      "B. 18 tahun",
+      "C. 19 tahun",
+      "D. 20 tahun",
+      "E. 21 tahun"
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan:
+        "Hukum menikah ditujukan untuk orang yang sudah mampu dari segi lahir dan batin untuk menikah namun masih sanggup mengendalikan dirinya dari godaan yang menjurus kepada perzinaan adalah ….",
+    pilihanJawaban: [
+      "A. wajib",
+      "B. sunah",
+      "C. haram",
+      "D. mubah",
+      "E. makruh"
+    ],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan:
+        "Di bawah ini yang bukan termasuk hikmah dalam pernikahan adalah ….",
+    pilihanJawaban: [
+      "A. dapat melaksanakan perintah Allah Swt. dan Rasul-Nya;",
+      "B. terbentuknya keluarga bahagia dan saling menyayangi;",
+      "C. terhindar dari bahan ejekan dari masyarakat",
+      "D. terjalinnya hubungan yang diridhai oleh Allah Swt. ",
+      "E. mendatangkan pahala dan menjauhkan dari dosa besar"
+    ],
+    jawabanBenar: "",
+  ),
+
 ];
+
 List<SoalPilihanGanda> pilihanGanda10 = [
   SoalPilihanGanda(
-    pertanyaan: "",
-    pilihanJawaban: ["", "", "", "", ""],
+    pertanyaan: "Ajaran Islam bukan hanya mementingkan soal akhirat, tetapi juga soal dunia. Umat Islam juga harus memperhatikan kehidupan dunia. Pemikiran ini dikemukakan oleh ….",
+    pilihanJawaban: ["A. Jamaludin al-Afghani", "B. Muhammad Rasyid Ridha", "C. Muhammad Abduh", "D. Sultan Mahmud II", "E. Rifa’ah Baidawi R. al-Tahtawi"],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan: "Perhatikan tokoh di bawah ini!\n1) Muhammad Ali Pasya\n2) Muhammad Abduh\n3) Rifa’ah Baidawi Rafi’at at-Tahtawi\n4) KH. Ahmad Dahlan\n5) KH. Hasyim Asy’ari\n6) Muhammad Iqbal\nDari tokoh Islam pada masa modern yang berkiprah di Mesir adalah ….",
+    pilihanJawaban: ["A. 1), 2), dan 3)", "B. 2), 3), dan 4)", "C. 3), 4, dan 5)", "D. 4), 5), dan 6)", "E. 5), 6), dan 1)"],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan: "Menurut Harun Nasution, membagi sejarah Islam ke dalam tiga periode besar. Di antaranya masa tahun 1800 sampai sekarang. Pada masa itu oleh Harun Nasution disebut dengan ….",
+    pilihanJawaban: ["A. masa klasik ", "B. masa pertengahan", "C. masa transisi ", "D. masa modern", "E. masa kejayaan"],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan: "Pintu ijtihad masih terbuka lebar bagi umat Islam. Ijtihad merupakan dasar penting dalam menafsirkan kembali ajaran Islam. Pemikiran tersebut dikemukakan oleh….",
+    pilihanJawaban: ["A. Jamaludin al-Afghani dan Sayyid Ahmad Khan", "B. Muhammad Rasyid Ridha dan Jamaludin al-Afghani", "C. Muhammad Abduh dan Muhammad Iqbal", "D. Sultan Mahmud II dan Namik Kemal", "E. Rifa’ah Baidawi dan Muhammad Ali Pasya"],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan: "Tokoh pembaharu pada abad ke-18 yang mendirikan sekolah Maktebi Ma’aarif dan Maktebi Ulum’i edibiyet dan sekolah kedokteran, militer, dan teknik adalah… ",
+    pilihanJawaban: ["A. Jamaludin al-Afghani", "B. Muhammad Rasyid Ridha", "C. Muhammad Abduh", "D. Sultan Mahmud II", "E. Rifa’ah Baidawi"],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan: "Perhatikan kitab di bawah ini\n1) Al-Qadha wa al-Qadar\n2) Risalah tauhid\n3) Syarh Nahjil Balaghah\n4) Ishlahu al-Mahakim al-Syar’iyyah\n5) Adab al-Alim wa al-Muta’allim\nDari kitab di atas yang merupakan karya Muhammad Abduh adalah ….",
+    pilihanJawaban: ["A. 1), 2), dan 3)", "B. 2), 3), dan 4)", "C. 3), 4, dan 5)", "D. 4), 5), dan 1)", "E. 5), 1), dan 2)"],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan: "Di bawah ini adalah tokoh pembaharu yang dikenal dengan bapak pendiri Negara Pakistan adalah ….",
+    pilihanJawaban: ["A. Jamaludin al-Afghani", "B. Muhammad Rasyid Ridha", "C. Muhammad Abduh", "D. Sultan Mahmud II", "E. Muhammad Iqbal"],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan: "Di bawah ini adalah pokok-pokok pikiran KH. Ahmad Dahlan adalah kecuali ….",
+    pilihanJawaban: ["A. fondasi dalam pemerintahan dalam Islam mempunyai tujuan memberi persamaan bagi setiap muslim, melayani kepentingan dengan cara perundingan, dan menjaga keadilan", "B. model pendidikan memadukan dua jenis yatu pesantren dan sekolah umum. Dalam pengajarannya menggabungkan antara sistem pengajaran pesantren dan Pendidikan Barat", "C. tujuan utama pendidikan Islam adalah membentuk manusia yang berbudi luhur, alim dalam agama, memiliki pandangan luas, dan paham tentang masalah ilmu keduniaan", "D. pendidikan harus mencetak manusia-manusia yang berjiwa nasionalisme dan patriotisme, sehingga bersedia berjuang untuk kemajuan masyarakat", "E. materi pendidikan harus meliputi: pendidikan moral dan akhlak, pendidikan individu, dan pendidikan kemasyarakatan"],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan: "KH. Hasyim Asy’ari adalah sosok yang produktif menulis kitab. Karya beliau yang berisi tentang pentingnya persatuan dan kesatuan di antara sesama umat Islam dalam merespon upaya-upaya yang telah dilakukan Belanda adalah….",
+    pilihanJawaban: ["A. Adab al-alim wa al-muta’allim", "B. Al-Mawa’idz", "C. Al-Nur al-Mubin", "D. Al-Tanbihat wa al-wajibat ", "E. Al-Durar al-Muntatsirah "],
+    jawabanBenar: "",
+  ),
+  SoalPilihanGanda(
+    pertanyaan: "Di bawah ini yang bukan merupakan hikmah mempelajari perkembangan Islam pada abad modern, adalah ….",
+    pilihanJawaban: ["A. mendorong umat Islam untuk menguasai IPTEK", "B. mendorong umat Islam untuk menjadi orang kaya", "C. mendorong semangat untuk berjuang", "D. mendorong umat Islam meraih kemajuan yang hakiki", "E. mendorong umat Islam memiliki prinsip hidup yang kuat "],
     jawabanBenar: "",
   ),
 ];

@@ -7,17 +7,24 @@ import 'package:book/app/widgets/heading_3.dart';
 import 'package:book/app/widgets/paragraf_italic.dart';
 import 'package:book/app/widgets/paragraf_list_abjad.dart';
 import 'package:book/app/widgets/paragraf_widget.dart';
+import 'package:book/app/widgets/quran_widget.dart';
 import 'package:book/app/widgets/tadabbur.dart';
 import 'package:book/app/widgets/terjemahan_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../data/bab_8_model/list_paragraf_8.dart';
 import '../data/kata_kunci.dart';
+import '../data/pilihan_ganda.dart';
+import '../data/tabel_penerapan_karakter.dart';
 import '../modules/SideMenu/views/side_menu_view.dart';
+import '../widgets/bab_1_widget/pilihanganda.dart';
 import '../widgets/baground_orange_kata_kunci.dart';
 import '../widgets/list_paragraf.dart';
+import '../widgets/penilaiandiri2.dart';
+import '../widgets/refleksi.dart';
 import '../widgets/sampul_bab.dart';
 import '../widgets/sub_bab.dart';
+import '../widgets/tabel_penerapan_karakter.dart';
 
 class Bab8 extends StatelessWidget {
   const Bab8({super.key});
@@ -46,16 +53,14 @@ class Bab8 extends StatelessWidget {
           DAyo(),
           ParagrafWidget(
               content:
-                  "Sebelum memulai pembelajaran ini, silahkan kalian tadarus al-Qur’an. Hal ini dapat menjadi pembiasaan kalian untuk membaca al-Qur’an setiap hari. Tujuannya, menguatkan literasi sekaligus berdoa kepada Allah Swt., semoga dalam setiap langkah kalian mendapatkan bimbingan, taufiq, dan ridha-Nya. Āmīn Yā Rabbal Ālamīn."),
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-
+                  "Sebelum mempelajari bab delapan tentang adab dalam bermedia sosial, mari membaca bersama-sama Q.S. An-Nūr/24: 11-13 dibawah ini!"),
+          QuranWidget(
+              arab:
+                  "اِنَّ الَّذِيْنَ جَاۤءُوْ بِالْاِفْكِ عُصْبَةٌ مِّنْكُمْۗ لَا تَحْسَبُوْهُ شَرًّا لَّكُمْۗ بَلْ هُوَ خَيْرٌ لَّكُمْۗ لِكُلِّ امْرِئٍ مِّنْهُمْ مَّا اكْتَسَبَ مِنَ الْاِثْمِۚ وَالَّذِيْ تَوَلّٰى كِبْرَهٗ مِنْهُمْ لَهٗ عَذَابٌ عَظِيْمٌ  ١١   لَوْلَآ اِذْ سَمِعْتُمُوْهُ ظَنَّ الْمُؤْمِنُوْنَ وَالْمُؤْمِنٰتُ بِاَنْفُسِهِمْ خَيْرًاۙ وَّقَالُوْا هٰذَآ اِفْكٌ مُّبِيْنٌ ١٢   لَوْلَا جَاۤءُوْ عَلَيْهِ بِاَرْبَعَةِ شُهَدَاۤءَۚ فَاِذْ لَمْ يَأْتُوْا بِالشُّهَدَاۤءِ فَاُولٰۤىِٕكَ عِنْدَ اللّٰهِ هُمُ الْكٰذِبُوْنَ ١٣   (النّور / ٢٤: ١٣ـ ١١)"),
+          AktivitasWidget(
+              activityTitle: "Aktivitas 8.1",
+              contentText:
+                  "Bacalah Q.S. An-Nūr/24: 11-13 di atas bersama-sama dengan tartil!"),
           ETadabb(),
           Tadabbur(idlist: tadabbur8),
           FKisah(),
@@ -99,26 +104,56 @@ class Bab8 extends StatelessWidget {
           ParagrafWidget(
               content:
                   "Semangat pagi calon pemimpin bangsa. Dalam kehidupan sehari-hari, kalian tidak bisa terlepas dari media sosial. Data We are Social Hootsuite Tahun 2020 bahwa pengguna aktif media sosial (medsos) di Indonesia sebesar 160 Juta. Dari fungsinya, ada yang menggunakan untuk kegiatan positif dan negatif. Media sosial bisa bermanfaat atau tidak tergantung pada penggunanya. "),
-
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 8),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  decoration: const BoxDecoration(
+                      color: bagroundGreen,
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(10),
+                          topRight: Radius.circular(10))),
+                  padding: const EdgeInsets.all(10),
+                  child: Text(
+                    "Aktivitas 8.3", // Use the activityTitle parameter here
+                    style: regular_paragraf.copyWith(
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+                Container(
+                  width: double.infinity,
+                  decoration: const BoxDecoration(
+                      color: bagroundGreenLight,
+                      borderRadius: BorderRadius.only(
+                        bottomRight: Radius.circular(10),
+                        bottomLeft: Radius.circular(10),
+                        topRight: Radius.circular(10),
+                      )),
+                  padding: const EdgeInsets.all(10),
+                  child: Column(
+                    children: [
+                      Text(
+                        "Jawablah pertanyaan ini dengan jujur sesuai kondisi kalian", // Use the contentText parameter here
+                        style: regular_paragraf,
+                        textAlign: TextAlign.justify,
+                      ),
+                      ParagrafList(idlist: aktiv83)
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
           ParagrafWidget(
               content:
                   "   Untuk bisa memanfaatkan dan meminimalisir kelemahan, maka belajar adab dalam menggunakan media sosial dalam bab ini sangat penting untuk kalian. Adab ini tentunya tidak hanya teori, tetapi setelah itu bisa diterapkan dalam kehidupan sehari-hari. Penasaran, seperti apa adabnya, mari bersamasama belajar materi ini dengan baik. "),
-
           Heading2(title: "1. Pentingnya Adab menggunakan Media Sosial"),
-
           ParagrafWidget(
               content:
                   "Seiring dengan perkembangan teknologi dan internet, telah menghubungkan setiap manusia ke dalam sebuah dunia baru, dunia digital tanpa batas. Internet dapat menghubungkan berbagai belahan dunia yang tidak kenal sebelumnya dengan cara mengoneksikan komputer/HP dengan jaringan internet. Saat berinteraksi dengan pengguna internet di dalam jaringan, naluri manusia sebagai makhluk sosial muncul. Hal ini yang menjadi dasar munculnya media online (termasuk media sosial) yang mampu mewadahi para pengguna internet di seluruh dunia. "),
-
           ParagrafWidget(
               content:
                   "   Medsos sangat mempengaruhi kehidupan manusia. Dari bangun tidur sampai mau tidur, medsos berada dalam genggaman. Medsos mempunyai dampak positif dan negatif. Di antara manfaatnya adalah memudahkan dalam berkomunikasi, bersilaturahmi, dan kemudahan mendapatkan informasi. Selain itu medsos juga bermanfaat untuk media belajar dan bisnis."),
@@ -145,16 +180,9 @@ class Bab8 extends StatelessWidget {
           ParagrafWidget(
               content:
                   "   Meskipun, zaman Nabi Muhammad Saw. belum ada media sosial, tetapi rambu-rambu dalam berinteraksinya diajarkan dalam Al-Qur’an dan Hadis. Di antara dalil naqli tentang menggunakan media sosial terdapat dalam Q.S. Al-Hujurat/49: 6 berikut ini."),
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
+          QuranWidget(
+              arab:
+                  "يٰٓاَيُّهَا الَّذِيْنَ اٰمَنُوْٓا اِنْ جَاۤءَكُمْ فَاسِقٌ ۢ  بِنَبَاٍ فَتَبَيَّنُوْٓا اَنْ تُصِيْبُوْا قَوْمًاۢ بِجَهَالَةٍ فَتُصْبِحُوْا عَلٰى مَا فَعَلْتُمْ نٰدِمِيْنَ  (الحجرٰت/ ٤٩: ٦)"),
           Terjemahan(
               content:
                   "Wahai orang-orang yang beriman! Jika seseorang yang fasik datang kepadamu membawa suatu berita, maka telitilah kebenarannya, agar kalian tidak mencelakakan suatu kaum karena kebodohan (kecerobohan), yang akhirnya kamu menyesali perbuatanmu itu.",
@@ -162,23 +190,12 @@ class Bab8 extends StatelessWidget {
           ParagrafWidget(
               content:
                   "   Dari ayat di atas dapat diketahui bahwa ketika menerima sebuah informasi termasuk di dalamnya mendapatkan informasi dari media sosial, maka perlu dicek kebenaran informasi yang kalian terima. Pengecekan informasi tersebut bisa menanyakan ke pemberi informasi atau mengecek ke sumber-sumber resmi yang bisa dipertanggungjawabkan. Apabila kalian mendapatkan informasi tanpa diteliti kebenarannya, seperti yang dijelaskan Q.S. Al-Hujurat/49: 6 agar kamu tidak mencelakakan suatu kaum karena kebodohannya yang akhirnya kalian akan menyesali perbuatan yang telah dilakukan."),
-
           ParagrafWidget(
               content:
                   "   Sedangkan dalam hadis Nabi Muhammad Saw. memberikan arahan dalam menggunakan media sosial sebagai berikut."),
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
+          QuranWidget(
+              arab:
+                  "عَنْ أَبِي الْخَيْرِ أَنَّهُ سَمِعَ عَبْدَ اللّٰهِ بْنَ عَمْرِو بْنِ الْعَاصِ يَقُولُ إِنَّ رَجُلًا سَأَلَ رَسُوْلَ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ أَيُّ الْمُسْلِمِينَ خَيْرٌ قَالَ مَنْ سَلِمَ الْمُسْلِمُوْنَ مِنْ لِسَانِهِ وَيَدِهِ (رواه مسلم)"),
           Terjemahan(
               content:
                   "Dari Abu al-Khair bahwa dia mendengar ‘Abdullah bin Amr bin al-Ash keduanya berkata, “Sesungguhnya seorang laki-laki bertanya kepada Rasulullah saw, “Muslim yang bagaimana yang paling baik?” Beliau menjawab: “Yaitu seorang muslim yang orang lain merasa aman dari gangguan lisan dan tangannya.”",
@@ -198,17 +215,9 @@ class Bab8 extends StatelessWidget {
           ParagrafWidget(
               content:
                   "Dalam agama Islam, kedudukan niat sangatlah penting, tidak hanya karena merupakan rukun dari suatu ibadah, tetapi niat akan membimbing kesadaran dan sikap seorang muslim dalam melakukan kegiatan sehari-hari. Bahkan dengan nilai suatu perbuatan akan ditentukan sesuai dengan niatnya. Seperti sabda Rasulullah Saw.:"),
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
+          QuranWidget(
+              arab:
+                  "عَنْ عُمَرَ بْنِ الْخَطَّابِ قَالَ: قَالَ رَسُوْلُ اللّٰهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى فَمَنْ كَانَتْ هِجْرَتُهُ إِلَى اللّٰهِ وَرَسُوْلِهِ ، فَهِجْرَتُهُ إِلَى اللهِ وَرَسُوْلِهِ ، وَمَنْ كَانَتْ هِجْرَتُهُ لِدُنْيَا يُصِيْبُهَا أَوِ امْرَأَةٍ يَتَزَوَّجُهَا فَهِجْرَتُهُ إِلَى مَا هَاجَرَ إِلَيْهِ (رواه مسلم)"),
           Terjemahan(
               content:
                   "Dari ‘Umar bin al-Khattab ra ia berkata, Rasulullah Saw. bersabda, sesungguhnya amal perbuatan ditentukan dengan niatnya. Sesungguhnya setiap orang mendapatkan sesuai dengan niatnya. Siapa yang hijrah dengan niat kepada Allah dan Rasulnya, maka hijrahnya kepada Allah dan rasulnya. Dan siapa yang hijrah dengan niat memperoleh dunia atau menikahi seorang perempuan, maka hijrahnya sesuai dengan yang ia niatkan. ",
@@ -220,11 +229,9 @@ class Bab8 extends StatelessWidget {
               activityTitle: "Aktivitas 8.5",
               contentText:
                   "Carilah teks Q.S. Al-An’am/6: 162-163, terjemahan, tafsir dan bagaimana hubungannya dengan bermedia sosial!"),
-
           ParagrafWidget(
               content:
                   "   Penjelasan di atas menunjukkan pentingnya sebuah niat. Dalam Kitab Ta’lim al-Muta’alim, Imam al-Zarnuji menyebutkan banyak perbuatan yang secara lahiriah adalah amal duniawi, tetapi karena baiknya niat akan menjadi amal akhirat (bernilai ibadah) jika diniati dengan niat yang baik. Sebaliknya amal akhirat (ibadah) jika niatnya tidak baik akan menjadi amal dunia (tidak dinilai sebagai ibadah yang berpahala)."),
-
           ParagrafWidget(
               content:
                   "   Dari hadis dan penjelasan di atas dihubungkan dengan menggunakan media sosial pun perlu diniati dengan baik agar mempunyai nilai ibadah dan mendatangkan manfaat bagi diri sendiri maupun orang lain. "),
@@ -235,18 +242,9 @@ class Bab8 extends StatelessWidget {
           ParagrafWidget(
               content:
                   "   Terkait memilih teman, Nabi Muhammad Saw. telah memberikan gambaran perbedaan antara teman yang baik dan yang tidak baik:"),
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-
+          QuranWidget(
+              arab:
+                  "عَنْ أَبِي مُوسَى رَضِيَ اللهُ عَنْهُ عَنِ النَّبِيِّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ قَالَ: مَثَلُ الجَلِيْسِ الصَّالِحِ وَالسَّوْءِ كَحَامِلِ الْمِسْكِ وَنَافِخِ الْكِيْرِ فَحَامِلُ الْمِسْكِ: إِمَّا أَنْ يُحْذِيَكَ وَإِمَّا أَنْ تَبْتَاعَ مِنْهُ وَإِمَّا أَنْ تَجِدَ مِنْهُ رِيْحًا طَيِّبَةً وَنَافِخُ الْكِيْرِ: إِمَّا أَنْ يُحْرِقَ ثِيَابَكَ وَإِمَّا أَنْ تَجِدَ رِيْحًا خَبِيْثَةً (رواه البخاري)"),
           Terjemahan(
               content:
                   "Dari Abi Musa ra., dari Nabi Saw. bersabda: perumpamaan teman duduk yang baik dengan teman duduk yang buruk adalah seperti penjual minyak misik (yang wangi) dan seorang pandai besi. Penjual minyak misik terkadang ia menawarkan minyaknya dan terkadang ia akan menjualnya kepadamu dan terkadang kamu yang akan mendapatkan aroma wanginya. Adapun pandai besi adakalanya ia akan membakar pakaianmu dan adakalanya kamu akan mendapatkan bau yang tidak sedap.",
@@ -266,32 +264,17 @@ class Bab8 extends StatelessWidget {
           ParagrafWidget(
               content:
                   "   Berita bohong atau hoax biasa dimulai dari mengedit, merekayasa dan memanipulasi informasi yang ada di dalam sebuah berita. Padahal hal ini dilarang dalam Islam. Maka sebagai muslim yang baik, hendaknya tidak merekayasa dan memanipulasi informasi. Hal ini sebagaimana yang dijelaskan dalam Q.S. Al-Hajj/22: 30 di bawah ini:"),
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
+          QuranWidget(
+              arab: "وَاجْتَنِبُوْا قَوْلَ الزُّوْرِ ۙ  (الحج/ ٢٢: ٣٠)...."),
           ParagrafItalic(
               content: "“Jauhilah olehmu perkataan-perkataan dusta.”"),
           Heading3(title: "e. Mengajak kepada kebaikan"),
           ParagrafWidget(
               content:
                   "Media sosial tidak hanya media untuk bersilaturrahmi dengan berbagai kalangan. Tetapi juga dapat dijadikan sebagai media mengajak kepada kebaikan secara lebih luas. Terlebih lagi data Kementerian Komunikasi dan Informatika per tanggal 5 Mei 2020 ada 1.401 konten hoaks dan disinformasi tentang Covid-19 yang beredar di masyarakat. Sedangkan dalam ujaran kebencian, data dari media tempo.co tanggal 20 November 2020, bahwa salah satu media sosial terbesar dari sepuluh ribu penayangan konten sepanjang bulan Juli-September 2020, terdapat sepuluh sampai sebelas unggahan yang mengandung ujaran kebencian. Dari data tersebut, seharusnya media sosial menjadi ladang dakwah kalian untuk menyeru kebaikan dan menebarkan perdamaian. Sehingga orang-orang akan tetap tergerak hatinya untuk mengikuti kebaikan. Nabi Muhammad Saw. bersabda:"),
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-
+          QuranWidget(
+              arab:
+                  "عَنْ أَبِي مَسْعُودٍ الْأَنْصَارِيِّ ... فَقَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: مَنْ دَلَّ عَلَى خَيْرٍ فَلَهُ مِثْلُ أَجْرِ فَاعِلِهِ (رواه مسلم)"),
           Terjemahan(
               content:
                   "Dari Abi Mas’ud al-Anshari………lalu Rasulullah Saw. bersabda: Barangsiapa yang menunjukkan kepada kebaikan, maka orang tersebut akan mendapatkan pahala sama seperti orang yang menjalankan kebaikan tersebut.",
@@ -305,65 +288,33 @@ class Bab8 extends StatelessWidget {
           ParagrafWidget(
               content:
                   "Dalam menggunakan media sosial, seringkali kalian menyampaikan informasi. Sampaikan informasi di media sosial kalian dengan cara yang baik. Begitu juga saat memberikan komentar teman kalian, sampaikan dengan cara yang baik pula. Hal ini sesuai dengan firman Allah Swt. dalam Q.S. An-Nahl/16: 125: "),
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
+          QuranWidget(
+              arab:
+                  "اُدْعُ اِلٰى سَبِيْلِ رَبِّكَ بِالْحِكْمَةِ وَالْمَوْعِظَةِ الْحَسَنَةِ وَجَادِلْهُمْ بِالَّتِيْ هِيَ اَحْسَنُۗ اِنَّ رَبَّكَ هُوَ اَعْلَمُ بِمَنْ ضَلَّ عَنْ سَبِيْلِهٖ وَهُوَ اَعْلَمُ بِالْمُهْتَدِيْنَ "),
           Terjemahan(
               content:
                   "“Serulah (manusia) kepada jalan Tuhan-mu dengan hikmah dan pelajaran yang baik dan bantahlah mereka dengan cara yang baik. Sesungguhnya Tuhanmu Dialah yang lebih mengetahui tentang siapa yang tersesat dari jalan-Nya dan Dialah yang lebih mengetahui orang-orang yang mendapat petunjuk” ",
               riwayat: "(QS. An-Nahl/16: 125)."),
-
           Heading3(
               title:
                   "g. Dalam menggunakan media sosial, hindarilah bahasa yang menyinggung atau menyakiti atau menghina orang lain"),
           ParagrafWidget(
               content:
                   "Menggunakan media sosial dengan bahasa yang menyinggung atau menyakiti atau mencaci-maki, atau menghina orang lain dapat menumbuhkan kebencian dan pertikaian dengan orang lain. Dengan kata lain segala bentuk perbuatan buruk harus dihindari dalam berinteraksi baik di dunia nyata ataupun di media sosial, seperti: menghasut, ujaran kebencian, menyebarkan berita bohong, dan acuh-tak acuh. Sebagaimana dijelaskan Nabi Muhammad Saw. dalam hadis berikut ini:"),
-
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
+          QuranWidget(
+              arab:
+                  "عَنْ أَبِيْ هُرَيْرَةَ ، قَالَ : قَالَ رَسُوْلُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: لَا تَحَاسَدُوْا . وَلَا تَنَاجَشُوْا وَلَا تَبَاغَضُوْا وَلَا تَدَابَرُوْا وَلَا يَبِعْ بَعْضُكُمْ عَلَى بَيْعِ بَعْضٍ. وَكُوْنُوْا عِبَادَ اللّٰهِ إِخْوَانًا الْمُسْلِمُ أَخُو الْمُسْلِمِ لَا يَظْلِمُهُ وَلَا يَخْذُلُهُ وَلَا يَحْقِرُهُ التَّقْوَى هَاهُنَا وَيُشِيْرُ إِلَى صَدْرِهِ ثَلَاثَ مَرَّاتٍ بِحَسْبِ أَمْرِئٍ مِنَ الشَّرِّ أَنْ يَحْقِرَ أَخَاهُ الْمُسْلِمِ كُلُّ الْمُسْلِمَ عَلَى الْمُسْلِمِ حَرَامٌ دَمُهُ وَمَالُهُ .وَعِرْضُهُ (رواه مسلم)"),
           Terjemahan(
               content:
                   "Dari Abu Hurairah berkata, Rasulullas Saw. bersabda: janganlah kalian semua saling hasad/iri dengki, saling menipu, saling membenci, saling acuh tak acuh, dan janganlah sebagian dari kalian menjual barang yang sudah dijual ke orang lain (sudah ditawar dan akan dibeli orang lain), jadilah kalian semua hamba-hamba Allah yang bersaudara. Seorang muslim adalah saudara bagi muslim yang lainnya, janganlah seorang muslim menzhaliminya, jangan menipunya dan janganlah menghinanya. Taqwa ada di sini, Rasul sambil menunjuk pada dada beliau tiga kali. Cukuplah seseorang dinilai buruk jika ia merendahkan/menghina saudaranya yang muslim. Setiap muslim bagi muslim yang lain haram darahnya, hartanya, dan harga dirinya. ",
               riwayat: "(H.R. Muslim)."),
-
           Heading3(title: "h. Bersikap Bijak"),
-
           ParagrafWidget(
               content:
                   "Muslim yang baik tentu mereka yang bijak dalam menggunakan media sosial. Caranya dengan mengedepankan logika dan perasaan ketika berbagi nasihat yang baik ataupun status di medsos. Bijak dalam bermedsos berarti memahami bahwa setiap orang yang menjalin pertemanan di medsos, memiliki latar belakang yang berbeda. Mereka memiliki karakter, pengetahuan, wawasan serta pola pikir yang berbeda-beda, sehingga ketika mengirim informasi ke media sosial harus lebih berhati-hati agar tidak ada yang tersinggung. Tidak hanya itu, termasuk bersikap bijak dalam menggunakan media sosial adalah kalian dapat menjauhkan diri dari segala hal yang tidak bermanfaat. Hal ini merupakan salah satu karakter dari seorang muslim adalah dapat meninggalkan sesuatu yang tidak bermanfaat. Rasulullah saw bersabda:"),
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
+          QuranWidget(
+              arab:
+                  "عَنْ أَبِي هُرَيْرَةَ ، قَالَ : قَالَ رَسُوْلُ اللّٰهِ صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمَ: مِنْ حُسْنِ إِسْلَامِ الْمَرْءِ تَرْكُهُ مَا لَا يَعْنِيْهِ (رواه الترمذي)"),
           Terjemahan(
               content:
                   "Dari Abu Hurairah berkata, Rasulullah Saw. bersabda sebagian dari kebaikan Islam seseorang adalah ia meninggalkan sesuatu yang tidak bermanfaat baginya.",
@@ -372,17 +323,9 @@ class Bab8 extends StatelessWidget {
           ParagrafWidget(
               content:
                   "Apa yang ada di media sosial, tidak seluruhnya baik, dan tidak seluruhnya buruk. Dengan kata lain ada yang buruk dan ada yang baik. Pada penjelasan sebelumnya, kalian sebagai muslim diajarkan untuk bisa meninggalkan hal-hal buruk yang tidak memberikan manfaat. Selain itu, karena media sosial juga mengandung banyak kebaikan dan hal-hal positif bagi umat muslim, maka kalian harus selalu bisa mengambil manfaat dan kebaikan dari media sosial. hal ini sudah dianjurkan Rasulullah Saw. sebagaimana dalam hadits berikut ini:"),
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-
+          QuranWidget(
+              arab:
+                  "عَنْ أَبِي هُرَيْرَةَ، قَالَ: قَالَ رَسُوْلُ اللّٰهِ صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمَ: الْكَلِمَةُ الْحِكْمَةُ ضَالَّةَ الْمُؤْمِنِ فَحَيْثُ وَجَدَهَا فَهُوَ أَحَقُّ بِهَا (رواه الترمذي)"),
           Terjemahan(
               content:
                   "Dari Abu Hurairah berkata, Rasulullah Saw. bersabda: kalimat yang mengandung hikmah (kebaikan) adalah sesuatu yang hilang dari orang mukmin, maka ketika seorang mukmin menemukannya ia lebih berhak untuk mengambilnya.",
@@ -398,60 +341,20 @@ class Bab8 extends StatelessWidget {
           ParagrafWidget(
               content:
                   "Ada beberapa hal yang dapat diterapkankan dalam menggunakan media sosial agar tetap nyaman, yaitu."),
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
+          QuranWidget(
+              arab:
+                  "يٰٓاَيُّهَا الَّذِيْنَ اٰمَنُوا اجْتَنِبُوْا كَثِيْرًا مِّنَ الظَّنِّۖ اِنَّ بَعْضَ الظَّنِّ اِثْمٌ وَّلَا تَجَسَّسُوْا وَلَا يَغْتَبْ بَّعْضُكُمْ بَعْضًاۗ اَيُحِبُّ اَحَدُكُمْ اَنْ يَّأْكُلَ لَحْمَ اَخِيْهِ مَيْتًا فَكَرِهْتُمُوْهُۗ وَاتَّقُوا اللّٰهَ ۗاِنَّ اللّٰهَ تَوَّابٌ رَّحِيْمٌ (الحرٰت /٤٩: ١٢)"),
           Heading2(title: "6. Hikmah Adab Bermedia Sosial"),
           ParagrafWidget(
               content:
                   "Ada beberapa hikmah yang akan kalian dapatkan apabila mematuhi adab dalam bermedia sosial, yaitu:"),
           ParagrafListAbjad(idlist: hikmahadab),
           HPenerapan(),
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
+          TabelPenerapanKarakterWidget(idlist: tabelPenKarakter8),
           IReflek(),
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
+          Refleksi(
+              content:
+                  "Setelah mempelajari materi tentang Adab bermedia sosial, manfaat apa saja yang kalian rasakan dalam kehidupan sehari-hari?Tuliskan 3 manfaatnya di bawah ini.\n1. ………………………………………………………………………………\n2. ………………………………………………………………………………\n3. ………………………………………………………………………………"),
           JRangkum(),
           Container(
             padding: const EdgeInsets.all(20),
@@ -463,77 +366,175 @@ class Bab8 extends StatelessWidget {
           ),
           KPenilai(),
           Heading2(title: "1. Penilaian Diri"),
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
+          PenilaianDiri2(idlist: tabelPenilaiandiri8),
           Heading2(title: "2. Penilaian Pengetahuan"),
-          const IPengaya(),
-          ParagrafWidget(
-              content:
-                  "   Dari hadis tersebut Nabi memberikan motivasi kepada umat muslim agar selalu mencari dan mengambil kebaikan dari segala sumber. Dalam hadis ini disebutkan “sesuatu yang hilang dari orang mukmin” ini menunjukkan bahwa dalam mencari kebaikan harus dengan keinginan yang kuat seperti ketika mencari barang milik kalian yang hilang. Selain itu, hadis ini mengajarkan bahwa seorang mukmin tidak hanya cukup mengajarkan kebaikan, tetapi harus selalu mencari kebaikan-kebaikan juga."),
-          AktivitasWidget(
-              activityTitle: "Aktivitas 8.6",
-              contentText:
-                  "Setelah mempelajari adab bermedia sosial, buatlah flyer tentang ajakan untuk berbuat baik kepada sesama. Setelah itu hasilnya dishare di media sosial yang kalian punya. "),
-
-          Heading2(title: "5. Penerapan Karakter dalam Adab Bermedia Sosial"),
-          ParagrafWidget(
-              content:
-                  "Ada beberapa hal yang dapat diterapkankan dalam menggunakan media sosial agar tetap nyaman, yaitu."),
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          Heading2(title: "6. Hikmah Adab Bermedia Sosial"),
-          ParagrafWidget(
-              content:
-                  "Ada beberapa hikmah yang akan kalian dapatkan apabila mematuhi adab dalam bermedia sosial, yaitu:"),
-          ParagrafListAbjad(idlist: hikmahAdab),
-          HPenerapan(),
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //  IReflek()
-
-          JRangkum(),
+          Heading3(
+              title:
+                  "a. Pilihlah salah satu jawaban yang tepat pada salah satu huruf jawaban a, b, c, d atau e"),
           Container(
-            padding: const EdgeInsets.all(20),
+            margin: const EdgeInsets.only(top: 4),
+            padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
-              color: purpleBagroundLight,
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: ParagrafList(idlist: rangkuman8),
+                border: Border.all(width: 1, color: black),
+                color: const Color(0xFFF3F3F4),
+                borderRadius: BorderRadius.circular(2)),
+            height: 280, // Atur tinggi sesuai kebutuhan
+            child: PilihanGandaSoal(daftarSoal: pilihanGanda8),
           ),
-          KPenilai(),
-          Heading2(title: "1. Penilaian Diri"),
-          Heading2(title: "2. Penilaian Pengetahuan"),
+          SizedBox(
+            height: 12,
+          ),
+          Heading3(
+              title:
+                  "Jawablah pertanyaan-pertanyaan di bawah ini dengan jelas dan tepat!"),
+          ParagrafList(idlist: uraian8),
           Heading2(title: "3. Penilaian Keterampilan"),
           ParagrafListAbjad(idlist: penKet),
           const IPengaya(),
           ParagrafWidget(
               content:
-                  "Setelah kalian selesai mempelajari materi adab bermedia sosial, kalian bisa menambah pengetahuan kalian dengan membaca buku-buku dibawah ini: ")
+                  "Setelah kalian selesai mempelajari materi adab bermedia sosial, kalian bisa menambah pengetahuan kalian dengan membaca buku-buku dibawah ini: "),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                width: 20,
+                child: Text(
+                  "1.",
+                  style: regular_paragraf,
+                  textAlign: TextAlign.justify,
+                ),
+              ),
+              Expanded(
+                  child: RichText(
+                text: TextSpan(style: regular_paragraf, children: <TextSpan>[
+                  TextSpan(text: "Harjani Hefni. 2017. "),
+                  TextSpan(
+                      text: "Komunikasi Islam.  ",
+                      style: regular_paragraf.copyWith(
+                          fontStyle: FontStyle.italic)),
+                  TextSpan(text: "Jakarta: Prenadamedia Grup."),
+                ]),
+                textAlign: TextAlign.justify,
+              ))
+            ],
+          ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                width: 20,
+                child: Text(
+                  "2.",
+                  style: regular_paragraf,
+                  textAlign: TextAlign.justify,
+                ),
+              ),
+              Expanded(
+                  child: RichText(
+                text: TextSpan(style: regular_paragraf, children: <TextSpan>[
+                  TextSpan(text: "Hosen, Nadirsyah. 2019. "),
+                  TextSpan(
+                      text: "Saring Sebelum Sharing. ",
+                      style: regular_paragraf.copyWith(
+                          fontStyle: FontStyle.italic)),
+                  TextSpan(text: "Yogyakarta: Bentang."),
+                ]),
+                textAlign: TextAlign.justify,
+              ))
+            ],
+          ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                width: 20,
+                child: Text(
+                  "3.",
+                  style: regular_paragraf,
+                  textAlign: TextAlign.justify,
+                ),
+              ),
+              Expanded(
+                  child: RichText(
+                text: TextSpan(style: regular_paragraf, children: <TextSpan>[
+                  TextSpan(text: "Juminem. "),
+                  TextSpan(
+                      text: "Adab Bermedia Sosial dalam Pandangan Islam.  ",
+                      style: regular_paragraf.copyWith(
+                          fontStyle: FontStyle.italic)),
+                  TextSpan(
+                      text:
+                          "Jurnal Pendidikan Agama Islam. Vol. 6 No. 1 (Januari-Juni 2019)."),
+                ]),
+                textAlign: TextAlign.justify,
+              ))
+            ],
+          ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                width: 20,
+                child: Text(
+                  "4. ",
+                  style: regular_paragraf,
+                  textAlign: TextAlign.justify,
+                ),
+              ),
+              Expanded(
+                  child: RichText(
+                text: TextSpan(style: regular_paragraf, children: <TextSpan>[
+                  TextSpan(text: "Setyawan, Hendra A. 2017. "),
+                  TextSpan(
+                      text:
+                          "Fikih Informasi di Era Media Sosial dalam Membangun Komunikasi Beretika. ",
+                      style: regular_paragraf.copyWith(
+                          fontStyle: FontStyle.italic)),
+                  TextSpan(
+                      text:
+                          "Makalah disampaikan pada Seminar Nasional dengan Tema "),
+                  TextSpan(
+                      text:
+                          "Membangun Etika Sosial Politik Menuju 147 Masyarakat Yang Berkeadilan. ",
+                      style: regular_paragraf.copyWith(
+                          fontStyle: FontStyle.italic)),
+                  TextSpan(
+                      text:
+                          "Dilaksanakan oleh FISIP Universitas Lampung pada 18 Oktober 2017 di Hotel Swiss Bell Bandar Lampung."),
+                ]),
+                textAlign: TextAlign.justify,
+              ))
+            ],
+          ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                width: 20,
+                child: Text(
+                  "5.",
+                  style: regular_paragraf,
+                  textAlign: TextAlign.justify,
+                ),
+              ),
+              Expanded(
+                child: RichText(
+                  text: TextSpan(style: regular_paragraf, children: <TextSpan>[
+                    TextSpan(text: "Sumadi, Eko. "),
+                    TextSpan(
+                        text: "Dakwah dan Media Sosial:  ",
+                        style: regular_paragraf.copyWith(
+                            fontStyle: FontStyle.italic)),
+                    TextSpan(
+                        text:
+                            "Menebar Kebaikan Tanpa Diskrimasi. AT-TABSYIR: Jurnal Komunikasi Penyiaran Islam. Vol. 4, No. 1 Juni 2016."),
+                  ]),
+                  textAlign: TextAlign.justify,
+                ),
+              )
+            ],
+          ),
         ],
       ),
     );

@@ -35,7 +35,7 @@ class _TabelPanilaianSikapState extends State<TabelPanilaianSikapAtas> {
             defaultVerticalAlignment: TableCellVerticalAlignment.middle,
             columnWidths: {
               0: const FractionColumnWidth(1 / 8),
-              1: const FractionColumnWidth(1 / 2),
+              1: const FractionColumnWidth(1 / 1.7),
             },
             children: List.generate(
               widget.idlist.length,

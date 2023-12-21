@@ -63,3 +63,28 @@ List<ListParagrafModel> penKet = [
   ListParagrafModel(textContent: "Tunjukkan kepada guru kalian untuk dinilai "),
 
 ];
+List<ListParagrafModel> aktiv83 = [
+
+  ListParagrafModel(textContent: "Selama ini, HP kalian dimanfaatkan untuk apa saja?"),
+  ListParagrafModel(textContent: "Selama ini, media sosial apa saja yang kalian ikuti ?"),
+  ListParagrafModel(textContent: "Dari media sosial yang kalian ikuti apa manfaat dan dampak negatifnya?"),
+
+];
+List<ListParagrafModel> uraian8 = [
+
+  ListParagrafModel(textContent: "Jelaskan apa yang dimaksud dengan adab bermedia sosial ?"), 
+  ListParagrafModel(textContent: "Mengapa dalam Islam, bermedia sosial perlu adab! Jelaskan tiga alasanmu!"), 
+  ListParagrafModel(textContent: "Sebutkan tiga adab dalam bermedia sosial! Jelaskan."), 
+  ListParagrafModel(textContent: "Jelaskan tiga dampak positif dari media sosial dalam kehidupan sehari-hari!"),           
+  ListParagrafModel(textContent: "Jelaskan tiga hikmah melaksanakan adab menggunakan media sosial!"),           
+         
+
+];
+List<ListParagrafModel> q = [
+
+  ListParagrafModel(textContent: ""), 
+  ListParagrafModel(textContent: ""), 
+  ListParagrafModel(textContent: ""), 
+  ListParagrafModel(textContent: ""), 
+
+];
