@@ -9,7 +9,12 @@ import 'package:book/app/widgets/paragraf_widget.dart';
 import 'package:book/app/widgets/quran_widget.dart';
 import 'package:book/app/widgets/terjemahan_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
+import '../assingnment/p_pengetahuan_9.dart';
+import '../assingnment/p_sikap_9.dart';
 import '../data/bab_1_model/tabel_penilaian_sikap_d.dart';
 import '../data/bab_2_model/tadabbur_model.dart';
 import '../data/bab_9_model/list_paragraf_9.dart';
@@ -31,7 +36,10 @@ import '../widgets/tabel_penerapan_karakter.dart';
 import '../widgets/tadabbur.dart';
 
 class Bab9 extends StatelessWidget {
-  const Bab9({super.key});
+  Bab9({super.key});
+  YoutubePlayerController _controller = YoutubePlayerController(
+      initialVideoId: 'vfl2I7eY9IM',
+      flags: YoutubePlayerFlags(autoPlay: false));
 
   @override
   Widget build(BuildContext context) {
@@ -54,6 +62,14 @@ class Bab9 extends StatelessWidget {
             CInfo(),
             Image.asset(
               "assets/images/infografis9.png",
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            YoutubePlayer(
+              controller: _controller,
+              showVideoProgressIndicator: true,
+              onReady: () {},
             ),
             DAyo(),
             ParagrafWidget(
@@ -132,7 +148,6 @@ class Bab9 extends StatelessWidget {
                   ParagrafWidget(
                       content:
                           "   Nabi Ibrahim terus berjalan sampai pada suatu tempat dan tidak bisa melihat rumah istri dan anak yang ia tinggalkan. Kemudian Ibrahim menghadap ke arah Baitullah, dengan mengangkat kedua tangannya dan berdoa kepada Allah Swt.:"),
-
                   RichText(
                     text:
                         TextSpan(style: regular_paragraf, children: <TextSpan>[
@@ -145,7 +160,6 @@ class Bab9 extends StatelessWidget {
                     ]),
                     textAlign: TextAlign.justify,
                   ),
-
                   ParagrafWidget(
                       content:
                           "   Ibu Hajar kembali menyusui anaknya dan minum dari air yang dibawakan oleh Ibrahim. Saat air habis, Ia pun merasakan haus. Kondisi ini juga dialami anaknya. Ibu Hajar melihat anaknya menghentakhentakkan kakinya karena merasakan haus. Setelah itu, ibu Hajar segera mencari air untuk minum anaknya."),
@@ -158,9 +172,8 @@ class Bab9 extends StatelessWidget {
                   ParagrafItalic(
                       content:
                           "(Sumber: al-Hafizh Ibnu Katsir. 2007. Kisah Para Nabi dan Rasul. Jakarta: Pustaka as-Sunnah)"),
-                  //
                 ],
-              ), //
+              ),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 8),
@@ -175,7 +188,7 @@ class Bab9 extends StatelessWidget {
                             topRight: Radius.circular(10))),
                     padding: const EdgeInsets.all(10),
                     child: Text(
-                      "Aktivitas 9.3", // Use the activityTitle parameter here
+                      "Aktivitas 9.3",
                       style: regular_paragraf.copyWith(
                         fontWeight: FontWeight.w600,
                       ),
@@ -360,7 +373,6 @@ class Bab9 extends StatelessWidget {
                   0: const FractionColumnWidth(1 / 6),
                 },
                 children: [
-                  // Header row
                   TableRow(
                     decoration: BoxDecoration(
                       color: purpleBaground,
@@ -1001,6 +1013,37 @@ class Bab9 extends StatelessWidget {
                 content:
                     "Jawablah pernyataan di bawah sesuai dengan kondisi yang ada dengan mencentang (√) di kolom!"),
             TabelPanilaianSikapAtas(idlist: tabelPenSikap9),
+            Container(
+              margin: EdgeInsets.only(top: 8, bottom: 12),
+              width: MediaQuery.of(context).size.width,
+              height: 122,
+              decoration: BoxDecoration(
+                border: Border.all(width: 1, color: grey),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: InkWell(
+                onTap: () {
+                  Get.to(PSikap9());
+                },
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      "assets/icons/assignment.png",
+                      width: 30,
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      "Penilaian Sikap",
+                      style: medium.copyWith(fontSize: 12, color: grey),
+                    )
+                  ],
+                ),
+              ),
+            ),
             Heading2(title: "2. Penilaian Pengetahuan"),
             Text(
                 "a. Pilihlah salah satu jawaban yang tepat pada salah satu huruf jawaban a, b, c, d atau e",
@@ -1012,13 +1055,44 @@ class Bab9 extends StatelessWidget {
                   border: Border.all(width: 1, color: black),
                   color: const Color(0xFFF3F3F4),
                   borderRadius: BorderRadius.circular(2)),
-              height: 280, // Atur tinggi sesuai kebutuhan
-              child: PilihanGandaSoal(daftarSoal: pilihanGanda10),
+              height: 280,
+              child: PilihanGandaSoal(daftarSoal: pilihanGanda9),
             ),
             Heading3(
                 title:
                     "b. Jawablah pertanyaan-pertanyaan di bawah ini dengan jelas dan tepat!"),
             ParagrafList(idlist: uraian9),
+            Container(
+              margin: EdgeInsets.only(top: 8, bottom: 12),
+              width: MediaQuery.of(context).size.width,
+              height: 122,
+              decoration: BoxDecoration(
+                border: Border.all(width: 1, color: grey),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: InkWell(
+                onTap: () {
+                  Get.to(PPengetahuan9());
+                },
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      "assets/icons/assignment.png",
+                      width: 30,
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      "Penilaian Pengetahuan",
+                      style: medium.copyWith(fontSize: 12, color: grey),
+                    )
+                  ],
+                ),
+              ),
+            ),
             Heading2(title: "3. Penilaian Keterampilan"),
             SizedBox(height: 8),
             Container(

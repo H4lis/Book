@@ -67,11 +67,9 @@ class Bab5 extends StatelessWidget {
           Image.asset(
             "assets/images/infografis5.jpg",
           ),
+         
           SizedBox(
-            height: 10,
-          ),
-          SizedBox(
-            height: 10,
+            height: 20,
           ),
           YoutubePlayer(
             controller: _controller,

@@ -7,7 +7,13 @@ import 'package:book/app/widgets/paragraf_list_costum.dart';
 import 'package:book/app/widgets/tabel_hukum_bacaan.dart';
 import 'package:book/app/widgets/terjemahan_perkata2.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
+import '../assingnment/p_pengetahuan_6.dart';
+import '../assingnment/p_sikap_5.dart';
+import '../assingnment/p_sikap_6.dart';
 import '../data/bab_1_model/tabel_penilaian_sikap_d.dart';
 import '../data/bab_2_model/tadabbur_model.dart';
 import '../data/bab_5_model/list_paragraf_5.dart';
@@ -27,6 +33,7 @@ import '../widgets/jawablah.dart';
 import '../widgets/list_paragraf.dart';
 import '../widgets/paragraf_italic.dart';
 import '../widgets/paragraf_widget.dart';
+import '../widgets/pembatas.dart';
 import '../widgets/refleksi.dart';
 import '../widgets/sampul_bab.dart';
 import '../widgets/sub_bab.dart';
@@ -35,9 +42,13 @@ import '../widgets/tadabbur.dart';
 import '../widgets/terjemahan_prakata.dart';
 import '../widgets/terjemahan_widget.dart';
 import '../widgets/quran_widget.dart';
+import '../widgets/voice_play.dart';
 
 class Bab6 extends StatelessWidget {
-  const Bab6({super.key});
+  Bab6({super.key});
+  YoutubePlayerController _controller = YoutubePlayerController(
+      initialVideoId: 'Y7nyGdbIVz8',
+      flags: YoutubePlayerFlags(autoPlay: false));
 
   @override
   Widget build(BuildContext context) {
@@ -242,6 +253,14 @@ class Bab6 extends StatelessWidget {
           Image.asset(
             "assets/images/infografis6.png",
           ),
+          SizedBox(
+            height: 20,
+          ),
+          YoutubePlayer(
+            controller: _controller,
+            showVideoProgressIndicator: true,
+            onReady: () {},
+          ),
           const Heading1(numbering: "D", title: "Tadabbur"),
           Tadabbur(idlist: tadabbur6),
           const AktivitasWidget(
@@ -307,7 +326,9 @@ class Bab6 extends StatelessWidget {
           QuranWidget(
               arab:
                   "وَمِنۡهُم مَّن يُؤۡمِنُ بِهِۦ وَمِنۡهُم مَّن لَّا يُؤۡمِنُ بِهِۦۚ وَرَبُّكَ أَعۡلَمُ بِٱلۡمُفۡسِدِينَ  ٤٠  وَإِن كَذَّبُوكَ فَقُل لِّي عَمَلِي وَلَكُمۡ عَمَلُكُمۡۖ أَنتُم بَرِيٓ‍ُٔونَ مِمَّآ أَعۡمَلُ وَأَنَا۠ بَرِيٓءٞ مِّمَّا تَعۡمَلُونَ   (يونس/٠ا: ا٤ ـ٤٠)  "),
-
+          VoicePlay(
+              audioUrl:
+                  "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F05%20surah-yunus%2040-41.mp3?alt=media&token=01d628b7-912d-45a9-90d3-fc91e247e618"),
           AktivitasWidget(
               activityTitle: "Aktivitas 6.3",
               contentText:
@@ -322,7 +343,6 @@ class Bab6 extends StatelessWidget {
               contentText:
                   "Isilah titik-titik pada tabel dibawah ini, yaitu pada kolom hukum bacaan dan alasan sebagaimana seperti di contoh."),
           TabelHukumBacaanWidget(idlist: hukumBacaan),
-
           Heading3(title: "c. Mengartikan Perkata Q.S. Yūnus /10 : 40-41"),
           ParagrafWidget(
               content:
@@ -358,7 +378,7 @@ class Bab6 extends StatelessWidget {
                       )),
                   padding: const EdgeInsets.all(10),
                   child: Text(
-                    "Alhamdulilah dari tabel di atas, kalian secara tidak langsung belajar mengenal 22 mufradāt (kosa kata) baru dalam bahasa Arab sekaligus memahami bahasa al-Qur’an. Sebenarnya jumlahnya lebih dari itu, tapi karena ada sekitar 8 mufradāt yang diulang, sehingga tidak ditulis dalam tabel di atas. Apabila hafal kosa kata di atas, insyā' Allah kalian akan mudah menerjemahkan Q.S. Yūnus/10:40-41.", // Use the contentText parameter here
+                    "Alhamdulilah dari tabel di atas, kalian secara tidak langsung belajar mengenal 22 mufradāt (kosa kata) baru dalam bahasa Arab sekaligus memahami bahasa al-Qur’an. Sebenarnya jumlahnya lebih dari itu, tapi karena ada sekitar 8 mufradāt yang diulang, sehingga tidak ditulis dalam tabel di atas. Apabila hafal kosa kata di atas, insyā' Allah kalian akan mudah menerjemahkan Q.S. Yūnus/10:40-41.",
                     style: regular_paragraf,
                     textAlign: TextAlign.justify,
                   ),
@@ -366,7 +386,6 @@ class Bab6 extends StatelessWidget {
               ],
             ),
           ),
-
           Heading3(title: "d. Menerjemahkan Q.S. Yūnus/10:40-41"),
           ParagrafWidget(
               content:
@@ -379,7 +398,6 @@ class Bab6 extends StatelessWidget {
           ParagrafItalic(
               content:
                   "“Dan jika mereka (tetap) mendustakanmu (Muhammad), maka katakanlah, “Bagiku pekerjaanku dan bagimu pekerjaanmu. Kamu tidak bertanggung jawab terhadap apa yang aku kerjakan dan aku pun tidak bertanggung jawab terhadap apa yang kamu kerjakan.” "),
-
           AktivitasWidget(
               activityTitle: "Aktivitas 6.5",
               contentText:
@@ -410,7 +428,6 @@ class Bab6 extends StatelessWidget {
           ParagrafWidget(
               content:
                   "2) Q.S. Yūnus /10 : 40-41 dan Hubungannya dengan Toleransi Dari penjelasan tafsir di atas, Q.S. Yūnus/10: 40-14 erat kaitannya  dengan toleransi. Sebelum membahas kaitan antara keduanya, alangkah baiknya, kalian mengetahui maksud toleransi, mengapa toleransi penting bagi umat manusia? "),
-
           Heading3(title: "Pengertian toleransi"),
           ParagrafWidget(
               content:
@@ -471,7 +488,7 @@ class Bab6 extends StatelessWidget {
                   "“Allah tidak melarang kamu berbuat baik dan berlaku adil terhadap orang-orang yang tidak memerangimu dalam urusan agama dan tidak mengusir kamu dari kampung halamanmu. Sesungguhnya Allah mencintai orang-orang yang berlaku adil.” (Q.S. al-Mumtahanah/60: 8)."),
           ParagrafWidget(
               content:
-                  "Dalam ayat tersebut, Allah Swt. menegaskan tidak melarang berbuat baik dan berlaku adil kepada orang-orang yang berbeda agama yang tidak memerangi dan tidak mengusir dari tempat tinggal. Melalui ayat ini, Allah Swt. ingin menghilangkan keraguan umat muslim dalam kaitannya hubungan mereka dengan orang kafir yang tidak memerangi dalam hal agama dan mengusir umat muslim dari tempat tinggal mereka. "),
+                  "   Dalam ayat tersebut, Allah Swt. menegaskan tidak melarang berbuat baik dan berlaku adil kepada orang-orang yang berbeda agama yang tidak memerangi dan tidak mengusir dari tempat tinggal. Melalui ayat ini, Allah Swt. ingin menghilangkan keraguan umat muslim dalam kaitannya hubungan mereka dengan orang kafir yang tidak memerangi dalam hal agama dan mengusir umat muslim dari tempat tinggal mereka. "),
           ParagrafWidget(
               content:
                   "   Dengan demikian, dalam hubungan sosial seorang muslim juga dapat menjalin hubungan baik dengan orang nonmuslim. Dalam ayat ini mengajarkan agar umat muslim dapat berbuat baik dan memberikan keadilan kepada mereka. Inilah tuntunan yang diajarkan al-Qur’an dalam kaitannya membangun toleransi, saling menghargai antarumat beragama dalam kehidupan sosial kemasyarakatan."),
@@ -498,7 +515,7 @@ class Bab6 extends StatelessWidget {
               riwayat: " (H.R. Al-Bukhāri)."),
           ParagrafWidget(
               content:
-                  "Dalam hadis lain disebutkan Nabi menjawab أَلَيْسَتْ نَفْسًا bukankah dia juga manusia). Al-Zabidi memberi penjelasan bahwa menghormati jenazah dengan cara berdiri saat iring-iringan yang membawa jenazah, merupakan hal yang dianjurkan sekalipun jenazah tersebut nonmuslim. Dengan kata lain, penghormatan Nabi dan para sahabat pada waktu itu sebenarnya didasarkan pada pertimbangan kemanusiaan."),
+                  "   Dalam hadis lain disebutkan Nabi menjawab أَلَيْسَتْ نَفْسًا bukankah dia juga manusia). Al-Zabidi memberi penjelasan bahwa menghormati jenazah dengan cara berdiri saat iring-iringan yang membawa jenazah, merupakan hal yang dianjurkan sekalipun jenazah tersebut nonmuslim. Dengan kata lain, penghormatan Nabi dan para sahabat pada waktu itu sebenarnya didasarkan pada pertimbangan kemanusiaan."),
           ParagrafWidget(
               content:
                   "   Kemudian untuk contoh toleransi dengan agama lain, kalian bisa belajar dari Sunan Kudus. Himbauan Sunan Kudus untuk tidak menyembelih sapi sebagai lauk di kedai-kedai makanan. Hal ini sebagai bentuk toleransi terhadap pemeluk agama lain. Himbauan tersebut sama sekali tidak mengorbankan keyakinan agama Islam, tetapi bentuk penghargaan sosial terhadap pemeluk agama lain."),
@@ -512,7 +529,6 @@ class Bab6 extends StatelessWidget {
               activityTitle: "Aktivitas 6.7",
               contentText:
                   "Carilah contoh-contoh praktik baik toleransi yang dilakukan ulama’ di Indonesia selain yang sudah ada di dalam buku ini baik dengan sesama muslim dan umat antaragama"),
-
           Heading3(title: "Pesan dalam Q.S. Yūnus /10: 40-41"),
           ParagrafWidget(
               content:
@@ -540,12 +556,10 @@ class Bab6 extends StatelessWidget {
               )
             ],
           ),
-
           Heading2(
               title:
                   "2. Mengkaji Q.S. al-Māidah/5 : 32, serta Hadis tentang memelihara kehidupan manusia"),
           Heading3(title: "a. Membaca Q.S. al-Māidah/5:32 dengan tartil"),
-
           QuranWidget(
               arab:
                   "مِنۡ أَجۡلِ ذَٰلِكَ كَتَبۡنَا عَلَىٰ بَنِيٓ إِسۡرَآءِيلَ أَنَّهُۥ مَن قَتَلَ نَفۡسَۢا بِغَيۡرِ نَفۡسٍ أَوۡ فَسَادٖ فِي ٱلۡأَرۡضِ فَكَأَنَّمَا قَتَلَ ٱلنَّاسَ جَمِيعٗا وَمَنۡ أَحۡيَاهَا فَكَأَنَّمَآ أَحۡيَا ٱلنَّاسَ جَمِيعٗاۚ وَلَقَدۡ جَآءَتۡهُمۡ رُسُلُنَا بِٱلۡبَيِّنَٰتِ ثُمَّ إِنَّ كَثِيرٗا مِّنۡهُم بَعۡدَ ذَٰلِكَ فِي ٱلۡأَرۡضِ لَمُسۡرِفُونَ  ٣٢  ( المآئدة / ٥ : ٣٢) "),
@@ -553,34 +567,18 @@ class Bab6 extends StatelessWidget {
               activityTitle: "Aktifitas 6.8",
               contentText:
                   "Bacalah Q.S. Al-Māidah/5: 32 dengan tartil. Cara membacanya adalah dengan berpasangan bersama teman kalian! Apabila jumlah siswa ganjil, maka kelompok terakhir jumlahnya tiga. Satu siswa membaca, sedangkan temannya menyimak. Apabila ada bacaan yang kurang tepat, temannya mengingatkan. Setelah selesai, bergantian membaca dan menyimak."),
-
           Heading3(
               title: "b. Mengidentifikasi Tajwid dalam QS. al-Māidah/5 : 32"),
           AktivitasWidget(
               activityTitle: "Aktivitas 6.9",
               contentText:
                   "Setelah selesai membaca, silahkan kalian mengidentifikasi tajwid dalam Q.S. al-Māidah/5 : 32 dengan cara mengisikan titik-titik pada tabel dibawah ini seperti di contoh.\nIdentifikasi tajwid ini merupakan penerapan materi tajwid yang pernah kalian pelajari pada kelas sebelumnya."),
-
           TabelHukumBacaanWidget(idlist: hukumBacaan2),
           SizedBox(
             height: 8,
           ),
-
           Heading3(title: "c. Mengartikan Perkata Q.S. al-Māidah/5 : 32"),
           terjemahanPerkataWidget2(),
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
-          //
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 8),
             child: Column(
@@ -611,7 +609,7 @@ class Bab6 extends StatelessWidget {
                       )),
                   padding: const EdgeInsets.all(10),
                   child: Text(
-                    "Alhamdulilah dari tabel di atas, kalian secara tidak langsung belajar memahami 28 mufradāt (kosa kata) baru bahasa Arab sekaligus memahami bahasa al-Qur’an. Apabila hafal kosa kata di atas, insyā' Allah kalian akan dapat mudah menerjemahkan Q.S. al-Māidah/5 : 32 dengan sendirinya. ", // Use the contentText parameter here
+                    "Alhamdulilah dari tabel di atas, kalian secara tidak langsung belajar memahami 28 mufradāt (kosa kata) baru bahasa Arab sekaligus memahami bahasa al-Qur’an. Apabila hafal kosa kata di atas, insyā' Allah kalian akan dapat mudah menerjemahkan Q.S. al-Māidah/5 : 32 dengan sendirinya. ",
                     style: regular_paragraf,
                     textAlign: TextAlign.justify,
                   ),
@@ -619,7 +617,6 @@ class Bab6 extends StatelessWidget {
               ],
             ),
           ),
-
           Heading3(title: "d. Menerjemahkan Q.S. al-Māidah/5 : 32"),
           ParagrafWidget(
               content:
@@ -638,19 +635,15 @@ class Bab6 extends StatelessWidget {
           ParagrafWidget(
               content:
                   "Dalam Tafsir al-Mishbāh, ayat ini dijelaskan setelah menguraikan kisah pembunuhan secara aniaya yang pertama serta dampak-dampaknya yang sangat buruk. Maksud kisah ini, Ibnu Katsir menjelaskan bahwa anak Nabi Adam telah melakukan pembunuhan terhadap saudaranya sendiri secara dzalim dan melampaui batas. Kemudian Quraish Shihab dalam lanjutan tafsirnya setelah terbukti melalui kisah ini betapa tergesa-gesa manusia, ayat 32 menegaskan bahwa: oleh karena kejahatan yang terjadi dan dampak-dampaknya yang sangat buruk dan perilaku Bani Israil, maka Kami Yang Maha Agung menetapkan suatu hukum menyangkut suatu persoalan yang besar dan hukum itu Kami sampaikan kepada Bani Israil bahwa: Barangsiapa yang membunuh satu jiwa salah seorang putra putri Adam, bukan karena orang itu membunuh jiwa orang yang lain yang memang wajar sesuai hukum untuk dibunuh, atau bukan karena membuat kerusakan di muka bumi, yang menurut hukum boleh dibunuh, seperti dalam peperangan ataumembela diri dari pembunuhan, maka seakan-akan dia telah membunuh manusia seluruhnya."),
-
           ParagrafWidget(
               content:
                   "   Barangsiapa yang memelihara kehidupan seorang manusia, misalnya dengan memaafkan pembunuh keluarganya atau menyelamatkan nyawa seseorang dari bencana, atau membela seseorang yang dapat terbunuh secara aniaya, maka seakan-akan dia telah memelihara kehidupan manusia semuanya. Sesungguhnya telah datang kepada mereka para rasul dengan membawa keterangan-keterangan yang jelas, yang membuktikan kebenaran para rasul dan kebenaran petunjuk-petunjuk. Tetapi, kemudian sesungguhnya banyak di antara mereka sesudah itu sungguh-sungguh telah membudaya pada dirinya sikap dan perilaku melampaui batas dalam berbuat kerusakan di muka bumi. "),
-
           ParagrafWidget(
               content:
                   "   Sedangkan maksud syari’at di atas, menurut ulama tafsir Ibnu ‘Asyur dalam kitab al-Tahrir wa al-Tanwir disebutkan sudah ditentukan sejak masa Bani Isra’il. Tujuannya untuk memberitahukan kepada umat muslim bahwa syari’at tersebut telah ditentukan Allah sejak lama. Mengetahui sejarah syari’at bisa menguatkan perasaan umat muslim dalam menerima perintah dan mengungkapkan mashlahah (kebaikan) yang ada di dalam hukum tersebut. Hukum yang terkandung dalam ayat ini telah ditetapkan Allah kepada Bani Isra’il dan berlaku juga bagi umat muslim."),
-
           ParagrafWidget(
               content:
                   "   Sementara itu, dalam Tafsir al-Azhar terkait disebutkannya ayat ini untuk Bani Israil, Hamka menjelaskan bahwa tentu sudah diketahui bahwa jarak diantara zaman Bani Israil dengan kedua anak Nabi Adam berkelahi itu sangat jauh, memakan waktu beribu tahun. Tidaklah mungkin peraturan ini baru berlaku kepada Bani Israil sebab kejadian itu. Sudah banyak kejadian pembunuhan kepada sesama manusia di antara zaman kedua anak Nabi Adam dengan Bani Israil. Penekanan kepada Bani Israil, ialah sebab tujuan ayat sedang dihadapkan kepada mereka. Sebab Bani Israil di zaman itu sangat mudah membunuh orang karena dengki dan sakit hati, bahkan banyak para nabi yang mereka bunuh."),
-
           ParagrafWidget(
               content:
                   "   Kemudian untuk pembunuhan yang dilarang pada ayat ini, menurut al-Maraghi dalam Kitab Tafsir al-Maraghi adalah pembunuhan yang dilakukan karena kejahatan, permusuhan, dan pembunuhan yang bukan karena menegakkan hukuman pidana. Adapun maksud membuat kerusakan dalam ayat ini adalah menghilangkan rasa aman bagi orang lain, merusak lahan pertanian, merusak keturunan. Misalnya para pencuri bersenjata, merampas harta dan merusak fasilitas negara. "),
@@ -679,18 +672,15 @@ class Bab6 extends StatelessWidget {
           ParagrafWidget(
               content:
                   "tetapi juga menjaga nyawa orang nonmuslim yang tidak memerangi umat muslim, atau orang nonmuslim yang hidup damai dalam sebuah negara."),
-
           ParagrafWidget(
               content:
                   "2) Hadis yang terkait dengan Menjaga Kehidupan Manusia"),
           ParagrafWidget(
               content:
                   "Di antara hadis yang berhubungan dengan menjaga kehidupan manusia adalah hadits yang yang diceritakan oleh ‘Abdullah bin ‘Amr bahwa Rasul melarang membunuh mu’ahad. Seperti diriwayatkan al-Bukhari dalam Kitab al-Jami’ al-Shahih Juz 4 disebutkan."),
-
           QuranWidget(
               arab:
                   " عَنْ عَبْدِ اللهِ بْنِ عَمْرٍو عَنِ النَّبِيِّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ قَالَ مَنْ قَتَلَ نَفْسًا مُعَاهَدًا لَمْ يَرِحْ رَائِحَةَ الْجَنَّةِ وَإِنَّ رِيْحَهَا لَيُوجَدُ مِنْ مَسِيرَةِ أَرْبَعِيْنَ عَامًا   (رواه البخاري)"),
-
           Terjemahan(
               content:
                   "Diriwatkan dari ‘Abdullah bin ‘Amr, dari Nabi Muhammad Saw, beliau bersabda: barangsiapa yang membunuh mu’ahad (orang nonmuslim yang mendapatkan janji jaminan keamanan dari orang muslim) tidak akan dapat mencium harumnya surga, padahal harumnya dapat dicium dari perjalanan empat puluh tahun.",
@@ -698,11 +688,9 @@ class Bab6 extends StatelessWidget {
           ParagrafWidget(
               content:
                   "   Dalam hadis lain Nabi Saw. juga menjelaskan larangan seorang muslim menzhalimi mu’ahad (tidak memerangi orang muslim dan mendapat jaminan keamanan). Sebagaimana diriwayatkan Abu Dawud yang tertulis dalam Kitab Sunan Abi Dawud Juz 3 disebutkan, Rasul Saw. mengingatkan beberapa hal yang tidak boleh dilakukan kepada mu’ahad, yakni: tidak boleh menzhaliminya, melanggar janji yang telah diberikan untuk memberi keamanan kepada mereka, membebani sesuatu di atas kemampuan mereka dan mengambil sesuatu milik mereka tanpa ada kerelaan dari mereka. Nabi mengancam bahwa yang melakukan itu akan dituntut oleh beliau kelak di hari kiamat."),
-
           ParagrafWidget(
               content:
                   "   Yang menarik lagi dalam agama Islam adalah suatu perbuatan yang memberikan isyarat mengancam kepada saudaranya termasuk perbuatan yang dilarang. Sebagaimana Hadis Nabi Muhammad Saw. disebutkan:"),
-
           QuranWidget(
               arab:
                   "عَنْ أَبِيْ هُرَيْرَةَ  يَقُوْلُ قَالَ أَبُو الْقَاسِمِ رَسُوْلُ اللّٰهِ صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمَ: مَنْ أَشَارَ إِلَى أَخِيْهِ بِحَدِيْدَةٍ فَإِنَّ الْمَلَائِكَةَ تَلْعَنُهُ حَتَّى وَإنْ كَانَ أَخَاهُ لأَبِيْهِ وَأُمِّهِ   (رَوَاهُ مُسْلِمْ )"),
@@ -716,7 +704,6 @@ class Bab6 extends StatelessWidget {
           QuranWidget(
               arab:
                   "عَنْ أَبِى هُرَيْرَةَ أَنَّ رَسُوْلَ اللهِ صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمَ قَالَ: أَتَدْرُوْنَ مَنِ الْمُفْلِسُ. قَالُوا: الْمُفْلِسُ فِينَا مَنْ لَا دِرْهَمَ لَهُ وَلَا مَتَاعَ فَقَالَ: إِنَّ الْمُفْلِسَ مِنْ أُمَّتِى يَأْتِى يَوْمَ الْقِيَامَةِ بِصَلَاةٍ وَصِيَامٍ وَزَكَاةٍ وَيَأْتِى قَدْ شَتَمَ هَذَا وَقَذَفَ هَذَا وَأكَلَ مَالَ هَذَا وَسَفَكَ دَمَ هَذَا وَضَرَبَ هَذَا فَيُعْطَى هَذَا مِنْ حَسَنَاتِهِ وَهَذَا مِنْ حَسَنَاتِهِ فَإِنْ فَنِيَتْ حَسَنَاتُهُ قَبْلَ أَنْ يُقْضَى مَا عَلَيْهِ أُخِذَ مِنْ خَطَايَاهُمْ فَطُرِحَتْ عَلَيْهِ ثُمّ طُرِحَ فِى النَّارِ.   ( رَوَاهُ مُسْلِمْ)"),
-
           Terjemahan(
               content:
                   "Dari Abu Hurairah r.a. bahwasanya Rasulullah Saw. bersabda: “Tahukah kamu siapakah orang yang bangkrut itu? Para sahabat menjawab: “Orang yang bangkrut di antara kami adalah orang yang tidak mempunyai dirham dan harta benda.” Maka beliau bersabda: “Sesungguhnya orang yang bangkrut dari umatku adalah orang yang datang pada hari kiamat membawa shalat, puasa dan zakat. Tetapi di samping itu juga pernah mencaci si ini, menuduh si ini, makan harta si ini, menumpahkan darah si ini, dan memukul si ini. Maka kebaikannya diberikan ke si ini dan kebaikannya diberikan ke si ini, maka apabila telah habis kebaikannya sedangkan belum terbayar semua tuntutan orang-orang yang lainnya, diambilkanlah dosa-dosa orang yang pernah didzalimi untuk dipikulkan kepadanya, kemudian ia dilemparkan ke neraka.”",
@@ -745,12 +732,10 @@ class Bab6 extends StatelessWidget {
             ],
           ),
           TabelPenerapanKarakterWidget(idlist: tabelPenKarakter6),
-
           const Heading1(numbering: "H", title: "Refleksi"),
           Refleksi(
               content:
                   "Setelah mempelajari materi Q.S. Yūnus/10: 40-41 tentang toleransi dan Q.S. al-Māidah/5: 32 tentang memelihara kehidupan manusia, manfaat apa saja yang kalian rasakan dalam kehidupan sehari-hari? Tuliskan tiga manfaatnya di bawah ini. \n1. .............................................................................................................. \n2. .............................................................................................................. \n3. .............................................................................................................. "),
-
           Heading1(numbering: "I", title: "Rangkuman"),
           Container(
               padding: const EdgeInsets.all(20),
@@ -770,22 +755,49 @@ class Bab6 extends StatelessWidget {
           ParagrafWidget(
               content:
                   "Jawablah pernyataan pada tabel di bawah ini sesuai dengan kondisi kalian. Caranya dengan mencentang (√) pada kolom!"),
-
           Heading1(numbering: "J", title: "Penilaian"),
           Heading2(title: "1. Penilaian Sikap"),
           TabelPanilaianSikapAtas(idlist: tabelPenSikap6),
+          Container(
+            margin: EdgeInsets.only(top: 8, bottom: 12),
+            width: MediaQuery.of(context).size.width,
+            height: 122,
+            decoration: BoxDecoration(
+              border: Border.all(width: 1, color: grey),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: InkWell(
+              onTap: () {
+                Get.to(PSikap6());
+              },
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    "assets/icons/assignment.png",
+                    width: 30,
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    "Penilaian Sikap",
+                    style: medium.copyWith(fontSize: 12, color: grey),
+                  )
+                ],
+              ),
+            ),
+          ),
           Heading2(title: "2. Penilaian Pengetahuan"),
           ParagrafWidget(
               content:
                   "Untuk menguji pengetahuan kalian dalam mempelajari Bab 6 ini, silahkan mengerjakan soal yang berjumlah 10 pilihan ganda dan 5 uraian. Selamat mengerjakan. Semoga sukses. Āmīn."),
-          Heading2(title: "2. Penilainan Pengetahuan"),
-          SizedBox(
-            height: 4,
-          ),
-          Text(
-            "Berilah tanda silang (X) pada huruf A, B, C, D atau E pada pernyataan di bawah ini sebagai jawaban yang paling tepat!",
-            style: h2.copyWith(fontWeight: FontWeight.w600),
-          ),
+          Heading3(title: "a. Soal Pilihan Ganda"),
+          Heading3(title: "Petunjuk Mengerjakan"),
+          Heading3(
+              title:
+                  "Jawablah pertanyaan di bawah ini dengan memberikan tanda (X) pada pilihan a, b, c, d, atau e!"),
           Container(
             margin: const EdgeInsets.only(top: 4),
             padding: const EdgeInsets.all(10),
@@ -793,7 +805,7 @@ class Bab6 extends StatelessWidget {
                 border: Border.all(width: 1, color: black),
                 color: const Color(0xFFF3F3F4),
                 borderRadius: BorderRadius.circular(2)),
-            height: 280, // Atur tinggi sesuai kebutuhan
+            height: 280,
             child: PilihanGandaSoal(daftarSoal: pilihanGanda6),
           ),
           SizedBox(
@@ -802,12 +814,10 @@ class Bab6 extends StatelessWidget {
           Heading3(title: "b. Soal Uraian"),
           Heading3(
               title: "Jawablah pertanyaan di bawah ini dengan yang benar!"),
-
           ParagrafListCostum(no: "1", content: "Perhatikan Q.S. Yūnus/10: 40!"),
           QuranWidget(
               arab:
                   "وَمِنۡهُمْ مَّنْ يُؤۡمِنُ بِهِ وَمِنۡهُمْ مَّنْ لَّا يُؤۡمِنُ بِهٖ ۗ  وَرَبُّكَ أَعۡلَمُ بِالۡمُفۡسِدِيْنَ   (يونس /١٠: ٤٠)"),
-
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -843,6 +853,37 @@ class Bab6 extends StatelessWidget {
               no: "5",
               content:
                   "Pasa saat ada pandemi Covid-19, pemerintah mengeluarkan protokol kesehatan, yaitu menganjurkan masyarakat memakai masker, menjaga jarak, dan menghindari kerumunan. Bagaimana pendapatmu tentang kebijakan tersebut dihubungkan dengan isi Q.S. Al-Māidah/5: 32!"),
+          Container(
+            margin: EdgeInsets.only(top: 8, bottom: 12),
+            width: MediaQuery.of(context).size.width,
+            height: 122,
+            decoration: BoxDecoration(
+              border: Border.all(width: 1, color: grey),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: InkWell(
+              onTap: () {
+                Get.to(PPengetahuan6());
+              },
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    "assets/icons/assignment.png",
+                    width: 30,
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    "Penilaian Pengetahuan",
+                    style: medium.copyWith(fontSize: 12, color: grey),
+                  )
+                ],
+              ),
+            ),
+          ),
           Heading2(title: "3. Penilaian Keterampilan"),
           ParagrafListCostum(
               no: "1",
@@ -1016,6 +1057,7 @@ class Bab6 extends StatelessWidget {
               ))
             ],
           ),
+                const Pembatas(),
         ],
       ),
     );

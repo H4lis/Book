@@ -1,3 +1,4 @@
+import 'package:book/app/data/bab_1_model/paragralistcostum2.dart';
 import 'package:book/app/data/bab_2_model/tadabbur_model.dart';
 import 'package:book/app/shared/constant.dart';
 import 'package:book/app/widgets/aktivitas_widget.dart';
@@ -11,7 +12,12 @@ import 'package:book/app/widgets/quran_widget.dart';
 import 'package:book/app/widgets/tadabbur.dart';
 import 'package:book/app/widgets/terjemahan_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
+import '../assingnment/p_pengetahuan_8.dart';
+import '../assingnment/p_sikap_8.dart';
 import '../data/bab_8_model/list_paragraf_8.dart';
 import '../data/kata_kunci.dart';
 import '../data/pilihan_ganda.dart';
@@ -20,6 +26,7 @@ import '../modules/SideMenu/views/side_menu_view.dart';
 import '../widgets/bab_1_widget/pilihanganda.dart';
 import '../widgets/baground_orange_kata_kunci.dart';
 import '../widgets/list_paragraf.dart';
+import '../widgets/pembatas.dart';
 import '../widgets/penilaiandiri2.dart';
 import '../widgets/refleksi.dart';
 import '../widgets/sampul_bab.dart';
@@ -27,7 +34,10 @@ import '../widgets/sub_bab.dart';
 import '../widgets/tabel_penerapan_karakter.dart';
 
 class Bab8 extends StatelessWidget {
-  const Bab8({super.key});
+  Bab8({super.key});
+  YoutubePlayerController _controller = YoutubePlayerController(
+      initialVideoId: 'a2P6K-Mymww',
+      flags: YoutubePlayerFlags(autoPlay: false));
 
   @override
   Widget build(BuildContext context) {
@@ -49,6 +59,14 @@ class Bab8 extends StatelessWidget {
           CInfo(),
           Image.asset(
             "assets/images/infografis8.png",
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          YoutubePlayer(
+            controller: _controller,
+            showVideoProgressIndicator: true,
+            onReady: () {},
           ),
           DAyo(),
           ParagrafWidget(
@@ -117,7 +135,7 @@ class Bab8 extends StatelessWidget {
                           topRight: Radius.circular(10))),
                   padding: const EdgeInsets.all(10),
                   child: Text(
-                    "Aktivitas 8.3", // Use the activityTitle parameter here
+                    "Aktivitas 8.3",
                     style: regular_paragraf.copyWith(
                       fontWeight: FontWeight.w600,
                     ),
@@ -136,7 +154,7 @@ class Bab8 extends StatelessWidget {
                   child: Column(
                     children: [
                       Text(
-                        "Jawablah pertanyaan ini dengan jujur sesuai kondisi kalian", // Use the contentText parameter here
+                        "Jawablah pertanyaan ini dengan jujur sesuai kondisi kalian",
                         style: regular_paragraf,
                         textAlign: TextAlign.justify,
                       ),
@@ -166,7 +184,7 @@ class Bab8 extends StatelessWidget {
           Heading2(title: "2. Pengertian Adab menggunakan Media Sosial"),
           ParagrafWidget(
               content:
-                  "   Secara bahasa, adab artinya adat istiadat; ia menunjukkan suatu kebiasaan, etiket, pola perilaku yang ditiru dari orang-orang yang dianggap sebagai model. Secara istilah adab adalah kebiasaan dan aturan tingkah laku praktis yang mempunyai muatan nilai baik yang diwariskan dari satu generasi ke generasi berikutnya"),
+                  "Secara bahasa, adab artinya adat istiadat; ia menunjukkan suatu kebiasaan, etiket, pola perilaku yang ditiru dari orang-orang yang dianggap sebagai model. Secara istilah adab adalah kebiasaan dan aturan tingkah laku praktis yang mempunyai muatan nilai baik yang diwariskan dari satu generasi ke generasi berikutnya"),
           ParagrafWidget(
               content:
                   "   Sedangkan media sosial yakni media berbasis Internet yang memungkinkan pengguna berkesempatan untuk berinteraksi dengan orang lain dan mempresentasikan dirinya dengan khalayak luas maupun terbatas yang dapat mendorong persepsi interaksi dengan orang lain. (Hendra A. Setyawan, 2017). Lebih lanjut ia menyatakan bahwa media sosial merupakan konten online yang dibuat dengan teknologi penerbitan yang sangat mudah diakses dan terukur."),
@@ -179,7 +197,7 @@ class Bab8 extends StatelessWidget {
           Heading2(title: "3. Dasar Naqli"),
           ParagrafWidget(
               content:
-                  "   Meskipun, zaman Nabi Muhammad Saw. belum ada media sosial, tetapi rambu-rambu dalam berinteraksinya diajarkan dalam Al-Qur’an dan Hadis. Di antara dalil naqli tentang menggunakan media sosial terdapat dalam Q.S. Al-Hujurat/49: 6 berikut ini."),
+                  "Meskipun, zaman Nabi Muhammad Saw. belum ada media sosial, tetapi rambu-rambu dalam berinteraksinya diajarkan dalam Al-Qur’an dan Hadis. Di antara dalil naqli tentang menggunakan media sosial terdapat dalam Q.S. Al-Hujurat/49: 6 berikut ini."),
           QuranWidget(
               arab:
                   "يٰٓاَيُّهَا الَّذِيْنَ اٰمَنُوْٓا اِنْ جَاۤءَكُمْ فَاسِقٌ ۢ  بِنَبَاٍ فَتَبَيَّنُوْٓا اَنْ تُصِيْبُوْا قَوْمًاۢ بِجَهَالَةٍ فَتُصْبِحُوْا عَلٰى مَا فَعَلْتُمْ نٰدِمِيْنَ  (الحجرٰت/ ٤٩: ٦)"),
@@ -254,7 +272,7 @@ class Bab8 extends StatelessWidget {
                   "c. Meneliti fakta atau kebenaran informasi yang diterima"),
           ParagrafWidget(
               content:
-                  "   Dalam berinteraksi media sosial, kalian pasti pernah menerima informasi dari teman, baik berupa teks/tulisan, foto atau video. Terkadang setelah menerima informasi tersebut, kalian ingin mengirim kembali informasi tersebut ke berbagai grup lain. Sebelum mengirim, teliti kebenaran beritanya. "),
+                  "Dalam berinteraksi media sosial, kalian pasti pernah menerima informasi dari teman, baik berupa teks/tulisan, foto atau video. Terkadang setelah menerima informasi tersebut, kalian ingin mengirim kembali informasi tersebut ke berbagai grup lain. Sebelum mengirim, teliti kebenaran beritanya. "),
           ParagrafWidget(
               content:
                   "   Meneliti kebenaran berita yang didapat dari media sosial merupakan hal yang paling utama. Saring sebelum sharing ke media sosial. Kebenaran ini akan menjadikan apa yang kalian sampaikan di medsos bisa dipertanggungjawabkan baik di dunia dan akhirat. Hal ini sebagaimana dijelaskan dalam Q.S. Al-Hujurat/49: 6 pada halaman sebelumnya."),
@@ -263,7 +281,7 @@ class Bab8 extends StatelessWidget {
                   "d. Menyampaikan informasi tanpa rekayasa atau manipulasi"),
           ParagrafWidget(
               content:
-                  "   Berita bohong atau hoax biasa dimulai dari mengedit, merekayasa dan memanipulasi informasi yang ada di dalam sebuah berita. Padahal hal ini dilarang dalam Islam. Maka sebagai muslim yang baik, hendaknya tidak merekayasa dan memanipulasi informasi. Hal ini sebagaimana yang dijelaskan dalam Q.S. Al-Hajj/22: 30 di bawah ini:"),
+                  "Berita bohong atau hoax biasa dimulai dari mengedit, merekayasa dan memanipulasi informasi yang ada di dalam sebuah berita. Padahal hal ini dilarang dalam Islam. Maka sebagai muslim yang baik, hendaknya tidak merekayasa dan memanipulasi informasi. Hal ini sebagaimana yang dijelaskan dalam Q.S. Al-Hajj/22: 30 di bawah ini:"),
           QuranWidget(
               arab: "وَاجْتَنِبُوْا قَوْلَ الزُّوْرِ ۙ  (الحج/ ٢٢: ٣٠)...."),
           ParagrafItalic(
@@ -341,9 +359,33 @@ class Bab8 extends StatelessWidget {
           ParagrafWidget(
               content:
                   "Ada beberapa hal yang dapat diterapkankan dalam menggunakan media sosial agar tetap nyaman, yaitu."),
-          QuranWidget(
-              arab:
-                  "يٰٓاَيُّهَا الَّذِيْنَ اٰمَنُوا اجْتَنِبُوْا كَثِيْرًا مِّنَ الظَّنِّۖ اِنَّ بَعْضَ الظَّنِّ اِثْمٌ وَّلَا تَجَسَّسُوْا وَلَا يَغْتَبْ بَّعْضُكُمْ بَعْضًاۗ اَيُحِبُّ اَحَدُكُمْ اَنْ يَّأْكُلَ لَحْمَ اَخِيْهِ مَيْتًا فَكَرِهْتُمُوْهُۗ وَاتَّقُوا اللّٰهَ ۗاِنَّ اللّٰهَ تَوَّابٌ رَّحِيْمٌ (الحرٰت /٤٩: ١٢)"),
+          ParagrafListAbjad(idlist: adab_bermedia),
+          Padding(
+            padding: const EdgeInsets.only(left: 20),
+            child: Column(
+              children: [
+                QuranWidget(
+                    arab:
+                        "يٰٓاَيُّهَا الَّذِيْنَ اٰمَنُوا اجْتَنِبُوْا كَثِيْرًا مِّنَ الظَّنِّۖ اِنَّ بَعْضَ الظَّنِّ اِثْمٌ وَّلَا تَجَسَّسُوْا وَلَا يَغْتَبْ بَّعْضُكُمْ بَعْضًاۗ اَيُحِبُّ اَحَدُكُمْ اَنْ يَّأْكُلَ لَحْمَ اَخِيْهِ مَيْتًا فَكَرِهْتُمُوْهُۗ وَاتَّقُوا اللّٰهَ ۗاِنَّ اللّٰهَ تَوَّابٌ رَّحِيْمٌ (الحرٰت /٤٩: ١٢)"),
+                Terjemahan(
+                    content:
+                        "“Hai orang-orang yang beriman, jauhilah kebanyakan purba-sangka (kecurigaan), karena sebagian dari prasangka itu dosa. Dan janganlah mencari-cari keburukan orang dan janganlah menggunjingkan satu sama lain. Adakah seorang diantara kamu yang suka memakan daging saudaranya yang sudah mati? Maka tentulah kamu merasa jijik kepadanya. Dan bertakwalah kepada Allah. Sesungguhnya Allah Maha Penerima Taubat lagi Maha Penyayang.”",
+                    riwayat: "  (Q.S. Al-Hujurāt/49: 12)."),
+              ],
+            ),
+          ),
+          ParagrafListCostum2(
+              no: "c",
+              content:
+                  "Gunakan media sosial yang sehat dengan mengupload status atau informasi di grup yang bermanfaat bagi anggota. Hindarkan isi status atau komentar yang menyinggung SARA (suku, agama, ras, dan antargolongan). Selain itu jangan ada muatan radikalisme, intoleransi, kekerasan, dan terorisme;"),
+          ParagrafListCostum2(
+              no: "d",
+              content:
+                  "Apabila dalam interaksi di media sosial ada perbedaan pendapat, anggota grup harus saling menghormati. Utamakan persatuan. Jangan sampai perbedaan pendapat di grup berdampak pada hubungan secara langsung maupun tidak langsung;"),
+          ParagrafListCostum2(
+              no: "e",
+              content:
+                  "Tidak memproduksi dan menyebarkan berita bohong (hoax) dan ujaran kebencian (hatespeech) di media sosial."),
           Heading2(title: "6. Hikmah Adab Bermedia Sosial"),
           ParagrafWidget(
               content:
@@ -354,7 +396,7 @@ class Bab8 extends StatelessWidget {
           IReflek(),
           Refleksi(
               content:
-                  "Setelah mempelajari materi tentang Adab bermedia sosial, manfaat apa saja yang kalian rasakan dalam kehidupan sehari-hari?Tuliskan 3 manfaatnya di bawah ini.\n1. ………………………………………………………………………………\n2. ………………………………………………………………………………\n3. ………………………………………………………………………………"),
+                  "Setelah mempelajari materi tentang Adab bermedia sosial, manfaat apa saja yang kalian rasakan dalam kehidupan sehari-hari?\nTuliskan 3 manfaatnya di bawah ini.\n1. ………………………………………………………………………………\n2. ………………………………………………………………………………\n3. ………………………………………………………………………………"),
           JRangkum(),
           Container(
             padding: const EdgeInsets.all(20),
@@ -367,6 +409,37 @@ class Bab8 extends StatelessWidget {
           KPenilai(),
           Heading2(title: "1. Penilaian Diri"),
           PenilaianDiri2(idlist: tabelPenilaiandiri8),
+          Container(
+            margin: EdgeInsets.only(top: 8, bottom: 12),
+            width: MediaQuery.of(context).size.width,
+            height: 122,
+            decoration: BoxDecoration(
+              border: Border.all(width: 1, color: grey),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: InkWell(
+              onTap: () {
+                Get.to(PSikap8());
+              },
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    "assets/icons/assignment.png",
+                    width: 30,
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    "Penilaian Sikap",
+                    style: medium.copyWith(fontSize: 12, color: grey),
+                  )
+                ],
+              ),
+            ),
+          ),
           Heading2(title: "2. Penilaian Pengetahuan"),
           Heading3(
               title:
@@ -378,7 +451,7 @@ class Bab8 extends StatelessWidget {
                 border: Border.all(width: 1, color: black),
                 color: const Color(0xFFF3F3F4),
                 borderRadius: BorderRadius.circular(2)),
-            height: 280, // Atur tinggi sesuai kebutuhan
+            height: 280,
             child: PilihanGandaSoal(daftarSoal: pilihanGanda8),
           ),
           SizedBox(
@@ -388,6 +461,37 @@ class Bab8 extends StatelessWidget {
               title:
                   "Jawablah pertanyaan-pertanyaan di bawah ini dengan jelas dan tepat!"),
           ParagrafList(idlist: uraian8),
+          Container(
+            margin: EdgeInsets.only(top: 8, bottom: 12),
+            width: MediaQuery.of(context).size.width,
+            height: 122,
+            decoration: BoxDecoration(
+              border: Border.all(width: 1, color: grey),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: InkWell(
+              onTap: () {
+                Get.to(PPengetahuan8());
+              },
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    "assets/icons/assignment.png",
+                    width: 30,
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    "Penilaian Pengetahuan",
+                    style: medium.copyWith(fontSize: 12, color: grey),
+                  )
+                ],
+              ),
+            ),
+          ),
           Heading2(title: "3. Penilaian Keterampilan"),
           ParagrafListAbjad(idlist: penKet),
           const IPengaya(),
@@ -535,6 +639,7 @@ class Bab8 extends StatelessWidget {
               )
             ],
           ),
+          Pembatas(),
         ],
       ),
     );

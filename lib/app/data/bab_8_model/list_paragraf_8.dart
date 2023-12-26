@@ -80,11 +80,10 @@ List<ListParagrafModel> uraian8 = [
          
 
 ];
-List<ListParagrafModel> q = [
+List<ListParagrafModel> adab_bermedia = [
 
-  ListParagrafModel(textContent: ""), 
-  ListParagrafModel(textContent: ""), 
-  ListParagrafModel(textContent: ""), 
-  ListParagrafModel(textContent: ""), 
+  ListParagrafModel(textContent: "Dalam berinteraksi di media sosial, saling menghormati dan menghargai antaranggota grup atau netizen. Gunakan bahasa yang santun, tidak menyinggung perasaan anggota dalam media sosial;"), 
+  ListParagrafModel(textContent: "Menghindari update status atau meng-upload berita berburuk sangka (su’udzan), mencari-cari kesalahan orang lain (tajassus), dan menggunjing orang lain (ghibah). Hal ini sesuai firman Allah Swt. dalam Q.S. Al-Hujurāt/49: 12."), 
+
 
 ];

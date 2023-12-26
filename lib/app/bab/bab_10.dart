@@ -10,7 +10,13 @@ import 'package:book/app/widgets/paragraf_list_abjad.dart';
 import 'package:book/app/widgets/paragraf_widget.dart';
 import 'package:book/app/widgets/quran_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
+import '../assingnment/p_pengetahuan_10.dart';
+import '../assingnment/p_sikap_10.dart';
+import '../assingnment/p_sikap_5.dart';
 import '../data/bab_10_model/list_paragraf_10.dart';
 import '../data/bab_1_model/tabel_penilaian_sikap_d.dart';
 import '../data/bab_2_model/tadabbur_model.dart';
@@ -35,7 +41,10 @@ import '../widgets/tadabbur.dart';
 import '../widgets/wawasan_keislaman.dart';
 
 class Bab10 extends StatelessWidget {
-  const Bab10({super.key});
+  Bab10({super.key});
+  YoutubePlayerController _controller = YoutubePlayerController(
+      initialVideoId: 'PG_0ibjHYqU',
+      flags: YoutubePlayerFlags(autoPlay: false));
 
   @override
   Widget build(BuildContext context) {
@@ -59,6 +68,14 @@ class Bab10 extends StatelessWidget {
             Image.asset(
               "assets/images/infografis10.png",
             ),
+            SizedBox(
+              height: 20,
+            ),
+            YoutubePlayer(
+              controller: _controller,
+              showVideoProgressIndicator: true,
+              onReady: () {},
+            ),
             DAyo(),
             AktivitasWidget(
                 activityTitle: "Aktivitas 10.1",
@@ -75,10 +92,8 @@ class Bab10 extends StatelessWidget {
                 contentText:
                     "Bagaimana pendapatmu tentang gambar di atas dihubungkan dengan Peradaban Islam pada Masa Modern?"),
             FKisah(),
-
             ParagrafWidget(
                 content: "Bacalah artikel di bawah ini dengan baik!"),
-
             SizedBox(
               height: 4,
             ),
@@ -120,12 +135,13 @@ class Bab10 extends StatelessWidget {
             ParagrafWidget(
                 content:
                     "Sebelum membahas peradaban Islam pada masa modern lebih lanjut, alangkah baiknya kalian mengetahui periodisasi secara umum. Hal ini bertujuan bahwa materi ini tidak lepas dari pembahasan sejarah Islam sebelumnya dan kalian akan mempunyai kerangka pikir yang utuh dan integratif. Dalam periodisasi sejarah Islam, Prof. Dr. H. Harun Nasution, pakar studi Islam, membagi menjadi tiga. Apa saja pembagiannya? Silahkan disimak dalam tabel berikut ini!"),
-
+            Image.asset(
+              "assets/images/wawasan.png",
+            ),
             ParagrafWidget(
                 content:
                     "   Dari periode tersebut, sekarang kalian akan fokus belajar Islam pada masa modern. Penjabaran lebih lanjut, silahkan dipelajari dengan baik di bawah ini."),
             Heading2(title: "1. Kondisi Islam pada Masa Modern"),
-
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
@@ -145,7 +161,6 @@ class Bab10 extends StatelessWidget {
                         "Kemajuan Eropa dengan ditemukannya teknologi perkapalan berkembang pesat pada abad ke-18 dan menjadi penguasa lautan, ekonomi, dan perdagangan di dunia"),
               ],
             ),
-
             ParagrafWidget(
                 content:
                     "   Di antara kemajuannya adalah dengan adanya penemuan mesin uap yang kemudian melahirkan revolusi industri di Eropa semakin memantapkan kemajuannya. Teknologi perkapalan dan militer berkembang pesat. Sehingga Eropa menjadi penguasa lautan dan bebas melakukan kegiatan ekonomi dan perdagangan dari dan ke seluruh dunia, tanpa mendapat hambatan berarti dari lawan-lawan mereka. Bahkan satu demi satu negeri Islam jatuh kekuasaannya sebagai negeri jajahan."),
@@ -159,7 +174,6 @@ class Bab10 extends StatelessWidget {
                 content:
                     "   Menyadari kondisi tersebut menjadi spirit kebangkitan dunia Islam dalam bidang ilmu pengetahuan, pendidikan, politik, maupun melawan penjajah. Usaha untuk memulihkan kembali kekuatan Islam dikenal dengan gerakan modernisasi atau pembaruan yang didorong, setidaknya ada tiga faktor. Apa saja faktornya? Silahkan disimak tabel berikut ini."),
             Kondisiislamd(idlist: kondisiIslamm),
-
             ParagrafWidget(
                 content:
                     "   Pembaruan di beberapa negara tidak terlepas dari peran tokoh-tokohnya yang akan dibahas dalam bab ini adalah:"),
@@ -170,7 +184,6 @@ class Bab10 extends StatelessWidget {
                 activityTitle: "Aktivitas 10.4",
                 contentText:
                     "Sebenarnya tokoh-tokoh Islam pada Masa Modern, selain di atas, masih banyak yang lain. Carilah tiga tokoh Islam yang hidup pada masa abad 18- sekarang yang berpengaruh sampai sekarang!"),
-
             ParagrafWidget(
                 content:
                     "   Dari nama-nama tersebut, bagaimana sosok tokoh tersebut, pemikiran, dan kontribusi bagi peradaban Islam sekarang ini? Silahkan dipelajari uraian materi di bawah ini dengan baik!"),
@@ -196,7 +209,6 @@ class Bab10 extends StatelessWidget {
                     description: "Muhammad Ali Pasya"),
               ],
             ),
-
             ParagrafWidget(
                 content:
                     "   Meskipun begitu, Pasya termasuk anak yang cerdas, pemberani, dan gigih dalam bekerja. Karakter ini yang menempa dan mengantarkannya menjadi pemimpin di Mesir. Salah satu jasa besarnya adalah berhasil membebaskan Mesir dari kekuasaan Napoleon dari Perancis. Sehingga Sultan di Turki merestui Muhammad Ali Pasya menjadi wali Mesir. "),
@@ -216,7 +228,6 @@ class Bab10 extends StatelessWidget {
             ParagrafWidget(
                 content:
                     "Nama lengkapnya adalah Rifa’ah Baidawi Rafi’at at-Tahtawi. Nama panggilannya adalah At-Tahtawi. Saat umur 16 tahun, At-Tahtawi telah menyelesaikan belajarnya di Universitas Al-Azhar Kairo. Setelah itu, At-Tahtawi melanjutkan pendidikan masternya di Egyptian Army Mesir. Kemudian, ia belajar selama lima tahun di Perancis. Selama di Perancis, At-Tahtawi menerjemahkan 12 buku dan risalah. "),
-
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
@@ -238,9 +249,138 @@ class Bab10 extends StatelessWidget {
             ParagrafWidget(
                 content:
                     "Pokok-pokok pemikiran at-Tahtawi dibagi menjadi beberapa bidang, yaitu."),
-
             ParagrafListAbjad(idlist: pokokpokopemikiran),
-
+            Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: bagroundDarkOrange,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Column(
+                children: [
+                  ParagrafWidget(
+                      content:
+                          "Di antara Kitab yang ditulis At-Tahtawi adalah:"),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        width: 20,
+                        child: Text(
+                          "1.",
+                          style: regular_paragraf,
+                          textAlign: TextAlign.justify,
+                        ),
+                      ),
+                      Expanded(
+                        child: RichText(
+                          text: TextSpan(
+                              style: regular_paragraf,
+                              children: <TextSpan>[
+                                TextSpan(
+                                    text:
+                                        "Manahijul Albab al-Misriyah fi Manahijil Adab al-Asriyyah  ",
+                                    style: regular_paragraf.copyWith(
+                                        fontStyle: FontStyle.italic)),
+                                TextSpan(
+                                    text:
+                                        "(Jalan bagi Orang Mesir untuk Mengetahui Literatur Modern);"),
+                              ]),
+                          textAlign: TextAlign.justify,
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        width: 20,
+                        child: Text(
+                          "2.",
+                          style: regular_paragraf,
+                          textAlign: TextAlign.justify,
+                        ),
+                      ),
+                      Expanded(
+                        child: RichText(
+                          text: TextSpan(
+                              style: regular_paragraf,
+                              children: <TextSpan>[
+                                TextSpan(
+                                    text:
+                                        "Al-Mursyidul Amin lil Banati wal Banin  ",
+                                    style: regular_paragraf.copyWith(
+                                        fontStyle: FontStyle.italic)),
+                                TextSpan(
+                                    text:
+                                        "(Petunjuk Pendidikan bagi laki-laki dan perempuan);"),
+                              ]),
+                          textAlign: TextAlign.justify,
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        width: 20,
+                        child: Text(
+                          "3.",
+                          style: regular_paragraf,
+                          textAlign: TextAlign.justify,
+                        ),
+                      ),
+                      Expanded(
+                        child: RichText(
+                          text: TextSpan(
+                              style: regular_paragraf,
+                              children: <TextSpan>[
+                                TextSpan(
+                                    text:
+                                        "Al-Qaul as-Sadid fi al-Ijtihad wa taqlid  ",
+                                    style: regular_paragraf.copyWith(
+                                        fontStyle: FontStyle.italic)),
+                                TextSpan(
+                                    text:
+                                        "(Perkataan yang benar tentang Ijtihad dan taklid)"),
+                              ]),
+                          textAlign: TextAlign.justify,
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        width: 20,
+                        child: Text(
+                          "4.",
+                          style: regular_paragraf,
+                          textAlign: TextAlign.justify,
+                        ),
+                      ),
+                      Expanded(
+                        child: RichText(
+                          text: TextSpan(
+                              style: regular_paragraf,
+                              children: <TextSpan>[
+                                TextSpan(
+                                    text: "Al-Madzahib al-Arba’ fi al-Fiqih  ",
+                                    style: regular_paragraf.copyWith(
+                                        fontStyle: FontStyle.italic)),
+                                TextSpan(text: "(Madzhab Empat dalam Fiqih)"),
+                              ]),
+                          textAlign: TextAlign.justify,
+                        ),
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ),
             AktivitasWidget(
                 activityTitle: "Aktivitas 10.5",
                 contentText:
@@ -264,7 +404,6 @@ class Bab10 extends StatelessWidget {
                     description: "Jamaludin Al-Afghani"),
               ],
             ),
-
             ParagrafWidget(
                 content:
                     "   Jamaludin merupakan seorang yang cerdas. Pada usia yang masih muda, yakni 18 tahun, ia sudah menguasai berbagai disiplin keilmuan, seperti: ilmu agama, filsafat, hukum, sejarah, metafisika, kedokteran, sains, astronomi, dan astrologi. Dalam kariernya, Jamaludin pernah menjabat sebagai perdana menteri di Afghanistan. Tetapi, saat itu Inggris mencampuri masalah politik dalam negeri, Jamaludin meninggalkan Kabul, dan pergi ke India. Di India, ternyata juga sudah diintervensi Inggris sehingga ia berpindah ke Mesir pada tahun 1871 M."),
@@ -272,6 +411,9 @@ class Bab10 extends StatelessWidget {
                 content:
                     "Adapun pokok-pokok pemikiran Jamaludin al-Afghani adalah:"),
             ParagrafListAbjad(idlist: pemikiranJamaludin),
+            SizedBox(
+              height: 10,
+            ),
             Container(
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
@@ -451,7 +593,6 @@ class Bab10 extends StatelessWidget {
                 content:
                     "Sedangkan ide pokok pikiran Muhammad Abduh adalah sebagai berikut."),
             ParagrafListAbjad(idlist: pikiranAbduh),
-
             Container(
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
@@ -579,14 +720,11 @@ class Bab10 extends StatelessWidget {
                 ],
               ),
             ),
-
             AktivitasWidget(
                 activityTitle: "Aktivitas 10.6",
                 contentText:
                     "Dari penjelasan sosok Jamaludin al-Afghani dan Muhammad Abduh di atas, apa persamaan dan perbedaan pemikirannya?"),
-
             Heading2red(title: "e. Rasyid Ridha (1865 - 1935 M)"),
-
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
@@ -605,7 +743,6 @@ class Bab10 extends StatelessWidget {
                     description: "\nRasyid Ridha"),
               ],
             ),
-
             ParagrafWidget(
                 content:
                     "   Latar belakang pemikiran Ridha adalah tuntutan zaman yang menuntut adanya perubahan. Pada masa itu kondisi umat Islam berada pada posisi yang sangat buruk, kemunduran di berbagai bidang. Dalam pemikirannya, Ridha terpengaruh dengan pemikiran dari Jamaludin al-Afghani dan Muhammad Abduh. Setelah Jamaludin al-Afghani wafat, Ridha ingin sekali bertemu Muhammad Abduh untuk belajar langsung dan mengetahui pandangannya tentang reformasi Islam. Kemudian, pada tahun 1897, Ridha bertemu dengan Muhammad Abduh. Atas persetujuan Abduh, Ridha menerbitkan majalah al-Manar. Tujuan penerbitan tersebut adalah untuk menjadi corong bagi gerakan pembaruan Islam dalam memajukan umat Islam dan membebaskan dari belenggu penjajah. "),
@@ -613,6 +750,9 @@ class Bab10 extends StatelessWidget {
                 content:
                     "Adapun pokok-pokok pemikiran Rasyid Ridha adalah sebagai berikut."),
             ParagrafListAbjad(idlist: pemikiranRasyid),
+            SizedBox(
+              height: 10,
+            ),
             Container(
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
@@ -768,7 +908,6 @@ class Bab10 extends StatelessWidget {
                 ],
               ),
             ),
-
             Heading2red(title: "f. Muhammad Iqbal (1877 - 1938 M)"),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -791,11 +930,9 @@ class Bab10 extends StatelessWidget {
             ParagrafWidget(
                 content:
                     "Dua tahun kemudian mendapatkan gelar Master of Art (M.A.) dengan memperoleh medali emas. Setelah itu, Iqbal belajar di Universitas Cambridge London dan Philosophy of Doctor (Ph.D.) dari Universitas Munich Jerman. Puncak kariernya, Iqbal terpilih menjadi Presiden Liga Muslim pada tahun 1930. Liga Muslim ini memiliki peran yang strategis dalam pergerakan kemerdekan India. Selain itu, ia menjadi kunci utama dalam pendirian Negara Pakistan, sebagai sebuah negara Islam yang terpisah dari Negara India. Meskipun tidak sempat menyaksikan langsung pendirian berdirinya Negara Pakistan, tetapi karena jasanya, Iqbal tetap dikenang menjadi pahlawan nasional di Pakistan. Namanya diabadikan menjadi nama bandar udara internasional Muhammad Iqbal di Lahore, Pakistan."),
-
             ParagrafWidget(
                 content:
                     "Sedangkan pokok-pokok pikirannya adalah sebagai berikut."),
-
             ParagrafListAbjad(idlist: pokokPikiranya),
             SizedBox(
               height: 8,
@@ -951,13 +1088,11 @@ class Bab10 extends StatelessWidget {
                 ],
               ),
             ),
-
             AktivitasWidget(
                 activityTitle: "Aktivitas 10.7",
                 contentText:
                     "Dari sosok dan pemikiran Rasyid Rida dan Muhammad Iqbal di atas, bagaimana kelebihan dan kelemahan apabila diterapkan di Indonesia?"),
             Heading2red(title: "g. KH. Ahmad Dahlan (1868 – 1923 M)"),
-
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
@@ -1026,7 +1161,6 @@ class Bab10 extends StatelessWidget {
                 ],
               ),
             ),
-
             Heading2red(title: "h. KH. Hasyim Asy’ari (1871–1947)"),
             ParagrafWidget(
                 content:
@@ -1034,7 +1168,6 @@ class Bab10 extends StatelessWidget {
             ParagrafWidget(
                 content:
                     "   Dalam mencari ilmu, Kiai Hasyim termasuk sosok yang tidak mengenal kata menyerah. Kiai Hasyim belajar ilmu agama langsung dengan bapak dan kakeknya yang sekaligus pengasuh pondok pesantren. Kemudian melanjutkan ke belajar ke berbagai Pondok Pesantren di Jawa. Di antaranya adalah Pondok Pesantren Wonorejo Mojokerto, Wonokoyo Probolinggo, Langitan Tuban, Tenggilis Surabaya, Kademangan Bangkalan Madura, Siwalan Panji Buduran Sidoarjo, dan Semarang. Waktu mondok di KH. Sholeh Darat Semarang, KH Hasyim belajar ilmu agama bersama KH. Ahmad Dahlan, pendiri Muhammadiyah."),
-
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
@@ -1055,8 +1188,7 @@ class Bab10 extends StatelessWidget {
             ),
             ParagrafWidget(
                 content:
-                    "Prestasi Kiai Hasyim yang menonjol selama belajar di Makkah adalah memperoleh kepercayaan untuk mengajar di Masjidil Haram.  Beberapa ulama dari berbagai negara yang pernah belajar dengan Kiai Hasyim adalah: Syaikh Sa’dullah al-Maymani (mufti di Bombai India), Syaikh Umar Hamdan (ahli hadis di Mekkah), al-Syihab Ahmad bin Abdullah (Syiria), KH. Wahab Hasbullah (Tambakberas), KH. R. Asnawi (Kudus), dan masih banyak yang lain"),
-
+                    "   Prestasi Kiai Hasyim yang menonjol selama belajar di Makkah adalah memperoleh kepercayaan untuk mengajar di Masjidil Haram.  Beberapa ulama dari berbagai negara yang pernah belajar dengan Kiai Hasyim adalah: Syaikh Sa’dullah al-Maymani (mufti di Bombai India), Syaikh Umar Hamdan (ahli hadis di Mekkah), al-Syihab Ahmad bin Abdullah (Syiria), KH. Wahab Hasbullah (Tambakberas), KH. R. Asnawi (Kudus), dan masih banyak yang lain"),
             ParagrafWidget(
                 content:
                     "   Di antara bentuk pembaharuan yang dilakukan oleh Kiai Hasyim yang sekarang masih bisa dilihat adalah mendirikan Pondok Pesantren Tebuireng Jombang Jawa Timur yang saat itu dusun Tebuireng penuh dengan perjudian, prostitusi, minuman keras, pencurian maupun perampokan. Dengan kesabaran Kiai Hasyim dalam mewujudkan gagasan, tidak menggunakan kekerasan dalam berdakwah menyebabkan masyarakat yang awalnya menentang, akhirnya menghentikan aksinya dan mendukung adanya pondok pesantren. Selain itu juga Kiai Hasyim merupakan pendiri organisasi Nahdlatul Ulama (NU). Penjelasan lebih lanjut tentang NU akan dijelaskan tersendiri pada kelas XII."),
@@ -1080,11 +1212,13 @@ class Bab10 extends StatelessWidget {
             SizedBox(
               height: 4,
             ),
+            SizedBox(
+              height: 10,
+            ),
             ParagrafListCostum2(
                 no: "c",
                 content:
                     "Dalam bidang politik, Kiai Hasyim mengajak kepada umat Islam untuk membangun dan menjaga persatuan. Menurutnya fondasi dalam pemerintahan dalam Islam mempunyai tujuan memberi persamaan bagi setiap muslim, melayani kepentingan dengan cara perundingan, dan menjaga keadilan;"),
-
             ParagrafListCostum2(
                 no: "d",
                 content:
@@ -1298,8 +1432,7 @@ class Bab10 extends StatelessWidget {
             ),
             ParagrafWidget(
                 content:
-                    "       Selain kitab di atas, masih banyak lagi karyanya yang lain. Padahal kalau direnungkan pada saat itu belum ada teknologi smartphone atau laptop, Kiai Hasyim memberikan teladan untuk produktif menulis."), //
-
+                    "       Selain kitab di atas, masih banyak lagi karyanya yang lain. Padahal kalau direnungkan pada saat itu belum ada teknologi smartphone atau laptop, Kiai Hasyim memberikan teladan untuk produktif menulis."),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 8),
               child: Column(
@@ -1313,7 +1446,7 @@ class Bab10 extends StatelessWidget {
                             topRight: Radius.circular(10))),
                     padding: const EdgeInsets.all(10),
                     child: Text(
-                      "Aktivitas 10.8", // Use the activityTitle parameter here
+                      "Aktivitas 10.8",
                       style: regular_paragraf.copyWith(
                         fontWeight: FontWeight.w600,
                       ),
@@ -1345,7 +1478,6 @@ class Bab10 extends StatelessWidget {
                 ],
               ),
             ),
-
             Heading2(title: "3. Pengaruh Islam Masa Modern bagi Indonesia"),
             ParagrafWidget(
                 content:
@@ -1379,13 +1511,10 @@ class Bab10 extends StatelessWidget {
                 content:
                     "Setelah mempelajari bab peradaban Islam pada masa modern, kalian diharapkan dapat menerapkan karakter dalam kehidupan sehari-hari, di antaranya sebagai berikut."),
             TabelPenerapanKarakterWidget(idlist: tabelPenKarakter10),
-
             IReflek(),
-
             Refleksi(
                 content:
                     "Setelah mempelajari materi Perdaban Islam pada Masa Modern, manfaat apa saja yang kalian rasakan dalam kehidupan sehari-hari?\nTuliskan 3 manfaatnya di bawah ini.\n1. ……………………………………………………………………………………………………\n2.…………………………………………………………………………………………………….\n3.……………………………………………………………………………………………………."),
-
             JRangkum(),
             Container(
               padding: const EdgeInsets.all(20),
@@ -1396,14 +1525,43 @@ class Bab10 extends StatelessWidget {
               child: ParagrafList(idlist: rangkuman10),
             ),
             KPenilai(),
-
             Heading2(title: "1. Penilaian Sikap"),
             Heading3(title: "Petunjuk Mengerjakan"),
             ParagrafWidget(
                 content:
-                    "Jawablah keterangan di bawah sesuai dengan kondisi yang ada dengan mencentang di kolom"), //
+                    "Jawablah keterangan di bawah sesuai dengan kondisi yang ada dengan mencentang di kolom"),
             TabelPanilaianSikapAtas(idlist: tabelPenSikap10),
-
+            Container(
+              margin: EdgeInsets.only(top: 8, bottom: 12),
+              width: MediaQuery.of(context).size.width,
+              height: 122,
+              decoration: BoxDecoration(
+                border: Border.all(width: 1, color: grey),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: InkWell(
+                onTap: () {
+                  Get.to(PSikap10());
+                },
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      "assets/icons/assignment.png",
+                      width: 30,
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      "Penilaian Sikap",
+                      style: medium.copyWith(fontSize: 12, color: grey),
+                    )
+                  ],
+                ),
+              ),
+            ),
             Heading2(title: "2. Uji Pengetahuan"),
             Text(
                 "a. Pilihlah salah satu jawaban yang tepat pada salah satu huruf jawaban a, b, c, d atau e",
@@ -1415,24 +1573,48 @@ class Bab10 extends StatelessWidget {
                   border: Border.all(width: 1, color: black),
                   color: const Color(0xFFF3F3F4),
                   borderRadius: BorderRadius.circular(2)),
-              height: 280, // Atur tinggi sesuai kebutuhan
+              height: 280,
               child: PilihanGandaSoal(daftarSoal: pilihanGanda10),
             ),
             Heading3(
-                title:
-                    "b. Jawablah pertanyaan di bawah ini dengan benar!"),
+                title: "b. Jawablah pertanyaan di bawah ini dengan benar!"),
             ParagrafList(idlist: uraian10),
+            Container(
+              margin: EdgeInsets.only(top: 8, bottom: 12),
+              width: MediaQuery.of(context).size.width,
+              height: 122,
+              decoration: BoxDecoration(
+                border: Border.all(width: 1, color: grey),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: InkWell(
+                onTap: () {
+                  Get.to(PPengetahuan10());
+                },
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      "assets/icons/assignment.png",
+                      width: 30,
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      "Penilaian Pengetahuan",
+                      style: medium.copyWith(fontSize: 12, color: grey),
+                    )
+                  ],
+                ),
+              ),
+            ),
             Heading2(title: "3. Penilaian Keterampilan"),
             ParagrafWidget(
                 content:
                     "Dalam mengerjakan penilaian keterampilan ini, silahkan kalian perhatikan petunjuk di bawah ini!"),
-            ParagrafList(idlist: penilaianketerampilan)
-
-            //
-
-            //
-            //
-            ,
+            ParagrafList(idlist: penilaianketerampilan),
             const IPengaya(),
             ParagrafWidget(
                 content:

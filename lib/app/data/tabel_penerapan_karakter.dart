@@ -167,7 +167,7 @@ List<TabelPenerapanKarakter> tabelPenKarakter6 = [
       butirSikap: "Menggunakan masker dan jaga jarak saat ada wabah",
       nilaiKarakter: "Peduli lingkungan/memelihara kehidupan manusia"),
   TabelPenerapanKarakter(
-      butirSikap: " Memberikan bantuan kepada korban bencana",
+      butirSikap: "Memberikan bantuan kepada korban bencana",
       nilaiKarakter: "Peduli sosial/memelihara kehidupan manusia"),
 ];
 

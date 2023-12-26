@@ -7,10 +7,12 @@ import 'package:book/app/widgets/paragraf_widget.dart';
 import 'package:book/app/widgets/quran_widget.dart';
 import 'package:book/app/widgets/terjemahan_widget.dart';
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import '../assingnment/p_pengetahuan_7.dart';
+import '../assingnment/p_sikap_7.dart';
 import '../data/bab_1_model/tabel_penilaian_sikap_d.dart';
 import '../data/bab_2_model/tadabbur_model.dart';
-import '../data/bab_6_model/list_paragraf_6.dart';
 import '../data/bab_7_model/list_paragraf_7.dart';
 import '../data/kata_kunci.dart';
 import '../data/pilihan_ganda.dart';
@@ -22,6 +24,7 @@ import '../widgets/bab_1_widget/pilihanganda.dart';
 import '../widgets/bab_1_widget/tabel_penilaian_sikap_atas.dart';
 import '../widgets/baground_orange_kata_kunci.dart';
 import '../widgets/list_paragraf.dart';
+import '../widgets/pembatas.dart';
 import '../widgets/refleksi.dart';
 import '../widgets/sampul_bab.dart';
 import '../widgets/sub_bab.dart';
@@ -29,7 +32,10 @@ import '../widgets/tabel_penerapan_karakter.dart';
 import '../widgets/tadabbur.dart';
 
 class Bab7 extends StatelessWidget {
-  const Bab7({super.key});
+  Bab7({super.key});
+  YoutubePlayerController _controller = YoutubePlayerController(
+      initialVideoId: 'sUUiQPFQ4z0',
+      flags: YoutubePlayerFlags(autoPlay: false));
 
   @override
   Widget build(BuildContext context) {
@@ -51,8 +57,19 @@ class Bab7 extends StatelessWidget {
             ParagrafList(idlist: tujPem7),
             BagroundOrangeKataKunci(idlist: kataKunciBab7),
             CInfo(),
+            ParagrafWidget(
+                content:
+                    "Diantara Cabang Iman: menjaga kehormatan, ikhlas, malu, dan zuhud"),
             Image.asset(
               "assets/images/infografis7.png",
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            YoutubePlayer(
+              controller: _controller,
+              showVideoProgressIndicator: true,
+              onReady: () {},
             ),
             DAyo(),
             Padding(
@@ -87,7 +104,7 @@ class Bab7 extends StatelessWidget {
                     child: Column(
                       children: [
                         Text(
-                          "Sebelum mempelajari materi tentang menguatkan iman dengan menjaga kehormatan, ikhlas, malu, dan zuhud, mari bersama-sama membaca Q.S. Al-A’raf/7: 27-29 di bawah ini dengan tartil! Siap?", // Use the contentText parameter here
+                          "Sebelum mempelajari materi tentang menguatkan iman dengan menjaga kehormatan, ikhlas, malu, dan zuhud, mari bersama-sama membaca Q.S. Al-A’raf/7: 27-29 di bawah ini dengan tartil! Siap?",
                           style: regular_paragraf,
                           textAlign: TextAlign.justify,
                         ),
@@ -163,7 +180,7 @@ class Bab7 extends StatelessWidget {
                             topRight: Radius.circular(10))),
                     padding: const EdgeInsets.all(10),
                     child: Text(
-                      "Aktivitas 7.3", // Use the activityTitle parameter here
+                      "Aktivitas 7.3",
                       style: regular_paragraf.copyWith(
                         fontWeight: FontWeight.w600,
                       ),
@@ -182,7 +199,7 @@ class Bab7 extends StatelessWidget {
                     child: Column(
                       children: [
                         Text(
-                          "Setelah kalian membaca artikel di atas, jawablah pertanyaan di bawah ini.", // Use the contentText parameter here
+                          "Setelah kalian membaca artikel di atas, jawablah pertanyaan di bawah ini.",
                           style: regular_paragraf,
                           textAlign: TextAlign.justify,
                         ),
@@ -227,9 +244,9 @@ class Bab7 extends StatelessWidget {
             QuranWidget(
                 arab:
                     "عَنْ أَبِي هُرَيْرَةَ عَنِ النَّبِيِّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ قَالَ: لَيْسَ الْغِنَى عَنْ كَثْرَةِ العَرَضِ وَلَكِنَّ الْغِنَى غِنَى النَّفْسِ (رواه البخاري)"),
-            Terjemahan(
-                content: "Aktivitas 7.4",
-                riwayat:
+            AktivitasWidget(
+                activityTitle: "Aktivitas 7.4",
+                contentText:
                     "Buatlah dua contoh yang mencerminkan sikap menjaga kehormatan dalam kehidupan sehari-hari!"),
             Heading2(title: "2. Ikhlas"),
             ParagrafWidget(
@@ -271,7 +288,6 @@ class Bab7 extends StatelessWidget {
             QuranWidget(
                 arab:
                     " عَنْ عَبْدِ اللّٰهِ بْنِ عُمَرَ رَضِيَ اللهُ عَنْهُمَا مَرَّ النَّبِيُّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ عَلَى رَجُلٍ ، وَهُوَ يُعَاتِبُ أَخَاهُ فِي الْحَيَاءِ ، يَقُولُ: إِنَّكَ لَتَسْتَحْيِي حَتَّى كَأَنَّهُ يَقُولُ : قَدْ أَضَرَّ بِكَ ، فَقَالَ رَسُولُ اللّٰهُ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: دَعْهُ فَإِنَّ الْحَيَاءَ مِنَ الإِيْمَانِ (رواه البخاري)"),
-            ParagrafWidget(content: "Dalam hadis Nabi Muhammad Saw:"),
             Terjemahan(
                 content:
                     "Dari ‘Abdullah bin ‘Umar: suatu saat Nabi saw bertemu seorang laki-laki yang mencela saudaranya yang pemalu. Bahkan lelaki tersebut mengatakan rasa malu telah membahayakanmu. Maka Rasulullah bersabda: berhentilah kamu mencela saudaramu, karena malu adalah bagian dari iman.",
@@ -363,7 +379,7 @@ class Bab7 extends StatelessWidget {
             IReflek(),
             Refleksi(
                 content:
-                    "Setelah mempelajari materi manisnya Iman dengan menjaga kehormatan, ikhlas, malu, dan zuhud, manfaat apa saja yang kalian rasakan dalam kehidupan sehari-hari?Tuliskan 3 manfaatnya di bawah ini!\n1. ……………………………………………………………………………………………………\n2. ……………………………………………………………………………………………………..\n3. ……………………………………………………………………………………………………..\n"),
+                    "Setelah mempelajari materi manisnya Iman dengan menjaga kehormatan, ikhlas, malu, dan zuhud, manfaat apa saja yang kalian rasakan dalam kehidupan sehari-hari?\nTuliskan 3 manfaatnya di bawah ini!\n1. ……………………………………………………………………………………………………\n2. ……………………………………………………………………………………………………..\n3. ……………………………………………………………………………………………………..\n"),
             JRangkum(),
             ParagrafList(idlist: jrangkuman),
             KPenilai(),
@@ -374,6 +390,37 @@ class Bab7 extends StatelessWidget {
                 content:
                     "Jawablah pernyataan di bawah sesuai dengan kondisi yang ada dengan mencentang (√) di kolom!"),
             TabelPanilaianSikapAtas(idlist: tabelPenSikap7),
+            Container(
+              margin: EdgeInsets.only(top: 8, bottom: 12),
+              width: MediaQuery.of(context).size.width,
+              height: 122,
+              decoration: BoxDecoration(
+                border: Border.all(width: 1, color: grey),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: InkWell(
+                onTap: () {
+                  Get.to(PSikap7());
+                },
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      "assets/icons/assignment.png",
+                      width: 30,
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      "Penilaian Sikap",
+                      style: medium.copyWith(fontSize: 12, color: grey),
+                    )
+                  ],
+                ),
+              ),
+            ),
             Heading2(title: "2. Penilaian Pengetahuan"),
             Text(
                 "a. Pilihlah salah satu jawaban yang tepat pada salah satu huruf jawaban a, b, c, d atau e",
@@ -385,7 +432,7 @@ class Bab7 extends StatelessWidget {
                   border: Border.all(width: 1, color: black),
                   color: const Color(0xFFF3F3F4),
                   borderRadius: BorderRadius.circular(2)),
-              height: 280, // Atur tinggi sesuai kebutuhan
+              height: 280,
               child: PilihanGandaSoal(daftarSoal: pilihanGanda7),
             ),
             SizedBox(
@@ -395,7 +442,38 @@ class Bab7 extends StatelessWidget {
                 "b. Jawablah pertanyaan-pertanyaan di bawah ini dengan jelas dan tepat!",
                 style: h2.copyWith(fontWeight: FontWeight.w600)),
             ParagrafList(idlist: essay7),
-            Heading3(title: "3. Penilaian Keterampilan"),
+            Container(
+              margin: EdgeInsets.only(top: 8, bottom: 12),
+              width: MediaQuery.of(context).size.width,
+              height: 122,
+              decoration: BoxDecoration(
+                border: Border.all(width: 1, color: grey),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: InkWell(
+                onTap: () {
+                  Get.to(PPengetahuan7());
+                },
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      "assets/icons/assignment.png",
+                      width: 30,
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      "Penilaian Pengetahuan",
+                      style: medium.copyWith(fontSize: 12, color: grey),
+                    )
+                  ],
+                ),
+              ),
+            ),
+            Heading2(title: "3. Penilaian Keterampilan"),
             ParagrafList(idlist: essay72),
             const IPengaya(),
             ParagrafWidget(
@@ -530,6 +608,7 @@ class Bab7 extends StatelessWidget {
                 ))
               ],
             ),
+            const Pembatas(),
           ]),
     );
   }
