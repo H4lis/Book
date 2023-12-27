@@ -11,6 +11,7 @@ import 'package:book/app/widgets/paragraf_widget.dart';
 import 'package:book/app/widgets/quran_widget.dart';
 import 'package:book/app/widgets/tadabbur.dart';
 import 'package:book/app/widgets/terjemahan_widget.dart';
+import 'package:book/app/widgets/voice_play.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -75,6 +76,9 @@ class Bab8 extends StatelessWidget {
           QuranWidget(
               arab:
                   "اِنَّ الَّذِيْنَ جَاۤءُوْ بِالْاِفْكِ عُصْبَةٌ مِّنْكُمْۗ لَا تَحْسَبُوْهُ شَرًّا لَّكُمْۗ بَلْ هُوَ خَيْرٌ لَّكُمْۗ لِكُلِّ امْرِئٍ مِّنْهُمْ مَّا اكْتَسَبَ مِنَ الْاِثْمِۚ وَالَّذِيْ تَوَلّٰى كِبْرَهٗ مِنْهُمْ لَهٗ عَذَابٌ عَظِيْمٌ  ١١   لَوْلَآ اِذْ سَمِعْتُمُوْهُ ظَنَّ الْمُؤْمِنُوْنَ وَالْمُؤْمِنٰتُ بِاَنْفُسِهِمْ خَيْرًاۙ وَّقَالُوْا هٰذَآ اِفْكٌ مُّبِيْنٌ ١٢   لَوْلَا جَاۤءُوْ عَلَيْهِ بِاَرْبَعَةِ شُهَدَاۤءَۚ فَاِذْ لَمْ يَأْتُوْا بِالشُّهَدَاۤءِ فَاُولٰۤىِٕكَ عِنْدَ اللّٰهِ هُمُ الْكٰذِبُوْنَ ١٣   (النّور / ٢٤: ١٣ـ ١١)"),
+          VoicePlay(
+              audioUrl:
+                  "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F08-surah-annur-full%2011-13.mp3?alt=media&token=a9193c4a-1a23-490a-82c3-4c9e2a5eb3d1"),
           AktivitasWidget(
               activityTitle: "Aktivitas 8.1",
               contentText:
@@ -201,6 +205,9 @@ class Bab8 extends StatelessWidget {
           QuranWidget(
               arab:
                   "يٰٓاَيُّهَا الَّذِيْنَ اٰمَنُوْٓا اِنْ جَاۤءَكُمْ فَاسِقٌ ۢ  بِنَبَاٍ فَتَبَيَّنُوْٓا اَنْ تُصِيْبُوْا قَوْمًاۢ بِجَهَالَةٍ فَتُصْبِحُوْا عَلٰى مَا فَعَلْتُمْ نٰدِمِيْنَ  (الحجرٰت/ ٤٩: ٦)"),
+          VoicePlay(
+              audioUrl:
+                  "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F08%20SURAH%20ALHUJURAT%2006.mp3?alt=media&token=dc1b498f-2097-4322-b612-ab37cd611673"),
           Terjemahan(
               content:
                   "Wahai orang-orang yang beriman! Jika seseorang yang fasik datang kepadamu membawa suatu berita, maka telitilah kebenarannya, agar kalian tidak mencelakakan suatu kaum karena kebodohan (kecerobohan), yang akhirnya kamu menyesali perbuatanmu itu.",
@@ -284,6 +291,9 @@ class Bab8 extends StatelessWidget {
                   "Berita bohong atau hoax biasa dimulai dari mengedit, merekayasa dan memanipulasi informasi yang ada di dalam sebuah berita. Padahal hal ini dilarang dalam Islam. Maka sebagai muslim yang baik, hendaknya tidak merekayasa dan memanipulasi informasi. Hal ini sebagaimana yang dijelaskan dalam Q.S. Al-Hajj/22: 30 di bawah ini:"),
           QuranWidget(
               arab: "وَاجْتَنِبُوْا قَوْلَ الزُّوْرِ ۙ  (الحج/ ٢٢: ٣٠)...."),
+          VoicePlay(
+              audioUrl:
+                  "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F08%20surah-alhajj30.mp3?alt=media&token=0e77c30f-5ec2-4f6b-ada2-6a7fb27c085c"),
           ParagrafItalic(
               content: "“Jauhilah olehmu perkataan-perkataan dusta.”"),
           Heading3(title: "e. Mengajak kepada kebaikan"),
@@ -309,6 +319,9 @@ class Bab8 extends StatelessWidget {
           QuranWidget(
               arab:
                   "اُدْعُ اِلٰى سَبِيْلِ رَبِّكَ بِالْحِكْمَةِ وَالْمَوْعِظَةِ الْحَسَنَةِ وَجَادِلْهُمْ بِالَّتِيْ هِيَ اَحْسَنُۗ اِنَّ رَبَّكَ هُوَ اَعْلَمُ بِمَنْ ضَلَّ عَنْ سَبِيْلِهٖ وَهُوَ اَعْلَمُ بِالْمُهْتَدِيْنَ "),
+          VoicePlay(
+              audioUrl:
+                  "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F08%20Surah%20ANNAHL%20125.mp3?alt=media&token=608a606c-7f47-4faf-80fa-a45506fa29bf"),
           Terjemahan(
               content:
                   "“Serulah (manusia) kepada jalan Tuhan-mu dengan hikmah dan pelajaran yang baik dan bantahlah mereka dengan cara yang baik. Sesungguhnya Tuhanmu Dialah yang lebih mengetahui tentang siapa yang tersesat dari jalan-Nya dan Dialah yang lebih mengetahui orang-orang yang mendapat petunjuk” ",
@@ -367,6 +380,9 @@ class Bab8 extends StatelessWidget {
                 QuranWidget(
                     arab:
                         "يٰٓاَيُّهَا الَّذِيْنَ اٰمَنُوا اجْتَنِبُوْا كَثِيْرًا مِّنَ الظَّنِّۖ اِنَّ بَعْضَ الظَّنِّ اِثْمٌ وَّلَا تَجَسَّسُوْا وَلَا يَغْتَبْ بَّعْضُكُمْ بَعْضًاۗ اَيُحِبُّ اَحَدُكُمْ اَنْ يَّأْكُلَ لَحْمَ اَخِيْهِ مَيْتًا فَكَرِهْتُمُوْهُۗ وَاتَّقُوا اللّٰهَ ۗاِنَّ اللّٰهَ تَوَّابٌ رَّحِيْمٌ (الحرٰت /٤٩: ١٢)"),
+                VoicePlay(
+                    audioUrl:
+                        "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F08%20surah-alhujurat-%2012.mp3?alt=media&token=69dbeb72-b291-471e-ab1e-34187498d33d"),
                 Terjemahan(
                     content:
                         "“Hai orang-orang yang beriman, jauhilah kebanyakan purba-sangka (kecurigaan), karena sebagian dari prasangka itu dosa. Dan janganlah mencari-cari keburukan orang dan janganlah menggunjingkan satu sama lain. Adakah seorang diantara kamu yang suka memakan daging saudaranya yang sudah mati? Maka tentulah kamu merasa jijik kepadanya. Dan bertakwalah kepada Allah. Sesungguhnya Allah Maha Penerima Taubat lagi Maha Penyayang.”",

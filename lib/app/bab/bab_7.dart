@@ -6,6 +6,7 @@ import 'package:book/app/widgets/paragraf_list_abjad.dart';
 import 'package:book/app/widgets/paragraf_widget.dart';
 import 'package:book/app/widgets/quran_widget.dart';
 import 'package:book/app/widgets/terjemahan_widget.dart';
+import 'package:book/app/widgets/voice_play.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
@@ -30,6 +31,7 @@ import '../widgets/sampul_bab.dart';
 import '../widgets/sub_bab.dart';
 import '../widgets/tabel_penerapan_karakter.dart';
 import '../widgets/tadabbur.dart';
+import '../widgets/voice_play_orange.dart';
 
 class Bab7 extends StatelessWidget {
   Bab7({super.key});
@@ -110,7 +112,10 @@ class Bab7 extends StatelessWidget {
                         ),
                         QuranWidget(
                             arab:
-                                "يٰبَنِيْٓ اٰدَمَ لَا يَفۡتِنَنَّكُمُ ٱلشَّيۡطٰنُ كَمَآ اَخۡرَجَ أَبَوَيۡكُمْ مِّنَ ٱلۡجَنَّةِ يَنْزِعُ عَنۡهُمَا لِبَاسَهُمَا لِيُرِيَهُمَا سَوۡءٰتِهِمَآۚ اِنَّهۥ يَرٰىٰكُمۡ هُوَ وَقَبِيْلُهُۥ مِنۡ حَيۡثُ لَا تَرَوۡنَهُمۡۗ إِنَّا جَعَلۡنَا ٱلشَّيٰطِيْنَ اَوۡلِيَآءَ لِلَّذِيْنَ لَا يُؤۡمِنُونَ ٢٧   وَاِذَا فَعَلُوْا فَاحِشَةً قَالُوْا وَجَدۡنَا عَلَيۡهَآ اٰبَآءَنَا وَاللّٰهُ اَمَرَنَا بِهَاۗ قُلۡ إِنَّ اللّٰهَ لَا يَأۡمُرُ بِالۡفَحۡشَآءِ ۗ  اَتَقُوْلُوْنَ عَلَى اللّٰهِ مَا لَا تَعۡلَمُوْنَ ٢٨   قُلۡ اَمَرَ رَبِّيْ بِالۡقِسۡطِ ۗ  وَاَقِيْمُوْا وُجُوهَكُمۡ عِنْدَ كُلِّ مَسۡجِدٍ وَّادۡعُوْهُ مُخۡلِصِيْنَ لَهُ ٱلدِّيْنَۚ كَمَا بَدَاَكُمۡ تَعُودُونَ ۗ ٢٩   (الاعراف/٧: ٢٩ـ٢٧)  ")
+                                "يٰبَنِيْٓ اٰدَمَ لَا يَفۡتِنَنَّكُمُ ٱلشَّيۡطٰنُ كَمَآ اَخۡرَجَ أَبَوَيۡكُمْ مِّنَ ٱلۡجَنَّةِ يَنْزِعُ عَنۡهُمَا لِبَاسَهُمَا لِيُرِيَهُمَا سَوۡءٰتِهِمَآۚ اِنَّهۥ يَرٰىٰكُمۡ هُوَ وَقَبِيْلُهُۥ مِنۡ حَيۡثُ لَا تَرَوۡنَهُمۡۗ إِنَّا جَعَلۡنَا ٱلشَّيٰطِيْنَ اَوۡلِيَآءَ لِلَّذِيْنَ لَا يُؤۡمِنُونَ ٢٧   وَاِذَا فَعَلُوْا فَاحِشَةً قَالُوْا وَجَدۡنَا عَلَيۡهَآ اٰبَآءَنَا وَاللّٰهُ اَمَرَنَا بِهَاۗ قُلۡ إِنَّ اللّٰهَ لَا يَأۡمُرُ بِالۡفَحۡشَآءِ ۗ  اَتَقُوْلُوْنَ عَلَى اللّٰهِ مَا لَا تَعۡلَمُوْنَ ٢٨   قُلۡ اَمَرَ رَبِّيْ بِالۡقِسۡطِ ۗ  وَاَقِيْمُوْا وُجُوهَكُمۡ عِنْدَ كُلِّ مَسۡجِدٍ وَّادۡعُوْهُ مُخۡلِصِيْنَ لَهُ ٱلدِّيْنَۚ كَمَا بَدَاَكُمۡ تَعُودُونَ ۗ ٢٩   (الاعراف/٧: ٢٩ـ٢٧)  "),
+                        VoicePlayOrange(
+                            audioUrl:
+                                "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F07%20surah-alaraf%2027-29.mp3?alt=media&token=65dfe3ea-aba7-40bd-9bb7-620c730b6351")
                       ],
                     ),
                   ),
@@ -227,6 +232,9 @@ class Bab7 extends StatelessWidget {
             QuranWidget(
                 arab:
                     "اِنَّ الْمُسْلِمِيْنَ وَالْمُسْلِمٰتِ وَالْمُؤْمِنِيْنَ وَالْمُؤْمِنٰتِ وَالْقٰنِتِيْنَ وَالْقٰنِتٰتِ وَالصّٰدِقِيْنَ وَالصّٰدِقٰتِ وَالصّٰبِرِيْنَ وَالصّٰبِرٰتِ وَالْخٰشِعِيْنَ وَالْخٰشِعٰتِ وَالْمُتَصَدِّقِيْنَ وَالْمُتَصَدِّقٰتِ وَالصَّاۤىِٕمِيْنَ وَالصّٰۤىِٕمٰتِ وَالْحٰفِظِيْنَ فُرُوْجَهُمْ وَالْحٰفِظٰتِ وَالذّٰكِرِيْنَ اللّٰهَ كَثِيْرًا وَّالذّٰكِرٰتِ اَعَدَّ اللّٰهُ لَهُمْ مَّغْفِرَةً وَّاَجْرًا عَظِيْمًا  (الاحزاب/٣٣ :٣٥)"),
+            VoicePlay(
+                audioUrl:
+                    "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F07%20surah-alahzab-full%2035.mp3?alt=media&token=919f0ca9-a29b-4375-801e-0d2ae93d781f"),
             Terjemahan(
                 content:
                     "“Sesungguhnya laki-laki dan perempuan yang muslim, laki-laki dan perempuan yang mukmin, laki-laki dan perempuan yang tetap dalam ketaatannya, laki-laki dan perempuan yang benar, laki-laki dan perempuan yang sabar, laki-laki dan perempuan yang khusyu´, laki-laki dan perempuan yang bersedekah, laki-laki dan perempuan yang berpuasa, laki-laki dan perempuan yang memelihara kehormatannya, laki-laki dan perempuan yang banyak menyebut (nama) Allah, Allah telah menyediakan untuk mereka ampunan dan pahala yang besar ",
@@ -261,6 +269,9 @@ class Bab7 extends StatelessWidget {
             QuranWidget(
                 arab:
                     "اِنَّآ اَنْزَلْنَآ اِلَيْكَ الْكِتٰبَ بِالْحَقِّ فَاعْبُدِ اللّٰهَ مُخْلِصًا لَّهُ الدِّيْنَۗ  (الزمر/٣٩ :٢)"),
+            VoicePlay(
+                audioUrl:
+                    "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F07%20surah-azzumar%202.mp3?alt=media&token=12097f86-7a95-416a-87f0-183e73ff751a"),
             Terjemahan(
                 content:
                     "Sesungghunya Kami telah menurunkan kepadamu (Muhammad) al-Kitab (al-Qur’an) dengan benar, maka sembahlah Allah dengan memurnikan ketaatan (ibadah) kepadanya.",

@@ -12,7 +12,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
       elevation: 1,
       backgroundColor: Colors.white,
       title: const Text(
-        "Book App",
+        "PAI BS KLS XI",
         style: TextStyle(
           color: purple,
           fontSize: 20,

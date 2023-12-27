@@ -116,7 +116,7 @@ class AboutView extends GetView<AboutController> {
                   ),
                   Center(
                     child: Text(
-                      "contact person : fauzip2buin@gmail.com",
+                      "contact person : fauzipascas3@gmail.com",
                       style: regular.copyWith(
                         fontSize: 10,
                       ),

@@ -563,6 +563,9 @@ class Bab6 extends StatelessWidget {
           QuranWidget(
               arab:
                   "مِنۡ أَجۡلِ ذَٰلِكَ كَتَبۡنَا عَلَىٰ بَنِيٓ إِسۡرَآءِيلَ أَنَّهُۥ مَن قَتَلَ نَفۡسَۢا بِغَيۡرِ نَفۡسٍ أَوۡ فَسَادٖ فِي ٱلۡأَرۡضِ فَكَأَنَّمَا قَتَلَ ٱلنَّاسَ جَمِيعٗا وَمَنۡ أَحۡيَاهَا فَكَأَنَّمَآ أَحۡيَا ٱلنَّاسَ جَمِيعٗاۚ وَلَقَدۡ جَآءَتۡهُمۡ رُسُلُنَا بِٱلۡبَيِّنَٰتِ ثُمَّ إِنَّ كَثِيرٗا مِّنۡهُم بَعۡدَ ذَٰلِكَ فِي ٱلۡأَرۡضِ لَمُسۡرِفُونَ  ٣٢  ( المآئدة / ٥ : ٣٢) "),
+          VoicePlay(
+              audioUrl:
+                  "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F06%20surah-almaidah%2032.mp3?alt=media&token=e0db00cb-47ea-41c4-9d3b-d75b4672bf0b"),
           AktivitasWidget(
               activityTitle: "Aktifitas 6.8",
               contentText:
@@ -1057,7 +1060,7 @@ class Bab6 extends StatelessWidget {
               ))
             ],
           ),
-                const Pembatas(),
+          const Pembatas(),
         ],
       ),
     );

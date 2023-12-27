@@ -8,6 +8,8 @@ import 'package:book/app/widgets/paragraf_list_abjad.dart';
 import 'package:book/app/widgets/paragraf_widget.dart';
 import 'package:book/app/widgets/quran_widget.dart';
 import 'package:book/app/widgets/terjemahan_widget.dart';
+import 'package:book/app/widgets/voice_play.dart';
+import 'package:book/app/widgets/voice_play_orange.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -111,7 +113,10 @@ class Bab9 extends StatelessWidget {
                                 "Bacalah Q.S. al-Rum/30: 19-21 di bawah ini dengan tartil dan dilakukan bersama-sama. Siap?  "),
                         QuranWidget(
                             arab:
-                                "يُخْرِجُ الْحَيَّ مِنَ الْمَيِّتِ وَيُخْرِجُ الْمَيِّتَ مِنَ الْحَيِّ وَيُحْيِ الْاَرْضَ بَعْدَ مَوْتِهَا ۗوَكَذٰلِكَ تُخْرَجُوْنَ ࣖ  ١٩  وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَكُمْ مِّنْ تُرَابٍ ثُمَّ اِذَآ اَنْتُمْ بَشَرٌ تَنْتَشِرُوْنَ ٢٠  وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةً ۗاِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ ٢١  (الرّوم /٣٠: ٢١ـ ا٩)")
+                                "يُخْرِجُ الْحَيَّ مِنَ الْمَيِّتِ وَيُخْرِجُ الْمَيِّتَ مِنَ الْحَيِّ وَيُحْيِ الْاَرْضَ بَعْدَ مَوْتِهَا ۗوَكَذٰلِكَ تُخْرَجُوْنَ ࣖ  ١٩  وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَكُمْ مِّنْ تُرَابٍ ثُمَّ اِذَآ اَنْتُمْ بَشَرٌ تَنْتَشِرُوْنَ ٢٠  وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةً ۗاِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ ٢١  (الرّوم /٣٠: ٢١ـ ا٩)"),
+                        VoicePlayOrange(
+                            audioUrl:
+                                "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F09%20surah-arrum%2019-21.mp3?alt=media&token=254b1c7a-02c1-454d-b3ce-8dd2e382a21b")
                       ],
                     ),
                   ),
@@ -237,6 +242,9 @@ class Bab9 extends StatelessWidget {
             QuranWidget(
                 arab:
                     "وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةً ۗاِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ   (الرّوم /٣٠: ٢١)"),
+            VoicePlay(
+                audioUrl:
+                    "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F09%20surah-arrum.mp3?alt=media&token=53bf2f36-d428-4c0d-ac6d-3637aee3b3e0"),
             Terjemahan(
                 content:
                     " “Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu istri-istri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berfikir.”",
@@ -303,6 +311,9 @@ class Bab9 extends StatelessWidget {
             QuranWidget(
                 arab:
                     "فَالصّٰلِحٰتُ قٰنِتٰتُ حٰفِظٰتٌ لِلْغَيْبِ بِمَا حَفِظَ اللهُ ۗ ( النسآء / ٤ : ٣٤)"),
+            VoicePlay(
+                audioUrl:
+                    "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F09%20-annisa-34.mp3?alt=media&token=e44ce9ad-9cf9-4c0c-822e-3476dc0ba89b"),
             Terjemahan(
                 content:
                     "“Sebab itu maka wanita yang shalihah, ialah yang taat kepada Allah lagi memelihara diri ketika suaminya tidak ada, oleh karena Allah telah memelihara (mereka).”",
@@ -619,6 +630,9 @@ class Bab9 extends StatelessWidget {
                         QuranWidget(
                             arab:
                                 "وَلَا تَعْزِمُوْا عُقْدَةَ النِّكَاحِ حَتّٰى يَبْلُغَ الْكِتٰبُ اَجَلَهُ ۗ وَاعْلَمُوْآ أَنَّ اللّٰهَ يَعْلَمُ مَا فِيْ ٓ اَنْفُسِكُمْ فَاحْذَرُوْهُ ۚ وَاعْلَمُوْ ٓاَنَّ اللّٰهَ غَفُوْرٌ حَلِيْمٌ    ( البقرة/ ٢ : ٢٣٥)"),
+                        VoicePlay(
+                            audioUrl:
+                                "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F09%20albaqarah-230.mp3?alt=media&token=c909d8a4-f323-415d-8b9b-64efe9611bed"),
                         Terjemahan(
                             content:
                                 "“Dan janganlah kamu berazam (bertetap hati) untuk berakad nikah, sebelum habis ´iddahnya. Dan ketahuilah bahwasanya Allah mengetahui apa yang ada dalam hatimu; maka takutlah kepada-Nya, dan ketahuilah bahwa Allah Maha Pengampun lagi Maha Penyantun.”",
@@ -687,6 +701,9 @@ class Bab9 extends StatelessWidget {
                         QuranWidget(
                             arab:
                                 "وَلَا تَنْكِحُوا الْمُشْرِكٰتِ حَتّٰى يُؤْمِنَّ وَلَاَمَةٌ مُؤْمِنَةٌ خَيْرٌ مِّنْ مُّشْرِكَةٍ وَّلَوْ اَعْجَبَتْكُمْ ۚ( البقرة/ ٢ : ٢٢١٠)"),
+                        VoicePlay(
+                            audioUrl:
+                                "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F09%20albaqarah-221.mp3?alt=media&token=8ee1d138-2f18-4d26-8959-e0e24b52cccd"),
                         Terjemahan(
                             content:
                                 "“Dan janganlah kamu menikahi wanita-wanita musyrik, sebelum mereka beriman. Sesungguhnya wanita budak yang mukmin lebih baik dari wanita musyrik, walaupun dia menarik hatimu. ",
@@ -751,6 +768,9 @@ class Bab9 extends StatelessWidget {
             QuranWidget(
                 arab:
                     "وَاٰتُوا النِّسَاۤءَ صَدُقٰتِهِنَّ نِحْلَةً ۗ  ... (النسآء/ ٤:٤)"),
+            VoicePlay(
+                audioUrl:
+                    "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F09-annisa-4.mp3?alt=media&token=a35a7e53-a1c5-4d33-9a27-e2778411787b"),
             Terjemahan(
                 content:
                     "Berikanlah maskawin kepada perempuan-perempuan yang kamu nikahi sebagai pemberian dengan penuh kerelaan…",
@@ -870,6 +890,9 @@ class Bab9 extends StatelessWidget {
                               QuranWidget(
                                   arab:
                                       " وَاُولٰتُ الْاَحْمَالِ اَجَلُهُنَّ اَنْ يَّضَعْنَ حَمْلَهُنَّۗ . . . (الطلاق/٦٥ : ٤)"),
+                              VoicePlay(
+                                  audioUrl:
+                                      "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F09%20surah-aththalaq%204.mp3?alt=media&token=8597968c-4a24-4ab7-aab4-73edc2aa2fc0"),
                               Terjemahan(
                                   content:
                                       "“… dan perempuan-perempuan yang sedang hamil (baik ditinggal mati suami ataupun ditalak) maka masa ‘iddahnya sampai ia melahirkan kandungannya…” ",
@@ -904,6 +927,9 @@ class Bab9 extends StatelessWidget {
                               QuranWidget(
                                   arab:
                                       "وَالَّذِيْنَ يُتَوَفَّوْنَ مِنْكُمْ وَيَذَرُوْنَ اَزْوَاجًا يَّتَرَبَّصْنَ بِاَنْفُسِهِنَّ اَرْبَعَةَ اَشْهُرٍ وَّعَشْرًا ۚ ... (البقرة/٢: ٢٣٤)"),
+                              VoicePlay(
+                                  audioUrl:
+                                      "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F09%20-albaqarah-%20234.mp3?alt=media&token=c7e71895-dbfb-4454-a8a6-2c90d66214a7"),
                               Terjemahan(
                                   content:
                                       "“Dan orang-orang yang meninggal dunia dan meninggalkan istri-istri maka masa ‘iddah istri mereka adalah empat bulan sepuluh hari…” ",
@@ -923,6 +949,9 @@ class Bab9 extends StatelessWidget {
             QuranWidget(
                 arab:
                     "وَالْمُطَلَّقٰتُ يَتَرَبَّصْنَ بِاَنْفُسِهِنَّ ثَلٰثَةَ قُرُوْۤءٍۗ ... (البقرة/٢: ٢٢٨)"),
+            VoicePlay(
+                audioUrl:
+                    "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F09%20-albaqarah-228.mp3?alt=media&token=eed72f1f-b20c-4491-9701-2df3187ee937"),
             Terjemahan(
                 content:
                     "Dan perempuan-perempuan yang diceraikan, maka mereka menunggu menahan dirinya (masa ’iddah) 3 kali masa suci…”",
@@ -930,6 +959,9 @@ class Bab9 extends StatelessWidget {
             QuranWidget(
                 arab:
                     "وَالّٰۤـِٔيْ يَىِٕسْنَ مِنَ الْمَحِيْضِ مِنْ نِّسَاۤىِٕكُمْ اِنِ ارْتَبْتُمْ فَعِدَّتُهُنَّ ثَلٰثَةُ اَشْهُرٍۙ ...(الطلاق/٦٥: ٤)"),
+            VoicePlay(
+                audioUrl:
+                    "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F09%20surah-aththalaq-004.mp3?alt=media&token=100cb066-2ae7-4d1f-abf1-2cc703be08ac"),
             Terjemahan(
                 content:
                     "Dan apabila perempuan-perempuan yang telah memasuki masa tidak haid, jika kalian ragu maka masa ‘iddah mereka adalah tiga bulan…",
@@ -942,6 +974,9 @@ class Bab9 extends StatelessWidget {
             QuranWidget(
                 arab:
                     "وَاِذَا طَلَّقْتُمُ النِّسَاۤءَ فَبَلَغْنَ اَجَلَهُنَّ فَاَمْسِكُوْهُنَّ بِمَعْرُوْفٍ اَوْ سَرِّحُوْهُنَّ بِمَعْرُوْفٍۗ وَلَا تُمْسِكُوْهُنَّ ضِرَارًا لِّتَعْتَدُوْا ۚ ... (البقرة/٢: ٢٣١)"),
+            VoicePlay(
+                audioUrl:
+                    "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F09%20albaqarah-231.mp3?alt=media&token=022f9c56-a112-435f-827e-e0e343eb6d42"),
             Terjemahan(
                 content:
                     "“Apabila kamu menceraikan istrimu, hingga (hampir) berakhir masa idahnya, tahanlah (rujuk) mereka dengan cara yang patut atau ceraikanlah mereka dengan cara yang patut (pula). Janganlah kamu menahan (rujuk) mereka untuk memberi kemudaratan sehingga kamu melampaui batas.”",
@@ -952,6 +987,9 @@ class Bab9 extends StatelessWidget {
             QuranWidget(
                 arab:
                     "اَلطَّلَاقُ مَرَّتٰنِ ۖ فَاِمْسَاكٌۢ بِمَعْرُوْفٍ اَوْ تَسْرِيْحٌۢ بِاِحْسَانٍ ۗ وَلَا يَحِلُّ لَكُمْ اَنْ تَأْخُذُوْا مِمَّآ اٰتَيْتُمُوْهُنَّ شَيْـًٔا اِلَّآ اَنْ يَّخَافَآ اَلَّا يُقِيْمَا حُدُوْدَ اللّٰهِ ۗ ... (البقرة/٢: ٢٢٩)"),
+            VoicePlay(
+                audioUrl:
+                    "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F09%20albaqarah-full-229.mp3?alt=media&token=045fd76f-2f4e-4e66-b0cb-0b4d3907feb3"),
             Terjemahan(
                 content:
                     "“Talak (yang dapat dirujuk) itu dua kali. (Setelah itu suami dapat) menahan (rujuk) dengan cara yang patut atau melepaskan (menceraikan) dengan baik. Tidak halal bagi kamu mengambil kembali sesuatu (mahar) yang telah kamu berikan kepada mereka, kecuali keduanya (suami dan istri) khawatir tidak mampu menjalankan batas-batas ketentuan Allah…”",

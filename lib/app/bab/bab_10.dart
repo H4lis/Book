@@ -9,6 +9,7 @@ import 'package:book/app/widgets/paragraf_italic.dart';
 import 'package:book/app/widgets/paragraf_list_abjad.dart';
 import 'package:book/app/widgets/paragraf_widget.dart';
 import 'package:book/app/widgets/quran_widget.dart';
+import 'package:book/app/widgets/voice_play.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -84,6 +85,8 @@ class Bab10 extends StatelessWidget {
             QuranWidget(
                 arab:
                     "يٰٓاَيُّهَا الَّذِيْنَ اٰمَنُوا اتَّقُوا اللّٰهَ وَلْتَنْظُرْ نَفْسٌ مَّا قَدَّمَتْ لِغَدٍۚ وَاتَّقُوا اللّٰهَ ۗاِنَّ اللّٰهَ خَبِيْرٌ ۢبِمَا تَعْمَلُوْنَ ١٨  وَلَا تَكُوْنُوْا كَالَّذِيْنَ نَسُوا اللّٰهَ فَاَنْسٰىهُمْ اَنْفُسَهُمْۗ اُولٰۤىِٕكَ هُمُ الْفٰسِقُوْنَ ١٩  لَا يَسْتَوِيْٓ اَصْحٰبُ النَّارِ وَاَصْحٰبُ الْجَنَّةِۗ اَصْحٰبُ الْجَنَّةِ هُمُ الْفَاۤىِٕزُوْنَ ٢٠  لَوْ اَنْزَلْنَا هٰذَا الْقُرْاٰنَ عَلٰى جَبَلٍ لَّرَاَيْتَهٗ خَاشِعًا مُّتَصَدِّعًا مِّنْ خَشْيَةِ اللّٰهِ ۗوَتِلْكَ الْاَمْثَالُ نَضْرِبُهَا لِلنَّاسِ لَعَلَّهُمْ يَتَفَكَّرُوْنَ٢١   (الحسر/ ٥٩: ٢١ـ ١٨)"),
+         
+         VoicePlay(audioUrl: "https://firebasestorage.googleapis.com/v0/b/book-592f2.appspot.com/o/audio%2F10%20surah-alhasy%2018-21.mp3?alt=media&token=5d9980fa-ac34-44c4-af2e-f71cb7eff78d"),
             ETadabb(),
             ParagrafWidget(content: "Amatilah gambar di bawah ini!"),
             Tadabbur(idlist: tadabbur10),
