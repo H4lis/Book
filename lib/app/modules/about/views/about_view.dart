@@ -98,7 +98,7 @@ class AboutView extends GetView<AboutController> {
                       textAlign: TextAlign.center,
                       style: semiBold.copyWith(fontSize: 16)),
                   Text(
-                    "Muhammad Fauzi Natsir S.Kom",
+                    "Muhammad Fauzi Natsir S.Kom.,M.Kom",
                     style: regular.copyWith(
                       fontSize: 12,
                     ),

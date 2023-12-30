@@ -14,7 +14,7 @@ class PPengetahuan6 extends StatefulWidget {
 class _PPengetahuan6State extends State<PPengetahuan6> {
   late InAppWebViewController controller;
   String url =
-      "https://docs.google.com/forms/d/e/1FAIpQLSdAIrbhMbFAXtA_bhn9mwXqKiI0jS9xan7O_hwM9WG8UlfD5g/viewform?usp=sharing";
+      "https://docs.google.com/forms/d/e/1FAIpQLSfnyrFVdXvKHH_g_y0OlJAE-kCs6uiKOAVKQeiu2paUXhpxxg/viewform?usp=sf_link";
   double progress = 0;
 
   @override

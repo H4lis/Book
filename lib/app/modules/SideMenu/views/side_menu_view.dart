@@ -38,7 +38,7 @@ class SideMenuView extends GetView<SideMenuController> {
               Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => FabTabs(selectedIndex: 7)))
+                      builder: (context) => FabTabs(selectedIndex: 12)))
             },
             horizontalTitleGap: 0,
             title: Text(

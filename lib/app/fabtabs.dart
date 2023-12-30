@@ -64,13 +64,13 @@ class _FabTabsState extends State<FabTabs> {
                                 : currentIndex == 7
                                     ? Bab6()
                                     : currentIndex == 8
-                                        ?  Bab7()
+                                        ? Bab7()
                                         : currentIndex == 9
                                             ? Bab8()
                                             : currentIndex == 10
-                                                ?  Bab9()
+                                                ? Bab9()
                                                 : currentIndex == 11
-                                                    ?  Bab10()
+                                                    ? Bab10()
                                                     : const DaftarIsi();
     return SafeArea(
       child: Scaffold(
